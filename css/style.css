@@ -194,6 +194,56 @@ button, input, select, optgroup, textarea {
 #WORKSPACE: DESKTOP SCREEN
 \*-----------------------------------*/
 
+#workspace {
+    width: 100%;
+    height: 100vh;
+}
+
+/* .desktop-apps {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+} */
+
+.desktop-apps li {
+    position: absolute;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    z-index: 20;
+}
+
+.desktop-apps li:nth-child(1) {
+    top: 100px;
+    right: 50px;
+}
+
+.desktop-apps li:nth-child(2) {
+    top: 220px;
+    right: 150px;
+}
+
+.desktop-apps li:nth-child(3) {
+    top: 350px;
+    right: 65px;
+}
+
+.desktop-apps li:nth-child(4) {
+    top: 400px;
+    left: 50px;
+}
+
+.desktop-apps li:nth-child(4) img { width: 100%; }
+
+.desktop-apps li:nth-child(5) {
+    top: 500px;
+    left: 150px;
+}
+
+.desktop-apps li:nth-child(6) {
+    top: 550px;
+    right: 70px;
+}
 
 /*-----------------------------------*\
 #WORKSPACE: MOBILE SCREEN
@@ -202,6 +252,8 @@ button, input, select, optgroup, textarea {
 #mobile { display: none; }
 
 @media screen and (max-width: 768px) {
+    #desktop { display: none; }
+
     #mobile { display: block; }
 
     .apps-list {
