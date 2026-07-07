@@ -199,8 +199,27 @@ button, input, select, optgroup, textarea {
 #WORKSPACE: MOBILE SCREEN
 \*-----------------------------------*/
 
+#pages {
+    position: fixed;
+    bottom: 6.5rem;
+    left: 50%;
+    transform: translate(-50%, -10%);
+}
 
+.page-icon {
+    font-size: 9px;
+}
+.page-icon:first-child {
+    color: rgb(255 255 255);
+}
 
+.page-icon:last-child {
+    color: rgba(255, 255, 255, 0.20);
+}
+
+@media screen and (max-width: 500px) {
+    #pages { bottom: 5rem; }
+}
 
 /*-----------------------------------*\
 #FOOTER: DESKTOP SCREEN
