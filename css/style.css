@@ -90,10 +90,103 @@ button, input, select, optgroup, textarea {
 #HEADER: DESKTOP SCREEN
 \*-----------------------------------*/
 
+#top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.20);
+}
+
+.desktop-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1rem;
+    height: 5vh;
+    position: relative;
+}
+
+.desktop {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    margin-right: 1rem;
+}
+
+.desktop p {
+    width: 150px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.desktop-socials {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    align-items: center;
+    position: absolute;
+    left: 12rem;
+}
+
+.desktop-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    right: 7rem;
+}
+
+.desktop li img {
+    width: 15px;
+}
+
+.desktop-icons li .battery { width: 20px; }
+
+.desktop-icons li .siri {
+    width: 45px;
+    margin-left: -8px;
+}
+
+.date-time {
+    font-size: 13px;
+    letter-spacing: 0.4px;
+}
+
+.mobile-header { display: none; }
 
 /*-----------------------------------*\
 #HEADER: MOBILE SCREEN
 \*-----------------------------------*/
+
+@media screen and (max-width: 768px) {
+    #top-bar { background: none; }
+
+    .desktop-header { display: none; }
+
+    .mobile-header { 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 7px;
+        height: 4vh;
+    }
+
+    .status-bar, .battery-life {
+        display: flex;
+        align-items: center;
+    }
+
+    .status-bar {
+        gap: 4px;
+    }
+
+    .battery-life {
+        gap: 2px;
+    }
+}
+
 
 
 
@@ -160,7 +253,7 @@ button, input, select, optgroup, textarea {
 \*-----------------------------------*/
 
 @media screen and (max-width: 768px) {
-    #dock { width: 50%; }
+    #dock { width: 45%; }
 
     #finder, #launchpad, #maps, #photos, #player, #facetime, #calendar, #reminders, #preview, #notes, #appstore, #settings, #siri, #terminal, #trash {
         display: none;
