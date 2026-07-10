@@ -252,9 +252,9 @@ button, input, select, optgroup, textarea {
 #mobile { display: none; }
 
 @media screen and (max-width: 768px) {
-    #desktop { display: none; }
+    /* #desktop { display: none; }
 
-    #mobile { display: block; }
+    #mobile { display: block; } */
 
     .apps-list {
         display: grid;
@@ -346,13 +346,13 @@ button, input, select, optgroup, textarea {
 \*-----------------------------------*/
 
 #dock {
-    width: 80%;
-    position: fixed;
-    bottom: 20px;
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
     z-index: 50;
     user-select: none;
+    bottom: calc(.25rem * 5);
+    padding-inline: calc(.25rem * 5);
 }
 
 .dock-container {
@@ -360,22 +360,26 @@ button, input, select, optgroup, textarea {
     backdrop-filter: blur(12px);
     display: flex;
     align-items: flex-end;
-    justify-content: space-evenly;
     border-radius: 1rem;
     gap: 10px;
     padding: 8px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: calc(.25rem * 1.5);
+    align-items: flex-end;
+    gap: calc(.25rem * 1.5);
 }
 
 .dock-item {
-    /* width: 80px;
-    height: 80px; */
-    width: calc(.25rem * 14);
-    height: calc(.25rem * 14);
-    cursor: pointer;
     transition: transform 0.25s ease;
     display: flex;
     align-items: center;
+    translate: none;
+    rotate: none;
+    scale: none;
+    transform: translate(0px, 0px);
+    width: calc(.25rem * 14);
+    height: calc(.25rem * 14);
+    cursor: pointer;
 }
 
 .dock-item img {
@@ -392,20 +396,38 @@ button, input, select, optgroup, textarea {
 \*-----------------------------------*/
 
 @media screen and (max-width: 768px) {
-    #dock { width: 250px; }
-
-    #finder, #launchpad, #maps, #photos, #player, #facetime, #calendar, #reminders, #preview, #notes, #appstore, #settings, #siri, #terminal, #trash {
+    #launchpad, #safri, #messages, #maps, #photos, #player, #facetime, #reminders, #appstore, #settings, #siri {
         display: none;
     }
 
-    #phone { display: flex; }
+    .dock-item {
+        width: calc(.20rem * 14);
+        height: calc(.20rem * 14);
+    }
+
 }
 
 @media screen and (max-width: 500px) {
     #dock {
         width: 100%;
         bottom: 0;
+        padding-inline: 0;
     }
 
-    .dock-container { border-radius: 0; }
+    .dock-container { 
+        justify-content: space-evenly;
+        border-radius: 0; 
+    }
+
+    .dock-item {
+        width: calc(.30rem * 14);
+        height: calc(.30rem * 14);
+    }
+
+    #phone, #safri, #messages { display: flex; }
+
+    #finder, #calendar, #preview, #notes, #trash {
+        display: none;
+    }
 }
+
