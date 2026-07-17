@@ -66,7 +66,7 @@ button {
 }
 
 img, svg, video, canvas, audio, iframe, embed, object {
-    vertical-align: middle;
+    /* vertical-align: middle; */
     display: block;
 }
 
@@ -185,72 +185,9 @@ button, input, select, optgroup, textarea {
     height: 100vh;
 }
 
-.icons {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-}
-
-.icon-item img {
-    object-fit: cover;
-    height: calc(.25rem * 20);
-    width: calc(.25rem * 20);
-    z-index: 20;
-}
-
-/* @media screen and (max-width: 1024px) {
-    .desktop-apps li {
-        position: absolute;
-        text-align: center;
-        width: 90px;
-        height: 90px;
-        z-index: 20;
-    }
-
-    .desktop-apps li:nth-child(1) {
-        top: 100px;
-        right: 50px;
-    }
-
-    .desktop-apps li:nth-child(2) {
-        top: 220px;
-        right: 150px;
-    }
-
-    .desktop-apps li:nth-child(3) {
-        top: 350px;
-        right: 65px;
-    }
-
-    .desktop-apps li:nth-child(4) {
-        top: 400px;
-        left: 50px;
-    }
-
-    .desktop-apps li:nth-child(4) img { width: 100%; }
-
-    .desktop-apps li:nth-child(5) {
-        top: 500px;
-        left: 150px;
-    }
-
-    .desktop-apps li:nth-child(6) {
-        top: 550px;
-        right: 70px;
-    }  
-} */
-
-/* .desktop-apps {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-} */
-
 .icon-item {
     position: absolute;
     text-align: center;
-    /* width: 90px;
-    height: 90px; */
     height: calc(.25rem * 20);
     width: calc(.25rem * 20);
     z-index: 20;
@@ -289,111 +226,109 @@ button, input, select, optgroup, textarea {
 }
 
 /*-----------------------------------*\
-#WORKSPACE: MOBILE SCREEN
+#WORKSPACE: TABLET SCREEN
 \*-----------------------------------*/
 
-#mobile-apps { display: none; }
-
-.apps {
-    display: grid;
-    grid-template-rows: repeat(4, calc(.25rem * 20));
-    grid-template-columns: repeat(4, calc(.25rem * 20));
-    row-gap: 1.5rem;
-    column-gap: 5px;
-    align-items: center;
-    justify-content: center;
-    padding-inline: calc(.45rem * 5);
-    padding-top: 2rem;
-}
-
-.app-item {
-    transform-origin: 50%;
-    cursor: pointer;
-    transition-property: all;
-    text-align: center;
-    font-size: 10px;
-    height: calc(.25rem * 20);
-    width: calc(.25rem * 20);
-}
-
-.app-item img {
-    object-fit: cover;
-    height: calc(.25rem * 20);
-    width: calc(.25rem * 20);
-}
-
-.social-links {
-    margin-top: 4px;
-    height: calc(.22rem * 20);
-    width: calc(.24rem * 20);
-    background: rgba(255, 255, 255, 0.20);
-    backdrop-filter: blur(12px);
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 1rem;
-    padding-block: 5px;
-    align-items: center;
-    justify-content: start;
-    padding-inline: 9px;
-    gap: 2px;
-    /* background: black; */
-    margin-bottom: 5px;
-}
-
-.social-item img {
-    width: 17px;
-    height: 17px;
-}
-
-.social-item span { display: none; }
-
-#pages {
-    position: fixed;
-    bottom: 6.5rem;
-    left: 50%;
-    transform: translate(-50%, -10%);
-}
-
-.page-icon { font-size: 9px; }
-
-.page-icon:first-child { color: rgb(255 255 255); }
-
-.page-icon:last-child { color: rgba(255, 255, 255, 0.20); }
-
-@media screen and (max-width: 800px) {
-    #mobile-apps { 
-        display: block; 
-        padding-top: 5rem;
-        /* position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); */
-    }
-
-    #desktop-apps { display: none; }
-
-    .apps  {
+@media screen and (max-width: 899px) {
+    .apps {
         display: grid;
         grid-template-rows: repeat(4, calc(.30rem * 20));
         grid-template-columns: repeat(4, calc(.30rem * 20));
-        padding-top: 0;
+        row-gap: 1.5rem;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 10rem;
+        padding-inline: calc(.45rem * 5);
     }
 
-    .app-item img{
+    .app-item {
+        transform-origin: 50%;
+        cursor: pointer;
+        transition-property: all;
+        text-align: center;
+        font-size: 13px;
         height: calc(.30rem * 20);
         width: calc(.30rem * 20);
     }
 
-    .social-links {
-        height: calc(.27rem * 20);
-        width: calc(.27rem * 20);
-        gap: 3px;
-        padding-inline: 7px;
+    .app-item img {
+        object-fit: cover;
+        /* height: calc(.25rem * 20);
+        width: calc(.25rem * 20); */
+        width: 100%;
+        height: 100%;
     }
 
-    .social-item img {
-        width: 22px;
-        height: 20px;
+    .social-links {
+        margin-top: 4px;
+        height: calc(.28rem * 20);
+        width: calc(.29rem * 20);
+        background: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(12px);
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 1rem;
+        padding-block: 5px;
+        align-items: center;
+        justify-content: start;
+        padding-inline: 9px;
+        gap: 2px;
+        /* background: black; */
+        margin-bottom: 5px;
+    }
+
+    .social-item {
+        /* width: 17px;
+        height: 17px; */
+        height: calc(.10rem * 14);
+        width: calc(.10rem * 14);
+    }
+
+    .social-item span { display: none; }
+
+    #pages {
+        position: fixed;
+        bottom: 6.5rem;
+        left: 50%;
+        transform: translate(-50%, -10%);
+    }
+
+    .page-icon { font-size: 9px; }
+
+    .page-icon:first-child { color: rgb(255 255 255); }
+
+    .page-icon:last-child { color: rgba(255, 255, 255, 0.20); }
+}
+
+/*-----------------------------------*\
+#WORKSPACE: MOBILE SCREEN
+\*-----------------------------------*/
+
+@media screen and (max-width: 599px) {
+    .apps {
+        display: grid;
+        grid-template-rows: repeat(4, calc(.25rem * 20));
+        grid-template-columns: repeat(4, calc(.25rem * 20));
+        justify-content: center;
+        margin-top: 4rem;
+        column-gap: 5px;
+    }
+
+    .app-item {
+        font-size: 10px;
+        height: calc(.25rem * 20);
+        width: calc(.25rem * 20);
+    }
+
+    .social-links {
+        margin-top: 4px;
+        height: calc(.22rem * 20);
+        width: calc(.24rem * 20);
+    }
+
+    .social-item {
+        height: calc(.08rem * 14);
+        width: calc(.08rem * 14);
     }
 }
 
