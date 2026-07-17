@@ -397,8 +397,6 @@ button, input, select, optgroup, textarea {
     }
 }
 
-
-
 /*-----------------------------------*\
 #FOOTER: DESKTOP SCREEN
 \*-----------------------------------*/
@@ -449,33 +447,27 @@ button, input, select, optgroup, textarea {
 
 #phone { display: none; }
 
-@media screen and (max-width: 1000px) {
-    #maps, #facetime, #reminders, #trash { display: none; }
+@media screen and (max-width: 1240px) {
+    #maps, #facetime, #messages, #reminders, #siri { display: none; }
 }
 
 /*-----------------------------------*\
 #FOTTER: TABLET SCREEN
 \*-----------------------------------*/
 
-@media screen and (max-width: 800px) {
-    #finder, #launchpad, #safri, #messages, #maps, #photos, #facetime, #reminders, #appstore, #settings, #siri, #trash, #notes, #calendar {
+@media screen and (max-width: 899px) {
+    #finder, #launchpad, #maps, #photos, #gmail, #calendar, #appstore, #settings, #trash {
         display: none;
     }
 
-    .dock-item {
-        width: calc(.20rem * 14);
-        height: calc(.20rem * 14);
-    }
-
     #phone { display: flex; }
-
 }
 
 /*-----------------------------------*\
 #FOTTER: MOBILE SCREEN
 \*-----------------------------------*/
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 560px) {
     #dock {
         width: 100%;
         bottom: 0;
@@ -487,14 +479,9 @@ button, input, select, optgroup, textarea {
         border-radius: 0; 
     }
 
-    .dock-item {
-        width: calc(.30rem * 14);
-        height: calc(.30rem * 14);
-    }
-
     #safri, #messages { display: flex; }
 
-    #finder, #preview, #player {
+    #finder, #preview, #player, #notes {
         display: none;
     }
 }
