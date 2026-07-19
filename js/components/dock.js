@@ -1,4 +1,6 @@
+
 import { dockAnimation } from "../utils/dockAnimation.js";
+import { dockTooltip } from "../utils/tooltip.js";
 
 const dock = [
     {
@@ -195,4 +197,5 @@ export function Dock() {
 
     const dockContainer = document.querySelector(".dock-container");
     dockAnimation(dockContainer);
+    dockTooltip(dockContainer);
 }

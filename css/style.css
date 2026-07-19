@@ -425,3 +425,21 @@ button, input, select, optgroup, textarea {
     }
 }
 
+/*-----------------------------------*\
+#FOTTER: DOCK ITEM TOOLTIP
+\*-----------------------------------*/
+
+.tippy-box[data-theme~="mac"]{
+    padding: 5px 12px;
+    font-size: 13px;
+    /* font-weight: 500; */
+    border-radius: 8px;
+    backdrop-filter: blur(12px);
+    background-color: #bfdbfe;
+    color: #1e3a8a;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+
+} 
+
+.tippy-box[data-theme~="mac"] > .tippy-arrow::before { color: #bfdbfe; }
+

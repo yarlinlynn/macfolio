@@ -24,7 +24,9 @@ export function dockAnimation(dockContainer) {
                 // ease: "power3.out",
                 // overwrite: true
                 scale: 1 + 0.25 * intensity,
-                y: -15 * intensity,
+                // y: -15 * intensity,
+                // y: -8 * intensity,
+                y: -10 * intensity,
                 duration: 0.2,
                 ease: "power1.out",
                 overwrite: true
