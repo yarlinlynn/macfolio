@@ -1,4 +1,6 @@
 
+import { draggableNote } from "./stickyNote.js";
+
 export function Workspace() {
     const width = window.innerWidth;
     const workspace = document.getElementById('workspace');
@@ -108,7 +110,9 @@ export function Workspace() {
     } else {
         workspace.innerHTML = `
             <section id="desktop-apps">
-                <div class="sticky-note"></div>
+                <div class="sticky-note" id="note">
+                    <textarea placeholder="To do list"></textarea>
+                </div>
                 <ul class="icons">
                     <li class="icon-item">
                         <!-- project 1 -->
@@ -147,4 +151,7 @@ export function Workspace() {
             </section>
         `;
     }
+
+    draggableNote();
 }
+
