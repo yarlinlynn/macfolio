@@ -1,5 +1,6 @@
 
 import { dateAndTime } from "../utils/dateAndTime.js";
+import { toggleTheme } from "../utils/ theme.js";
 
 export function Header() {
     const width = window.innerWidth;
@@ -23,7 +24,7 @@ export function Header() {
     } else {
         header.innerHTML = `
             <ul>
-                <li class="desktop-icon">
+                <li class="apple-icon">
                     <img src="/assets/icons/logo.svg" alt="Apple Logo" loading="lazy"/>
                 </li>
                 <li class="desktop">Yarlin's Desktop</li>
@@ -60,7 +61,9 @@ export function Header() {
                             <img src="/assets/icons/search.svg" alt="Search" loading="lazy"/>
                         </li>
                         <li>
-                            <img src="/assets/icons/mode.svg" alt="Light/Dark Toggle " loading="lazy"/>
+                            <button class="toggle-theme" aria-label="Toggle light and dark mode">
+                                <img src="/assets/icons/mode.svg" alt="Light/Dark Toggle " loading="lazy"/>
+                            </button>
                         </li>
                         <li>
                             <img class="siri" src="/assets/icons/siri.png" alt="Siri" loading="lazy"/>
@@ -76,5 +79,6 @@ export function Header() {
         `;
     }
 
+    toggleTheme();
     dateAndTime();
 }
