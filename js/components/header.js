@@ -1,4 +1,6 @@
 
+import { dateAndTime } from "../utils/dateAndTime.js";
+
 export function Header() {
     const width = window.innerWidth;
     const header = document.getElementById('top-bar');
@@ -11,7 +13,7 @@ export function Header() {
                 <img src="/assets/icons/wifi.svg" alt="Wifi" loading="lazy"/>
             </div>
 
-            <span>14:20</span>
+            <span class="time"></span>
 
             <div class="battery-life">
                 95%
@@ -66,11 +68,13 @@ export function Header() {
                     </ul>
                 </li>
                 <li class="date-time">
-                    <span class="day">Tue July 7</span>
-                    <span class="time">14:17</span>
+                    <span class="day"></span>
+                    <span class="time"></span>
                 </li>
             </ul>
                     
         `;
     }
+
+    dateAndTime();
 }

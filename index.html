@@ -41,6 +41,13 @@
         <!-- dynamtically created dock component goes here -->
     </footer>
 
+    <!-- date and time library link -->
+    <script type="module">
+        import { format } from "https://cdn.jsdelivr.net/npm/date-fns@4.1.0/+esm";
+
+        window.dateFnsFormat = format;
+    </script>
+
     <!-- tippy.js link -->
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
