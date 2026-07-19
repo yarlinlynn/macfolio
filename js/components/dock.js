@@ -1,3 +1,4 @@
+import { dockAnimation } from "../utils/dockAnimation.js";
 
 const dock = [
     {
@@ -191,4 +192,7 @@ export function Dock() {
             <!-- desktop icon -->
         </ul/>
     `;
+
+    const dockContainer = document.querySelector(".dock-container");
+    dockAnimation(dockContainer);
 }

@@ -371,6 +371,9 @@ button, input, select, optgroup, textarea {
     width: calc(.25rem * 14);
     height: calc(.25rem * 14);
     cursor: pointer;
+    list-style: none;
+    transform-origin: center bottom;
+    will-change: transform;
 }
 
 .dock-item img {
@@ -378,6 +381,7 @@ button, input, select, optgroup, textarea {
     height: 100%;
     object-fit: contain;
     object-position: center;
+    pointer-events: none;
 }
 
 #phone { display: none; }
