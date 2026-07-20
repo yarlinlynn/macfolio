@@ -1,6 +1,6 @@
 
 // DOCK APPS
-export const dock = [
+export const dockIcons = [
     {
         id: "phone",
         name: "Phone",
