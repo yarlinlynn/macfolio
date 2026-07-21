@@ -1,5 +1,6 @@
 
 import { draggableNote } from "./stickyNote.js";
+import { socials } from "../constants/index.js";
 
 export function Workspace() {
     const width = window.innerWidth;
@@ -45,42 +46,13 @@ export function Workspace() {
                         <img src="/assets/apps/appstore.png" alt="App Store" loading="lazy"/>
                         <span>App Store</span>
                     </li>
-                    <li class="app-item">
+                    <li class="app-item" id="socialsContainer">
                         <ul class="social-links">
-                            <li class="social-item">
-                                <img src="/assets/apps/gmail.png" alt="Gmail" loading="lazy"/>
-                                <span>Gmail</span>
-                            </li>
-                            <li class="social-item">
-                                <img src="/assets/apps/github.png" alt="GitHub" loading="lazy"/>
-                                <span>GitHub</span>
-                            </li>
-                            <li class="social-item">
-                                <img src="/assets/apps/linkedin.png" alt="LinkedIn" loading="lazy"/>
-                                <span>LinkedIn</span>
-                            </li>
-
-                            <li class="social-item">
-                                <img src="/assets/apps/instagram.png" alt="Instagram" loading="lazy"/>
-                                <span>Instagram</span>
-                            </li>
-                            <li class="social-item">
-                                <img src="/assets/apps/twitter.png" alt="X" loading="lazy"/>
-                                <span>X</span>
-                            </li>
-                            <li class="social-item">
-                                <img src="/assets/apps/discord.png" alt="Discord" loading="lazy"/>
-                                <span>Discord</span>
-                            </li>
-
-                            <li class="social-item">
-                                <img src="/assets/apps/tiktok.png" alt="TikTok" loading="lazy"/>
-                                <span>TikTok</span>
-                            </li>
-                            <li class="social-item">
-                                <img src="/assets/apps/youtube.png" alt="YouTube" loading="lazy"/>
-                                <span>YouTube</span>
-                            </li>
+                            ${socials.map(social => `
+                                <li class="social-item" ${social.id}>
+                                    <img src="${social.img}" alt="${social.name}" loading="lazy"/>
+                                </li>
+                            `).join("")}
                         </ul>
                         <span>Socials</span>
                     </li>

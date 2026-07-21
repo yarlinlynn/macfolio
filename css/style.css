@@ -397,6 +397,8 @@ button, input, select, optgroup, textarea {
         height: calc(.08rem * 14);
         width: calc(.08rem * 14);
     }
+
+    .social-item:first-child { display: none; }
 }
 
 /*-----------------------------------*\
