@@ -220,7 +220,7 @@ button, input, select, optgroup, textarea {
     font-family: "Yuyu Short", sans-serif;
     /* font-family: Arial, sans-serif; */
     position: absolute;
-    top: 4rem;
+    top: 6rem;
     left: 9rem;
     width: 250px;
     min-height: 230px;
@@ -298,7 +298,8 @@ button, input, select, optgroup, textarea {
         row-gap: 1.5rem;
         align-items: center;
         justify-content: space-evenly;
-        margin-top: 10rem;
+        column-gap: 4rem;
+        /* margin-top: 10rem; */
         padding-inline: calc(.45rem * 5);
     }
 
@@ -311,6 +312,8 @@ button, input, select, optgroup, textarea {
         height: calc(.30rem * 20);
         width: calc(.30rem * 20);
     }
+
+    .app-item:last-child { display: none; }
 
     .app-item img {
         object-fit: cover;
@@ -366,6 +369,9 @@ button, input, select, optgroup, textarea {
 \*-----------------------------------*/
 
 @media screen and (max-width: 599px) {
+
+    #workspace { height: auto; }
+
     .apps {
         display: grid;
         grid-template-rows: repeat(4, calc(.25rem * 20));
@@ -456,11 +462,15 @@ button, input, select, optgroup, textarea {
 \*-----------------------------------*/
 
 @media screen and (max-width: 899px) {
-    #finder, #launchpad, #maps, #photos, #gmail, #calendar, #appstore, #settings, #trash {
+    #phone, #safri, #launchpad, #maps, #photos, #gmail, #calendar, #appstore, #settings, #trash, #notes {
         display: none;
     }
 
-    #phone { display: flex; }
+    .dock-item {
+        width: calc(.30rem * 14);
+        height: calc(.30rem * 14);
+    }
+
 }
 
 /*-----------------------------------*\
@@ -479,7 +489,12 @@ button, input, select, optgroup, textarea {
         border-radius: 0; 
     }
 
-    #safri, #messages { display: flex; }
+    .dock-item {
+        width: calc(.25rem * 20);
+        height: calc(.25rem * 20);
+    }
+
+    #phone, #safri, #messages { display: flex; }
 
     #finder, #preview, #player, #notes {
         display: none;
