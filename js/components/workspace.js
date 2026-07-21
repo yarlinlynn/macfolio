@@ -1,6 +1,8 @@
 
-import { draggableNote } from "./stickyNote.js";
 import { socials } from "../constants/index.js";
+
+import { draggableNote } from "./stickyNote.js";
+import { socialMediaElement } from "./socials.js";
 
 export function Workspace() {
     const width = window.innerWidth;
@@ -125,5 +127,6 @@ export function Workspace() {
     }
 
     draggableNote();
+    socialMediaElement();
 }
 
