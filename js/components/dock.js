@@ -8,9 +8,15 @@ export function Dock() {
 
     dock.innerHTML = `
         <ul class="dock-container">
-            ${dockIcons.map( ({id, name, icon}) => `
+            ${dockIcons.map( ({id, name, icon, url}) => `
                 <li class="dock-item" id="${id}">
-                    <img src="${icon}" alt="${name}" loading="lazy"/>
+                    ${url ?
+                        `<a href="${url}" target="_blank">
+                            <img src="${icon}" alt="${name}" loading="lazy"/>
+                        </a>`
+                        :
+                        `<img src="${icon}" alt="${name}" loading="lazy"/>`
+                    }
                 </li>
             `).join("")}
         </ul/>

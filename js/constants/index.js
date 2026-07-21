@@ -1,4 +1,5 @@
 
+
 // SOCIAL MEDIA LINKS
 export const socials = [
     {
@@ -6,35 +7,35 @@ export const socials = [
         name: "Phone",
         img: "/assets/apps/phone.png",
         icon: "ri-phone-fill",
-        url: "tel:+YOURNUMBERHERE",
+        url: "tel:+27846333377",
     },
     {
         id: "gmail",
         name: "Gmail",
         img: "/assets/apps/gmail.png",
         icon: "ri-mail-fill",
-        url: "mailto:you@example.com",
+        url: "mailto:yarlinlynn.com",
     },
     {
         id: "github",
         name: "GitHub",
         img: "/assets/apps/github.png",
         icon: "ri-github-fill",
-        url: "ttps://github.com/yourusername",
+        url: "https://github.com/yarlinlynn",
     },
     {
         id: "linkedin",
         name: "LinkedIn",
         img: "/assets/apps/linkedin.png",
         icon: "ri-linkedin-box-fill",
-        url: "https://linkedin.com/in/yourusername",
+        url: "https://www.linkedin.com/in/yarlin-lynn",
     },
     {
         id: "instagram",
         name: "Instagram",
         img: "/assets/apps/instagram.png",
         icon: "ri-instagram-fill",
-        url: "https://instagram.com/yourusername",
+        url: "https://www.instagram.com/yarlin.lynn_",
     },
     {
         id: "twitter",
@@ -48,14 +49,14 @@ export const socials = [
         name: "Discord",
         img: "/assets/apps/discord.png",
         icon: "ri-discord-fill",
-        url: "https://discord.com/yourusername",
+        url: "https://discord.com/users/1362060392846856325",
     },
     {
         id: "tiktok",
         name: "TikTok",
         img: "/assets/apps/tiktok.png",
         icon: "ri-tiktok-fill",
-        url: "https://tiktok.com/yourusername",
+        url: "https://www.tiktok.com/@yarlin.lynn_",
     },
 ];
 
@@ -64,7 +65,8 @@ export const dockIcons = [
     {
         id: "phone",
         name: "Phone",
-        icon: "/assets/apps/phone.png",    
+        icon: "/assets/apps/phone.png",  
+        url: "tel:+27846333377",  
         canOpen: true,
     },
     {
