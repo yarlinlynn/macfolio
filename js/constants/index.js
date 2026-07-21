@@ -1,4 +1,64 @@
 
+// SOCIAL MEDIA LINKS
+export const socials = [
+    {
+        id: "1",
+        name: "Phone",
+        img: "/assets/apps/phone.png",
+        icon: "ri-phone-fill",
+        url: "",
+    },
+    {
+        id: "2",
+        name: "Gmail",
+        img: "/assets/apps/gmail.png",
+        icon: "ri-mail-fill",
+        url: "",
+    },
+    {
+        id: "3",
+        name: "GitHub",
+        img: "/assets/apps/github.png",
+        icon: "ri-github-fill",
+        url: "",
+    },
+    {
+        id: "4",
+        name: "LinkedIn",
+        img: "/assets/apps/linkedin.png",
+        icon: "ri-linkedin-box-fill",
+        url: "",
+    },
+    {
+        id: "5",
+        name: "Instagram",
+        img: "/assets/apps/instagram.png",
+        icon: "ri-instagram-fill",
+        url: "",
+    },
+    {
+        id: "6",
+        name: "X",
+        img: "/assets/apps/twitter.png",
+        icon: "ri-twitter-x-fill",
+        url: "",
+    },
+    {
+        id: "7",
+        name: "Discord",
+        img: "/assets/apps/discord.png",
+        icon: "ri-discord-fill",
+        url: "",
+    },
+    {
+        id: "8",
+        name: "TikTok",
+        img: "/assets/apps/tiktok.png",
+        icon: "ri-tiktok-fill",
+        url: "",
+    },
+];
+
 // DOCK APPS
 export const dockIcons = [
     {
