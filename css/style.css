@@ -459,6 +459,8 @@ body.blurred > *:not(.social-preview.expanded):not(#overlay) {
         width: calc(.25rem * 20);
     }
 
+    .app-item:last-child { display: block; }
+
     .social-links {
         margin-top: 4px;
         height: calc(.22rem * 20);
