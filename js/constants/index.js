@@ -1,4 +1,23 @@
 
+// SKILL STACK
+export const techStack = [
+  {
+    category: "Frontend",
+    items: ["HTML", "CSS", "JavaScript", "React.js", "Bootstrap"],
+  },
+  {
+    category: "Styling",
+    items: ["Tailwind CSS","CSS", "Bootstrap"],
+  },
+  {
+    category: "Framework",
+    items: ["React.js"],
+  },
+  {
+    category: "Dev Tools",
+    items: ["Git", "GitHub", "VS Code"],
+  },
+];
 
 // SOCIAL MEDIA LINKS
 export const socials = [
@@ -67,7 +86,7 @@ export const dockIcons = [
         name: "Phone",
         icon: "/assets/apps/phone.png",  
         url: "tel:+27846333377",  
-        canOpen: true,
+        canOpen: false,
     },
     {
         id: "finder",
@@ -178,3 +197,246 @@ export const dockIcons = [
         canOpen: false,
     },
 ];
+
+// WORK FOLDER WITH INDIVIDUAL PROJECTS
+export const WORK_FOLDER = {
+    id: 1,
+    type: "work",
+    name: "Work",
+    icon: "/assets/icons/work.svg",
+    kind: "folder",
+    children: [
+        // PROJECT 1:
+        {
+            id: 5,
+            name: "Project 1",
+            icon: "/assets/docs/folder.png",
+            kind: "folder",
+            //position: "top-10 left-5",  ->icon position inside Finder
+            //windowPosition: "top-[45vh] left-[50rem]",  ->optional: Finder desktop window position
+            children: [
+                {
+                    id: 1,
+                    name: "Project 1.txt",
+                    icon: "/assets/docs/txt.png",
+                    kind: "file",
+                    fileType: "txt",
+                    //position: "top-5 left-10", ->file position in finder window
+                    description: [ 
+                        // insert project text here ...
+                    ]
+                },
+                {
+                    id: 2,
+                    name: "Project 1.img",
+                    icon: "/assets/docs/image.png",
+                    kind: "file",
+                    fileType: "img",
+                    //position: "top-52 right-80", ->img position in finder window
+                    imageUrl: "", //inert image path here
+                },
+                {
+                    id: 3,
+                    name: "Project 1.com",
+                    icon: "/assets/docs/plain.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "", //add project live link
+                    //position: "top-10 right-20",
+                }
+            ]
+        },
+
+        // PROJECT 2:
+        {
+            id: 6,
+            name: "Project 2",
+            icon: "/assets/docs/folder.png",
+            kind: "folder",
+            //position: "top-52 right-80",  ->icon position inside Finder
+            //windowPosition: "top-[10vh] left-10",  ->optional: Finder desktop window position
+            children: [
+                {
+                    id: 1,
+                    name: "Project 2.txt",
+                    icon: "/assets/docs/txt.png",
+                    kind: "file",
+                    fileType: "txt",
+                    //position: "top-5 right-10", ->file position in finder window
+                    description: [ 
+                        // insert project text here ...
+                    ]
+                },
+                {
+                    id: 2,
+                    name: "Project 2.img",
+                    icon: "/assets/docs/image.png",
+                    kind: "file",
+                    fileType: "img",
+                    //position: "top-52 left-80", ->img position in finder window
+                    imageUrl: "", //inert image path here
+                },
+                {
+                    id: 3,
+                    name: "Project 2.com",
+                    icon: "/assets/docs/plain.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "", //add project live link
+                    //position: "top-20 left-20",
+                }
+            ]
+        },
+
+        // PROJECT 3:
+        {
+            id: 7,
+            name: "Project 3",
+            icon: "/assets/docs/folder.png",
+            kind: "folder",
+            //position: "top-10 left-80",  ->icon position inside Finder
+            //windowPosition: "top-[70vh] right-7",  ->optional: Finder desktop window position
+            children: [
+                {
+                    id: 1,
+                    name: "Project 3.txt",
+                    icon: "/assets/docs/txt.png",
+                    kind: "file",
+                    fileType: "txt",
+                    //position: "top-5 left-10", ->file position in finder window
+                    description: [ 
+                        // insert project text here ...
+                    ]
+                },
+                {
+                    id: 2,
+                    name: "Project 3.img",
+                    icon: "/assets/docs/image.png",
+                    kind: "file",
+                    fileType: "img",
+                    //position: "top-52 right-80", ->img position in finder window
+                    imageUrl: "", //inert image path here
+                },
+                {
+                    id: 3,
+                    name: "Project 3.com",
+                    icon: "/assets/docs/plain.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "", //add project live link
+                    //position: "top-10 right-20",
+                }
+            ]
+        },
+    ]
+};
+
+// ABOUT ME FOLDER
+export const ABOUT_FOLDER = {
+    id: 2,
+    type: "work",
+    name: "Work",
+    icon: "/assets/icons/info.svg",
+    kind: "folder",
+    children: [
+        {
+            id: 1,
+            name: "About me",
+            icon: "/assets/docs/folder.png",
+            kind: "file",
+            fileType: "folder"
+        }
+    ]
+};
+
+// RESUME FOLDER
+export const RESUME_FOLDER = {
+    id: 3,
+    type: "resume",
+    name: "Resume",
+    icon: "/assets/icons/file.svg",
+    kind: "folder",
+    children: [
+        {
+            id: 1,
+            name: "Resume.pdf",
+            icon: "/assets/docs/pdf.png",
+            kind: "file",
+            fileType: "pdf",
+        },
+        {
+            id: 2,
+            name: "Cover Letter",
+            icon: "/assets/docs/txt.png",
+            kind: "file",
+            fileType: "txt",
+        }
+    ]
+};
+
+// TRASH PROJECTS FOLDER
+export const TRASH_FOLDER = {
+    id: 4,
+    type: "trash",
+    name: "Trash",
+    icon: "/assets/icons/trash.svg",
+    kind: "folder",
+    children: [
+        {
+            id: 1,
+            name: "portfolio.png",
+            icon: "/assets/icons/trash.svg",
+            kind: "file",
+            fileType: "img",
+        }
+    ]
+};
+
+export const locations = {
+  work: WORK_FOLDER,
+  about: ABOUT_FOLDER,
+  resume: RESUME_FOLDER,
+  trash: TRASH_FOLDER,
+};
+
+// WINDOW INDEX
+export const INITIAL_Z_INDEX = 1000;
+
+// ALL WINDOWS
+export const WINDOW_CONFIG = {
+    finder: {
+        isOpen: false,
+        zIndex: INITIAL_Z_INDEX,
+        data: null
+    },
+    files: {
+        isOpen: false,
+        zIndex: INITIAL_Z_INDEX,
+        data: null
+    },
+    notes: {
+        isOpen: false,
+        zIndex: INITIAL_Z_INDEX,
+        data: null
+    },
+    resume: {
+        isOpen: false,
+        zIndex: INITIAL_Z_INDEX,
+        data: null
+    },
+    gmail: {
+        isOpen: false,
+        zIndex: INITIAL_Z_INDEX,
+        data: null
+    },
+    txtfile: {
+        isOpen: false,
+        zIndex: INITIAL_Z_INDEX,
+        data: null
+    },
+    imgfile: {
+        isOpen: false,
+        zIndex: INITIAL_Z_INDEX,
+        data: null
+    },
+};
