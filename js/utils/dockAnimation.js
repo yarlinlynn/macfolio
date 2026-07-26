@@ -2,6 +2,11 @@
 export function dockAnimation(dockContainer) {
     if(!dockContainer) return;
 
+    // only enable dock animation on desktop
+    if(window.matchMedia("(max-width: 899px)").matches) {
+        return;
+    }
+
     const dockIcons = document.querySelectorAll(".dock-item");
 
     function animateDockIcons(mouseX) {
@@ -18,17 +23,10 @@ export function dockAnimation(dockContainer) {
             );
 
             gsap.to(icon, {
-                // scale: 1 + 0.55 * intensity,
-                // y: -25 * intensity,
-                // duration: 0.15,
-                // ease: "power3.out",
-                // overwrite: true
                 scale: 1 + 0.25 * intensity,
-                // y: -15 * intensity,
-                // y: -8 * intensity,
                 y: -10 * intensity,
-                duration: 0.2,
-                ease: "power1.out",
+                duration: 0.1,
+                ease: "power2.out",     
                 overwrite: true
             })
         })
