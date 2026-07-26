@@ -1,6 +1,8 @@
 
 import { socials } from "../constants/index.js";
 
+import { windowManager } from "../state/WindowManager.js";
+
 import { draggableNote } from "./stickyNote.js";
 import { socialMediaElement } from "./socials.js";
 
@@ -66,7 +68,7 @@ export function Workspace() {
                         <img src="/assets/apps/calculator.png" alt="Calculator" loading="lazy"/>
                         <span>Calculator</span>
                     </li>
-                    <li class="app-item">
+                    <li class="app-item" id="notes-mobile">
                         <img src="/assets/apps/notes.png" alt="Notes" loading="lazy"/>
                         <span>Notes</span>
                     </li>
@@ -128,5 +130,12 @@ export function Workspace() {
 
     draggableNote();
     socialMediaElement();
+
+    const notesMobileWindow = document.getElementById("notes-mobile");
+    if(notesMobileWindow) {
+            notesMobileWindow.addEventListener("click", () => {
+            windowManager.open("notes");
+        });
+    }
 }
 

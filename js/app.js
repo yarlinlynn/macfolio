@@ -2,10 +2,13 @@ import { Header } from "./components/header.js";
 import { Dock } from "./components/dock.js";
 import { Workspace } from "./components/workspace.js";
 
+import { Notes } from "./windows/Notes.js";
+
 document.addEventListener('DOMContentLoaded', () => {
     Header();
     Workspace()
     Dock();
+    Notes()
 });
 
 window.addEventListener('DOMContentLoaded', () => {
