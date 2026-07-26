@@ -72,7 +72,7 @@ export function Workspace() {
                         <img src="/assets/apps/notes.png" alt="Notes" loading="lazy"/>
                         <span>Notes</span>
                     </li>
-                    <li class="app-item">
+                    <li class="app-item" id="files-mobile">
                         <img src="/assets/apps/files.png" alt="Finder" loading="lazy"/>
                         <span>Finder</span>
                     </li>
@@ -135,6 +135,13 @@ export function Workspace() {
     if(notesMobileWindow) {
             notesMobileWindow.addEventListener("click", () => {
             windowManager.open("notes");
+        });
+    }
+
+    const filesWindow = document.getElementById("files-mobile");
+    if(filesWindow) {
+            filesWindow.addEventListener("click", () => {
+            windowManager.open("files");
         });
     }
 }
