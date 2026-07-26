@@ -89,41 +89,7 @@ export function Workspace() {
                 <div class="sticky-note" id="note">
                     <textarea placeholder="To do list"></textarea>
                 </div>
-                <ul class="icons">
-                    <li class="icon-item">
-                        <!-- project 1 -->
-                        <img src="/assets/docs/folder.png" alt="" loading="lazy"/>
-                        <span>project 1</span>
-                    </li>
-                    <li class="icon-item">
-                        <!-- project 2 -->
-                        <img src="/assets/docs/folder.png" alt="" loading="lazy"/>
-                        <span>project 2</span>
-                    </li>
-                    <li class="icon-item">
-                        <!-- project 3 -->
-                        <img src="/assets/docs/folder.png" alt="" loading="lazy"/>
-                        <span>project 3</span>
-                    </li>
-
-                    <li class="icon-item">
-                        <!-- resume -->
-                        <img src="/assets/docs/pdf.png" alt="" loading="lazy"/>
-                        <span>resume.pdf</span>
-                    </li>
-
-                    <li class="icon-item">
-                        <!-- about me -->
-                        <img src="/assets/docs/folder.png" alt="" loading="lazy"/>
-                        <span>about me</span>
-                    </li>
-
-                    <li class="icon-item">
-                        <!-- project info -->
-                        <img src="/assets/apps/mac.png" alt="Project Info" loading="lazy"/>
-                        <span></span>
-                    </li>
-                </ul>
+                
             </section>
         `;
     }
