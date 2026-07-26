@@ -4,6 +4,7 @@ import { Workspace } from "./components/workspace.js";
 
 import { Notes } from "./windows/Notes.js";
 import { Files } from "./windows/Files.js";
+import { Finder } from "./windows/Finder.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     Header();
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Dock();
     Notes();
     Files();
+    Finder();
 });
 
 window.addEventListener('DOMContentLoaded', () => {
