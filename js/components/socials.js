@@ -1,5 +1,6 @@
 
 import { socials } from "../constants/index.js";
+import { windowManager } from "../state/WindowManager.js";
 
 let socialPreview = null;
 let originalRect = null;
@@ -65,6 +66,16 @@ function openSocialPreview() {
     });
 
     document.body.appendChild(socialPreview);
+
+    // attach eventListener for gmail icon to open gmail window
+    const gmail = socialPreview.querySelector("#gmail");
+    gmail?.addEventListener("click", (e) => {
+        e.preventDefault();       
+        e.stopPropagation();       
+
+        closeSocialPreview();
+        windowManager.open("gmail");
+    });
 
     const mobile = window.matchMedia("(max-width: 599px)").matches;
     requestAnimationFrame( () => {

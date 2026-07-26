@@ -5,6 +5,7 @@ import { Workspace } from "./components/workspace.js";
 import { Notes } from "./windows/Notes.js";
 import { Files } from "./windows/Files.js";
 import { Finder } from "./windows/Finder.js";
+import { Gmail } from "./windows/Gmail.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     Header();
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Notes();
     Files();
     Finder();
+    Gmail();
 });
 
 window.addEventListener('DOMContentLoaded', () => {
