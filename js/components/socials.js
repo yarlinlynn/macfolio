@@ -60,16 +60,38 @@ function openSocialPreview() {
         left: `${rect.left}px`,
         top: `${rect.top}px`,
         width: `${rect.width}px`,
-        height: `${rect.height}px`,
+        // height: `${rect.height}px`,
+        transform: "none"
     });
 
     document.body.appendChild(socialPreview);
 
-
-    // animate outward
-    requestAnimationFrame(() => {
-        socialPreview.classList.add("expanded");
-    });
+    const mobile = window.matchMedia("(max-width: 599px)").matches;
+    requestAnimationFrame( () => {
+        if(mobile) {
+            gsap.to(socialPreview, {
+                left: "50%",
+                top: "40%",
+                xPercent: -50,
+                yPercent: -50,
+                width: "80vw",
+                // height: "45dvh",
+                duration: 0.35,
+                ease: "power3.out"
+            })
+        } else {
+            gsap.to(socialPreview, {
+                left: "50%",
+                top: "50%",
+                xPercent: -50,
+                yPercent: -50,
+                width: "50vw",
+                // height: "520px",
+                duration: 0.35,
+                ease: "power3.out"
+            })
+        }
+    })
 }
 
 function closeSocialPreview() {
@@ -78,8 +100,30 @@ function closeSocialPreview() {
 
     document.body.classList.remove("blurred");
 
-    socialPreview.remove("expanded");
+    gsap.to(socialPreview, {
 
-    socialPreview = null;
-    originalRect = null;
+        left: originalRect.left,
+        top: originalRect.top,
+        width: originalRect.width,
+        height: originalRect.height,
+
+        xPercent: 0,
+        yPercent: 0,
+
+        duration: .25,
+
+        ease: "power2.in",
+
+        onComplete: () => {
+
+            socialPreview.remove();
+
+            socialPreview = null;
+
+            originalRect = null;
+
+        }
+
+    });
+
 }
