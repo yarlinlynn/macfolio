@@ -582,3 +582,90 @@ button, input, select, optgroup, textarea {
 
 .tippy-box[data-theme~="mac"] > .tippy-arrow::before { color: #bfdbfe; }
 
+/*-----------------------------------*\
+#GENERAL WINDOW STYLES
+\*-----------------------------------*/
+
+.window {
+    background: var(--background);
+    border-radius: .625rem;
+}
+
+/*-----------------------------------*\
+#WINDOW CONTROLS
+\*-----------------------------------*/
+
+.window-controls, .window-buttons {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.window-header {
+    border-top-left-radius: .625rem;
+    border-top-right-radius: .625rem;
+    padding-inline: calc(.25rem * 4);
+    padding-block: calc(.25rem * 3);
+    border-bottom: 1px solid lightgrey;
+    -webkit-user-select: none;
+    user-select: none;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.window-back { display: none; }
+
+.window-btn {
+    width: calc(.25rem * 3.5);
+    height: calc(.25rem * 3.5);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: .75rem;
+    color: #000;
+    padding: 0;
+}
+
+.window-btn i { display: none; }
+
+.window-buttons:hover .window-btn i { display: block; }
+
+.window-btn.close { background-color: #ff6157; }
+
+.window-btn.minimize { background-color: #ffc030; }
+
+.window-btn.maximize { background-color: #2acb42; }
+
+.window-btn.maximize i { transform: rotate(45deg); }
+
+@media screen and (max-width: 560px) {
+    .window { border-radius: 0; }
+
+    .window-back { display: block; }
+
+    .window-buttons { display: none; }
+}
+
+/*-----------------------------------*\
+#NOTES WINDO COMPONENT
+\*-----------------------------------*/
+
+#notes.window {
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+@media screen and (max-width: 599px) {
+    #notes.window {
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+}
