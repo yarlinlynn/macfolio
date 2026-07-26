@@ -199,7 +199,7 @@ button, input, select, optgroup, textarea {
 
 @media screen and (max-width: 600px) {
     #top-bar {
-        padding-inline: 2px;
+        padding-inline: 4px;
     }
 }
 
@@ -210,10 +210,6 @@ button, input, select, optgroup, textarea {
 #workspace {
     margin: 0;
     background-color: rgb(218 178 255);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-self: center;
 }
 
 .sticky-note {
@@ -291,6 +287,13 @@ button, input, select, optgroup, textarea {
 \*-----------------------------------*/
 
 @media screen and (max-width: 899px) {
+    #workspace {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .apps {
         display: grid;
         grid-template-rows: repeat(4, calc(.30rem * 20));
