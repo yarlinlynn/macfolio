@@ -8,8 +8,13 @@ export function WindowControls(target) {
     controls.innerHTML = `
         <!-- Mobile -->
         <button class="window-back close">
-            <i class="ri-arrow-left-s-line"></i>
-            <span>Go Back</span>
+            <div>
+                <i class="ri-arrow-left-s-line"></i>
+                <span>Go Back</span>
+            </div>
+            <span>
+                <i class="ri-close-circle-fill"></i>
+            </span>
         </button>
 
         <!-- Desktop -->

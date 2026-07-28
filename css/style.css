@@ -590,6 +590,21 @@ button, input, select, optgroup, textarea {
     background: var(--background);
     border-radius: .625rem;
     position: absolute;
+    /* width: 42rem; */
+    width: 30rem;
+    overflow: hidden;
+    border-radius: calc(.625rem + 4px);
+}
+
+.grid-row {
+    padding-block: 0.5rem;
+    border-bottom: 1px solid lightgray;
+    padding-inline: 0.5rem;
+}
+
+.grid-row input {
+    border: none;
+    padding-inline-start: 1rem;
 }
 
 /*-----------------------------------*\
@@ -613,6 +628,7 @@ button, input, select, optgroup, textarea {
     justify-content: space-between;
     align-items: center;
     display: flex;
+    color: rgb(153 161 175);
 }
 
 .window-back { display: none; }
@@ -644,14 +660,7 @@ button, input, select, optgroup, textarea {
 .window-btn.maximize i { transform: rotate(45deg); }
 
 @media screen and (max-width: 560px) {
-    .window { 
-        border-radius: 0; 
-        /* width: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 100vh; */
-    }
+    .window { border-radius: 0; }
 
     .window-back { display: block; }
 
@@ -659,15 +668,125 @@ button, input, select, optgroup, textarea {
 }
 
 /*-----------------------------------*\
-#NOTES WINDO COMPONENT
+#NOTES WINDOW 
 \*-----------------------------------*/
 
 #notes.window {
-    width: 500px;
-    /* position: absolute; */
-    top: 50%;
-    left: 50%;
+    top: calc(.25rem * 92);
+    /* left: 8.33333%; */
+    left: 3rem;
 }
+
+/*-----------------------------------*\
+#EMAIL WINDOW
+\*-----------------------------------*/
+
+#gmail.window {
+    top: calc(.25rem * 60);
+    /* left: 41.6667%;  */
+    right: 2rem;
+    height: 450px;
+}
+
+.window-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.window-header p { font-weight: 500; }
+
+.mobile-header-actions { display: none; }
+
+.window-content i { color: rgb(153 161 175); }
+
+.emailWindowFooter {
+    display: flex;
+    align-items: center;
+    margin-inline: 1rem;
+    position: fixed;
+    bottom: 1rem;
+}
+
+.window-content .desktop-send {
+    background: #2d53b1;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin-inline-end: 1rem;
+}
+
+.window-content .desktop-send i { color: white; }
+
+.message-container {
+    flex: 1;
+}
+
+#message {
+    border: none;
+    width: 100%;
+    height: 68%;
+    /* height: 100%; */
+    resize: none;
+    overflow-y: auto;
+    padding-inline: 5px;
+    margin-block-start: 1rem;
+}
+
+#message:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: transparent; 
+}
+
+.ri-delete-bin-6-line {
+    position: fixed;
+    right: 1rem;
+}
+
+@media screen and (max-width: 599px) {
+    #gmail.window {
+        bottom: 0;
+        top: 10%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 90vh;
+        border-top-left-radius: calc(.625rem + 4px);
+        border-top-right-radius: calc(.625rem + 4px);
+    }
+
+    #gmail.window .window-back div,
+    .window-header p { display: none; }
+
+    #gmail.window .window-back span i,
+    .mobile-header-actions i { font-size: 1.5rem; }
+
+    #gmail.window .window-header { flex-direction: row-reverse; }
+
+    .emailWindowFooter { display: none; }
+
+    .mobile-header-actions { 
+        display: flex;
+        margin-left: auto;
+        gap: 10px;
+    }
+
+}
+
+/*-----------------------------------*\
+#FINDER WINDOW 
+\*-----------------------------------*/
+
+#finder.window {
+    top: calc(.25rem * 20);
+    left: calc(.25rem * 40);
+}
+
+/*-----------------------------------*\
+#FILES WINDOW 
+\*-----------------------------------*/
+
 
 @media screen and (max-width: 599px) {
     #notes.window,
