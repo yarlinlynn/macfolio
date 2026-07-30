@@ -664,7 +664,7 @@ button, input, select, optgroup, textarea {
 
     .window-back { display: block; }
 
-    .window-buttons { display: none; }
+    .window-buttons, .email-close { display: none; }
 }
 
 /*-----------------------------------*\
@@ -842,6 +842,8 @@ button, input, select, optgroup, textarea {
         border-top-left-radius: calc(.625rem + 4px);
         border-top-right-radius: calc(.625rem + 4px);
     }
+
+    .email-close { display: block; }
 
     #gmail.window .window-back div,
     .window-header p { display: none; }

@@ -12,7 +12,7 @@ export function WindowControls(target) {
                 <i class="ri-arrow-left-s-line"></i>
                 <span>Go Back</span>
             </div>
-            <span>
+            <span class="email-close">
                 <i class="ri-close-circle-fill"></i>
             </span>
         </button>
