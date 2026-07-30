@@ -232,7 +232,7 @@ export const WORK_FOLDER = {
             name: "Project 1",
             icon: "/assets/docs/folder.png",
             kind: "folder",
-            //position: "top-10 left-5",  ->icon position inside Finder
+            position: "left: calc(.25rem * 5); top: calc(.25rem * 10);",  //->icon position inside Finder
             //windowPosition: "top-[45vh] left-[50rem]",  ->optional: Finder desktop window position
             children: [
                 {
@@ -241,7 +241,7 @@ export const WORK_FOLDER = {
                     icon: "/assets/docs/txt.png",
                     kind: "file",
                     fileType: "txt",
-                    //position: "top-5 left-10", ->file position in finder window
+                    position: "left: calc(.25rem * 10); top: calc(.25rem * 5);", //->file position in finder window
                     description: [ 
                         // insert project text here ...
                     ]
@@ -252,17 +252,26 @@ export const WORK_FOLDER = {
                     icon: "/assets/docs/image.png",
                     kind: "file",
                     fileType: "img",
-                    //position: "top-52 right-80", ->img position in finder window
+                    position: "top: calc(.25rem * 52); right: calc(.25rem * 80);", //->file position in finder window
                     imageUrl: "", //inert image path here
                 },
                 {
                     id: 3,
                     name: "Project 1.com",
-                    icon: "/assets/docs/plain.png",
+                    icon: "/assets/apps/safri.png",
                     kind: "file",
                     fileType: "url",
                     href: "", //add project live link
-                    //position: "top-10 right-20",
+                    position: "right: calc(.25rem * 20); top: calc(.25rem * 50);", //->file position in finder window
+                },
+                {
+                    id: 4,
+                    name: "Project 1.mov",
+                    icon: "/assets/docs/plain.png",
+                    kind: "file",
+                    fileType: "video",
+                    href: "", //add project live link
+                    position: "top: calc(.25rem * 10); right: calc(.25rem * 20);", //->file position in finder window
                 }
             ]
         },
@@ -273,7 +282,7 @@ export const WORK_FOLDER = {
             name: "Project 2",
             icon: "/assets/docs/folder.png",
             kind: "folder",
-            //position: "top-52 right-80",  ->icon position inside Finder
+            position: "top: calc(.25rem * 52); right: calc(.25rem * 80);",  //->icon position inside Finder
             //windowPosition: "top-[10vh] left-10",  ->optional: Finder desktop window position
             children: [
                 {
@@ -282,7 +291,7 @@ export const WORK_FOLDER = {
                     icon: "/assets/docs/txt.png",
                     kind: "file",
                     fileType: "txt",
-                    //position: "top-5 right-10", ->file position in finder window
+                    position: "top: calc(.25rem * 5); right: calc(.25rem * 10);", //->file position in finder window
                     description: [ 
                         // insert project text here ...
                     ]
@@ -293,17 +302,26 @@ export const WORK_FOLDER = {
                     icon: "/assets/docs/image.png",
                     kind: "file",
                     fileType: "img",
-                    //position: "top-52 left-80", ->img position in finder window
+                    position: "left: calc(.25rem * 80); top: calc(.25rem * 52);", //->img position in finder window
                     imageUrl: "", //inert image path here
                 },
                 {
                     id: 3,
                     name: "Project 2.com",
-                    icon: "/assets/docs/plain.png",
+                    icon: "/assets/apps/safri.png",
                     kind: "file",
                     fileType: "url",
                     href: "", //add project live link
-                    //position: "top-20 left-20",
+                    position: "left: calc(.25rem * 20); top: calc(.25rem * 20);", //->file position in finder window
+                },
+                {
+                    id: 4,
+                    name: "Project 2.mov",
+                    icon: "/assets/docs/plain.png",
+                    kind: "file",
+                    fileType: "video",
+                    href: "", //add project live link
+                    position: "left: calc(.25rem * 5); top: calc(.25rem * 50);", //->file position in finder window
                 }
             ]
         },
@@ -314,7 +332,7 @@ export const WORK_FOLDER = {
             name: "Project 3",
             icon: "/assets/docs/folder.png",
             kind: "folder",
-            //position: "top-10 left-80",  ->icon position inside Finder
+            position: "left: calc(.25rem * 80); top: calc(.25rem * 10);",  //->icon position inside Finder
             //windowPosition: "top-[70vh] right-7",  ->optional: Finder desktop window position
             children: [
                 {
@@ -323,7 +341,7 @@ export const WORK_FOLDER = {
                     icon: "/assets/docs/txt.png",
                     kind: "file",
                     fileType: "txt",
-                    //position: "top-5 left-10", ->file position in finder window
+                    position: "top: calc(.25rem * 5); left: calc(.25rem * 10);", //->file position in finder window
                     description: [ 
                         // insert project text here ...
                     ]
@@ -334,17 +352,26 @@ export const WORK_FOLDER = {
                     icon: "/assets/docs/image.png",
                     kind: "file",
                     fileType: "img",
-                    //position: "top-52 right-80", ->img position in finder window
+                    position: "top: calc(.25rem * 52); right: calc(.25rem * 80);", //->img position in finder window
                     imageUrl: "", //inert image path here
                 },
                 {
                     id: 3,
-                    name: "Project 3.com",
-                    icon: "/assets/docs/plain.png",
+                    name: "Project 2.com",
+                    icon: "/assets/apps/safri.png",
                     kind: "file",
                     fileType: "url",
                     href: "", //add project live link
-                    //position: "top-10 right-20",
+                    position: "right: calc(.25rem * 20); top: calc(.25rem * 10);", //->file position in finder window
+                },
+                {
+                    id: 4,
+                    name: "Project 2.mov",
+                    icon: "/assets/docs/plain.png",
+                    kind: "file",
+                    fileType: "video",
+                    href: "", //add project live link
+                    position: "right: calc(.25rem * 20); top: calc(.25rem * 45);", //->file position in finder window
                 }
             ]
         },
@@ -355,7 +382,7 @@ export const WORK_FOLDER = {
 export const ABOUT_FOLDER = {
     id: 2,
     type: "work",
-    name: "Work",
+    name: "About me",
     icon: "/assets/icons/info.svg",
     kind: "folder",
     children: [
@@ -364,7 +391,8 @@ export const ABOUT_FOLDER = {
             name: "About me",
             icon: "/assets/docs/folder.png",
             kind: "file",
-            fileType: "folder"
+            fileType: "folder",
+            position: "left: calc(.25rem * 5); top: calc(.25rem * 10);", //->file position in finder window
         }
     ]
 };
@@ -383,6 +411,7 @@ export const RESUME_FOLDER = {
             icon: "/assets/docs/pdf.png",
             kind: "file",
             fileType: "pdf",
+            position: "left: calc(.25rem * 5); top: calc(.25rem * 10);", //->file position in finder window
         },
         {
             id: 2,
@@ -390,6 +419,7 @@ export const RESUME_FOLDER = {
             icon: "/assets/docs/txt.png",
             kind: "file",
             fileType: "txt",
+            position: "top: calc(.25rem * 28); right: calc(.25rem * 65);", //->file position in finder window
         }
     ]
 };
@@ -405,9 +435,20 @@ export const TRASH_FOLDER = {
         {
             id: 1,
             name: "portfolio.png",
-            icon: "/assets/icons/trash.svg",
+            icon: "/assets/docs/image.png",
             kind: "file",
             fileType: "img",
+            imageUrl: "", //inert image path here
+            position: "top: calc(.25rem * 10); left: calc(.25rem * 10);", //->file position in finder window
+        },
+        {
+            id: 2,
+            name: "Project 1.mov",
+            icon: "/assets/docs/plain.png",
+            kind: "file",
+            fileType: "video",
+            videoUrl: "", //inert image path here
+            position: "top: calc(.25rem * 40); left: calc(.25rem * 80);", //->file position in finder window
         }
     ]
 };
