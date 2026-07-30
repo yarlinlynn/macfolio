@@ -1,4 +1,24 @@
 
+// QUESTIONS AND ANSWES: FAQ
+export const faq = [
+    {
+        question: "Tell me about yourself.",
+        answer: "I'm a software developer specializing in frontend with a passion for building responsive and interactive web applications."
+    },
+    {
+        question: "What technologies do you use?",
+        answer: "HTML, CSS, JavaScript, React, Git/GitHub, Tailwind CSS, Bootstrap"
+    },
+    {
+        question: "What are you currently learning?",
+        answer: "I'm expanding my frontend knowledge by learning GSAP for better and immersive animations and frontend experiences while building full-scale web applications using HTML, CSS & JavaScript"
+    },
+    {
+        question: "Are you available for work?",
+        answer: "Yes! I'm currently looking for frontend developer opportunities."
+    }
+]
+
 // SKILL STACK
 export const techStack = [
   {
