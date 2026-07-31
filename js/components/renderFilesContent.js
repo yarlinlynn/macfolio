@@ -3,6 +3,7 @@ import { windowManager } from "../state/WindowManager.js";
 
 import { ImagePreview } from "../windows/Images.js";
 import { TextPreview } from "../windows/Text.js";
+import { ResumePreview, renderPdf } from "../windows/Resume.js";
 
 // render files content/files/docs
 export function renderFilesContent({
@@ -43,6 +44,36 @@ export function renderFilesContent({
 
         return;
     }
+
+    // pdf preview
+    if (current.type === "pdf") {
+        container.innerHTML = `
+            ${renderBreadcrumb(navigation)}
+            ${ResumePreview(current.data)}
+        `;
+        const canvas = container.querySelector("canvas");
+        renderPdf(current.data.pdfUrl, canvas);
+
+        attachEventListeners({
+            header,
+            container,
+            navigation
+        });
+        return;
+    }
+    // if (current.type === "pdf") {
+    //     container.innerHTML = `
+    //         ${renderBreadcrumb(navigation)}
+    //         ${ResumePreview(current.data)}
+    //     `;
+
+    //     attachEventListeners({
+    //         header,
+    //         container,
+    //         navigation
+    //     });
+    //     return;
+    // }
 
     container.innerHTML = `
         ${renderBreadcrumb(navigation)}
@@ -190,7 +221,26 @@ function openItem({
     switch(item.fileType) {
         // open pdf
         case "pdf":
-            windowManager.open("resume",item);
+            // Desktop
+            if (window.innerWidth >= 768) {
+                windowManager.open("resume", item);
+                break;
+            }
+
+            // Mobile Files
+            navigation.push({
+                name: item.name,
+                type: "pdf",
+                data: item
+            });
+
+            renderFilesContent({
+                header,
+                container,
+                navigation
+            });
+
+            // windowManager.open("resume",item);
             break;
 
         // open text file

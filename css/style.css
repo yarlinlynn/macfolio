@@ -1113,6 +1113,25 @@ button, input, select, optgroup, textarea {
 #RESUME WINDOW 
 \*-----------------------------------*/
 
+#resume {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28rem;
+}
+
+#resume .window-header h3 {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.resume-download svg { padding: calc(.25rem * 1); }
+
+#resume .text-content { height: 630px; }
+
+@media screen and (max-width: 599px) {
+    #resume-preview-canvas { width: 100%; }
+}
 
 /*-----------------------------------*\
 #IMAGE WINDOW 

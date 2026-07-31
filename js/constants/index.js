@@ -457,6 +457,7 @@ export const RESUME_FOLDER = {
             kind: "file",
             fileType: "pdf",
             position: "left: calc(.25rem * 5); top: calc(.25rem * 10);", //->file position in finder window
+            pdfUrl: "/assets/files/Resume-2026.pdf"
         },
         {
             id: 2,
@@ -465,6 +466,7 @@ export const RESUME_FOLDER = {
             kind: "file",
             fileType: "pdf",
             position: "top: calc(.25rem * 28); right: calc(.25rem * 65);", //->file position in finder window
+            pdfUrl: "/assets/files/Resume-2026.pdf"
         }
     ]
 };

@@ -41,6 +41,13 @@
         <!-- dynamtically created dock component goes here -->
     </footer>
 
+    <!-- pdf library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc =
+            "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+    </script>
+
     <!-- date and time library link -->
     <script type="module">
         import { format } from "https://cdn.jsdelivr.net/npm/date-fns@4.1.0/+esm";
