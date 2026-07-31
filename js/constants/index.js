@@ -244,6 +244,7 @@ export const WORK_FOLDER = {
                     position: "left: calc(.25rem * 10); top: calc(.25rem * 5);", //->file position in finder window
                     description: [ 
                         // insert project text here ...
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cupiditate expedita deleniti, aut eum tempora omnis! Doloremque molestiae consequuntur inventore rerum odio quis non! Deleniti facere, neque commodi nihil at voluptas ab, sequi dicta, rerum fugiat nobis a adipisci magnam numquam. Quos a error beatae rerum architecto ducimus voluptas. Suscipit!"
                     ]
                 },
                 {
@@ -253,7 +254,7 @@ export const WORK_FOLDER = {
                     kind: "file",
                     fileType: "img",
                     position: "top: calc(.25rem * 52); right: calc(.25rem * 80);", //->file position in finder window
-                    imageUrl: "", //inert image path here
+                    imageUrl: "/assets/images/projectImages/old-portfolio.png", //inert image path here
                 },
                 {
                     id: 3,
@@ -294,6 +295,7 @@ export const WORK_FOLDER = {
                     position: "top: calc(.25rem * 5); right: calc(.25rem * 10);", //->file position in finder window
                     description: [ 
                         // insert project text here ...
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cupiditate expedita deleniti, aut eum tempora omnis! Doloremque molestiae consequuntur inventore rerum odio quis non! Deleniti facere, neque commodi nihil at voluptas ab, sequi dicta, rerum fugiat nobis a adipisci magnam numquam. Quos a error beatae rerum architecto ducimus voluptas. Suscipit!"
                     ]
                 },
                 {
@@ -303,7 +305,7 @@ export const WORK_FOLDER = {
                     kind: "file",
                     fileType: "img",
                     position: "left: calc(.25rem * 80); top: calc(.25rem * 52);", //->img position in finder window
-                    imageUrl: "", //inert image path here
+                    imageUrl: "/assets/images/projectImages/old-portfolio.png", //inert image path here
                 },
                 {
                     id: 3,
@@ -344,6 +346,7 @@ export const WORK_FOLDER = {
                     position: "top: calc(.25rem * 5); left: calc(.25rem * 10);", //->file position in finder window
                     description: [ 
                         // insert project text here ...
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cupiditate expedita deleniti, aut eum tempora omnis! Doloremque molestiae consequuntur inventore rerum odio quis non! Deleniti facere, neque commodi nihil at voluptas ab, sequi dicta, rerum fugiat nobis a adipisci magnam numquam. Quos a error beatae rerum architecto ducimus voluptas. Suscipit!"
                     ]
                 },
                 {
@@ -353,7 +356,7 @@ export const WORK_FOLDER = {
                     kind: "file",
                     fileType: "img",
                     position: "top: calc(.25rem * 52); right: calc(.25rem * 80);", //->img position in finder window
-                    imageUrl: "", //inert image path here
+                    imageUrl: "/assets/images/projectImages/old-portfolio.png", //inert image path here
                 },
                 {
                     id: 3,
@@ -390,10 +393,52 @@ export const ABOUT_FOLDER = {
             id: 1,
             name: "About me",
             icon: "/assets/docs/folder.png",
-            kind: "file",
+            kind: "folder",
             fileType: "folder",
+            mobileMode: "profile",
             position: "left: calc(.25rem * 5); top: calc(.25rem * 10);", //->file position in finder window
-        }
+
+            children: [
+                {
+                    id: 1,
+                    name: "profile.txt",
+                    icon: "/assets/docs/txt.png",
+                    kind: "file",
+                    fileType: "txt",
+                    // finderHidden: true,
+                    position: "top: calc(.25rem * 5); left: calc(.25rem * 10);", //->file position in finder window
+                    description: [ 
+                        // insert project text here ...
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cupiditate expedita deleniti, aut eum tempora omnis! Doloremque molestiae consequuntur inventore rerum odio quis non! Deleniti facere, neque commodi nihil at voluptas ab, sequi dicta, rerum fugiat nobis a adipisci magnam numquam. Quos a error beatae rerum architecto ducimus voluptas. Suscipit!",
+
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cupiditate expedita deleniti, aut eum tempora omnis! Doloremque molestiae consequuntur inventore rerum odio quis non! Deleniti facere, neque commodi nihil at voluptas ab, sequi dicta, rerum fugiat nobis a adipisci magnam numquam. Quos a error beatae rerum architecto ducimus voluptas. Suscipit!",
+
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cupiditate expedita deleniti, aut eum tempora omnis! Doloremque molestiae consequuntur inventore rerum odio quis non! Deleniti facere, neque commodi nihil at voluptas ab, sequi dicta, rerum fugiat nobis a adipisci magnam numquam. Quos a error beatae rerum architecto ducimus voluptas. Suscipit!. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cupiditate expedita deleniti, aut eum tempora omnis! Doloremque molestiae consequuntur inventore rerum odio quis non! Deleniti facere, neque commodi nihil at voluptas ab, sequi dicta, rerum fugiat nobis a adipisci magnam numquam. Quos a error beatae rerum architecto ducimus voluptas. Suscipit!"
+                    ],
+                    imageUrl: "/assets/images/profileImages/profile.jpg",
+                },
+                {
+                    id: 2,
+                    name: "profile.img",
+                    icon: "/assets/docs/image.png",
+                    kind: "file",
+                    fileType: "img",
+                    // finderHidden: true,
+                    position: "top: calc(.25rem * 52); right: calc(.25rem * 80);", //->img position in finder window
+                    imageUrl: "/assets/images/profileImages/profile.jpg", //inert image path here
+                },
+                {
+                    id: 3,
+                    name: "profile.img",
+                    icon: "/assets/docs/image.png",
+                    kind: "file",
+                    fileType: "img",
+                    // finderHidden: true,
+                    position: "top: calc(.25rem * 52); right: calc(.25rem * 80);", //->img position in finder window
+                    imageUrl: "/assets/images/profileImages/profile.jpg", //inert image path here
+                },
+            ]
+        },
     ]
 };
 
@@ -418,7 +463,7 @@ export const RESUME_FOLDER = {
             name: "Cover Letter",
             icon: "/assets/docs/txt.png",
             kind: "file",
-            fileType: "txt",
+            fileType: "pdf",
             position: "top: calc(.25rem * 28); right: calc(.25rem * 65);", //->file position in finder window
         }
     ]
@@ -438,7 +483,7 @@ export const TRASH_FOLDER = {
             icon: "/assets/docs/image.png",
             kind: "file",
             fileType: "img",
-            imageUrl: "", //inert image path here
+            imageUrl: "./assets/images/projectImages/old-portfolio.png", //inert image path here
             position: "top: calc(.25rem * 10); left: calc(.25rem * 10);", //->file position in finder window
         },
         {

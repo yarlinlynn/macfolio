@@ -26,6 +26,14 @@
     /* FONT: */
     --font-georama: "Georama", sans-serif;
     --font-roboto: "Roboto Mono", monospace;
+
+    /* window sizing */
+    --container-xs: 20rem;
+    --container-md: 28rem;
+    --container-xl: 36rem;
+    --container-2xl: 42rem;
+    --container-3xl: 48rem;
+    --container-4xl: 56rem;
 }
 
 /*-----------------------------------*\
@@ -612,6 +620,7 @@ button, input, select, optgroup, textarea {
     width: 30rem;
     overflow: hidden;
     border-radius: calc(.625rem + 4px);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .grid-row {
@@ -925,9 +934,6 @@ button, input, select, optgroup, textarea {
     border-radius: calc(.625rem - 2px);
     padding-inline: calc(.25rem * 3);
     padding-block: calc(.25rem * 2);
-    /* transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration)); */
     display: flex;
     flex-direction: row;
 }
@@ -1102,3 +1108,56 @@ button, input, select, optgroup, textarea {
         height: 100vh;
     }
 }
+
+/*-----------------------------------*\
+#RESUME WINDOW 
+\*-----------------------------------*/
+
+
+/*-----------------------------------*\
+#IMAGE WINDOW 
+\*-----------------------------------*/
+
+#imgfile {
+    top: calc(.25rem * 40);
+    width: 36rem;
+    border-radius: calc(.625rem + 4px);
+    background-color: var(--color-white);
+    
+    left: 16.6667%;
+    overflow: hidden;
+}
+
+.image-window-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.image-window-icons svg { padding: calc(.25rem * 1); }
+
+.image-content {
+    background-color: var(--background);
+    max-height: 70vh;
+    /* padding: calc(.25rem * 2); */
+}
+
+@media screen and (max-width: 599px) {
+    .image-preview{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-inline: calc(.25rem * 5);
+        padding-block: calc(.25rem * 2);
+        height: 50%;
+    }
+}
+
+/*-----------------------------------*\
+#TEXT WINDOW 
+\*-----------------------------------*/
+
+
+/*-----------------------------------*\
+#VIDEO WINDOW 
+\*-----------------------------------*/
