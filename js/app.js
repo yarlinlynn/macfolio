@@ -1,3 +1,5 @@
+import { windowManager } from "./state/WindowManager.js";
+
 import { Header } from "./components/header.js";
 import { Dock } from "./components/dock.js";
 import { Workspace } from "./components/workspace.js";

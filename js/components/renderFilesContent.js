@@ -61,19 +61,6 @@ export function renderFilesContent({
         });
         return;
     }
-    // if (current.type === "pdf") {
-    //     container.innerHTML = `
-    //         ${renderBreadcrumb(navigation)}
-    //         ${ResumePreview(current.data)}
-    //     `;
-
-    //     attachEventListeners({
-    //         header,
-    //         container,
-    //         navigation
-    //     });
-    //     return;
-    // }
 
     container.innerHTML = `
         ${renderBreadcrumb(navigation)}
@@ -239,8 +226,6 @@ function openItem({
                 container,
                 navigation
             });
-
-            // windowManager.open("resume",item);
             break;
 
         // open text file
@@ -256,7 +241,6 @@ function openItem({
                 container,
                 navigation
             })
-            // windowManager.open("txtfile",item);
             break;
 
         // open image file
@@ -272,7 +256,6 @@ function openItem({
                 container,
                 navigation
             })
-            // windowManager.open("imgfile",item);
             break;
 
         // open external link

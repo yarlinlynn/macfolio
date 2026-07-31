@@ -413,7 +413,7 @@ export const ABOUT_FOLDER = {
 
                         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cupiditate expedita deleniti, aut eum tempora omnis! Doloremque molestiae consequuntur inventore rerum odio quis non! Deleniti facere, neque commodi nihil at voluptas ab, sequi dicta, rerum fugiat nobis a adipisci magnam numquam. Quos a error beatae rerum architecto ducimus voluptas. Suscipit!",
 
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cupiditate expedita deleniti, aut eum tempora omnis! Doloremque molestiae consequuntur inventore rerum odio quis non! Deleniti facere, neque commodi nihil at voluptas ab, sequi dicta, rerum fugiat nobis a adipisci magnam numquam. Quos a error beatae rerum architecto ducimus voluptas. Suscipit!. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cupiditate expedita deleniti, aut eum tempora omnis! Doloremque molestiae consequuntur inventore rerum odio quis non! Deleniti facere, neque commodi nihil at voluptas ab, sequi dicta, rerum fugiat nobis a adipisci magnam numquam. Quos a error beatae rerum architecto ducimus voluptas. Suscipit!"
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cupiditate expedita deleniti, aut eum tempora omnis! Doloremque molestiae consequuntur inventore rerum odio quis non! Deleniti facere, neque commodi nihil at voluptas ab, sequi dicta, rerum fugiat nobis a adipisci magnam numquam. Quos a error beatae rerum architecto ducimus voluptas. Suscipit!"
                     ],
                     imageUrl: "/assets/images/profileImages/profile.jpg",
                 },
@@ -543,6 +543,11 @@ export const WINDOW_CONFIG = {
         data: null
     },
     imgfile: {
+        isOpen: false,
+        zIndex: INITIAL_Z_INDEX,
+        data: null
+    },
+    aboutme: {
         isOpen: false,
         zIndex: INITIAL_Z_INDEX,
         data: null

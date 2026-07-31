@@ -118,10 +118,7 @@ button {
     font-family: inherit;
 }
 
-img, svg, video, canvas, audio, iframe, embed, object {
-    /* vertical-align: middle; */
-    display: block;
-}
+img, svg, video, canvas, audio, iframe, embed, object { display: block; }
 
 img, video {
     max-width: 100%;
@@ -240,7 +237,6 @@ button, input, select, optgroup, textarea {
 
 .sticky-note {
     font-family: "Yuyu Short", sans-serif;
-    /* font-family: Arial, sans-serif; */
     position: absolute;
     top: 6rem;
     left: 9rem;
@@ -328,8 +324,6 @@ button, input, select, optgroup, textarea {
         align-items: center;
         justify-content: space-evenly;
         column-gap: 4rem;
-        /* margin-top: 10rem; */
-        /* padding-inline: calc(.45rem * 5); */
     }
 
     .app-item {
@@ -386,12 +380,6 @@ button, input, select, optgroup, textarea {
     .page-icon:first-child { color: rgb(255 255 255); }
 
     .page-icon:last-child { color: rgba(255, 255, 255, 0.20); }
-
-    /* SOCIAL MEDIA ELEMENT COMPONENT: */
-    /* body.blurred > *:not(.social-preview.expanded):not(#overlay) {
-        filter: blur(10px);
-        transition: filter .3s ease;
-    } */
 
     body.blurred > *:not(.social-preview):not(#overlay) {
         filter: blur(10px);
@@ -597,7 +585,6 @@ button, input, select, optgroup, textarea {
 .tippy-box[data-theme~="mac"]{
     padding: 5px 12px;
     font-size: 13px;
-    /* font-weight: 500; */
     border-radius: 8px;
     backdrop-filter: blur(12px);
     background-color: #bfdbfe;
@@ -616,7 +603,6 @@ button, input, select, optgroup, textarea {
     background: var(--background);
     border-radius: .625rem;
     position: absolute;
-    /* width: 42rem; */
     width: 30rem;
     overflow: hidden;
     border-radius: calc(.625rem + 4px);
@@ -692,7 +678,7 @@ button, input, select, optgroup, textarea {
 
     .window-back { display: block; }
 
-    .window-buttons, .email-close { display: none; }
+    .window-buttons { display: none; }
 }
 
 /*-----------------------------------*\
@@ -701,7 +687,6 @@ button, input, select, optgroup, textarea {
 
 #notes.window {
     top: calc(.25rem * 99);
-    /* left: 8.33333%; */
     right: 2rem;
     height: 280px;
     display: flex;
@@ -709,19 +694,13 @@ button, input, select, optgroup, textarea {
     overflow: hidden;
 }
 
-.window-header {
-    flex-shrink: 0;
-}
-
-/* .window-header div { font-size: 17px; } */
+.window-header { flex-shrink: 0; }
 
 .window-header .header-icons { font-size: 17px; }
 
 .window-header .header-icons:nth-child(1) { margin-left: -3rem; }
 
 #notes.window .window-content {
-    /* height: 200px;       */
-    /* height: auto; */
     flex: 1;
     min-height: 0;
     overflow-y: auto;
@@ -798,7 +777,6 @@ button, input, select, optgroup, textarea {
 
 #gmail.window {
     top: calc(.25rem * 60);
-    /* left: 41.6667%;  */
     right: 2rem;
     height: 450px;
 }
@@ -833,15 +811,12 @@ button, input, select, optgroup, textarea {
 
 .window-content .desktop-send i { color: white; }
 
-.message-container {
-    flex: 1;
-}
+.message-container { flex: 1; }
 
 #message {
     border: none;
     width: 100%;
     height: 68%;
-    /* height: 100%; */
     resize: none;
     overflow-y: auto;
     padding-inline: 5px;
@@ -871,8 +846,6 @@ button, input, select, optgroup, textarea {
         border-top-right-radius: calc(.625rem + 4px);
     }
 
-    .email-close { display: block; }
-
     #gmail.window .window-back div,
     .window-header p { display: none; }
 
@@ -899,8 +872,6 @@ button, input, select, optgroup, textarea {
     top: calc(.25rem * 50);
     left: calc(.25rem * 50);
     width: 40rem;
-    /* height: 20vh; */
-
 }
 
 .finder-content {
@@ -920,7 +891,6 @@ button, input, select, optgroup, textarea {
 .sidebar h3 {
     margin-bottom: calc(.25rem * 1);
     font-size: .75rem;
-    /* line-height: var(--tw-leading, var(--text-xs--line-height)); */
     font-weight: 500;
     color: rgb(153 161 175);;
 }
@@ -971,7 +941,6 @@ button, input, select, optgroup, textarea {
 .finder-content {
     max-width: 42rem;
     background-color: var(--background);
-    /* padding: calc(.25rem * 8); */
     color: var(--text);
     flex: 1;
     position: relative;
@@ -1021,7 +990,6 @@ button, input, select, optgroup, textarea {
 .files-header {
     display:flex;
     align-items:center;
-    /* justify-content:center; */
     position:relative;
     padding:.75rem;
     border-bottom:1px solid var(--window-header-border);
@@ -1158,7 +1126,6 @@ button, input, select, optgroup, textarea {
 .image-content {
     background-color: var(--background);
     max-height: 70vh;
-    /* padding: calc(.25rem * 2); */
 }
 
 @media screen and (max-width: 599px) {
@@ -1180,7 +1147,6 @@ button, input, select, optgroup, textarea {
     top: calc(.25rem * 85);
     right: calc(.25rem * 12);
     width: 23rem;
-    /* background: var(--background); */
 }
 
 .text-window-icons svg { color: rgb(153 161 175); }

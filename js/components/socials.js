@@ -9,23 +9,19 @@ export function socialMediaElement() {
     const socialMediaEl = document.getElementById("socialsContainer");
     if (!socialMediaEl) return;
 
-
     // opens social media component
     socialMediaEl.addEventListener("click", openSocialPreview);
 
     // closes social media component
     document.addEventListener("click", (event) => {
-
         if (!socialPreview) return;
 
         const clickedPreview = event.target.closest(".social-preview");
         const clickedLauncher = event.target.closest("#socialsContainer");
 
-
         if (!clickedPreview && !clickedLauncher) {
             closeSocialPreview();
         }
-
     });
     
 }
@@ -86,7 +82,6 @@ function openSocialPreview() {
                 xPercent: -50,
                 yPercent: -50,
                 width: "80vw",
-                // height: "45dvh",
                 duration: 0.35,
                 ease: "power3.out"
             })
@@ -97,7 +92,6 @@ function openSocialPreview() {
                 xPercent: -50,
                 yPercent: -50,
                 width: "50vw",
-                // height: "520px",
                 duration: 0.35,
                 ease: "power3.out"
             })
@@ -106,35 +100,23 @@ function openSocialPreview() {
 }
 
 function closeSocialPreview() {
-
     if (!socialPreview) return;
-
     document.body.classList.remove("blurred");
-
     gsap.to(socialPreview, {
-
         left: originalRect.left,
         top: originalRect.top,
         width: originalRect.width,
         height: originalRect.height,
-
         xPercent: 0,
         yPercent: 0,
-
         duration: .25,
-
         ease: "power2.in",
 
         onComplete: () => {
-
             socialPreview.remove();
-
             socialPreview = null;
-
             originalRect = null;
-
         }
 
     });
-
 }

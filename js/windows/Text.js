@@ -15,15 +15,6 @@ export function Text(parent=document.body) {
     // CONTENT
     const content = document.createElement("div");
     content.className="text-content";
-    // window.renderContent = function(item) {
-    //     content.innerHTML = `
-    //         ${item.imageUrl ? ` <img src="${item.imageUrl}" alt="${item.name}" loading="lazy"/>` : ""}
-
-    //         <div class="text">
-    //             ${item.description.map(text => `<p>${text}</p>`).join("")}
-    //         </div>
-    //     `;
-    // }
     window.renderContent = function(item) {
         content.innerHTML = `
             ${item.imageUrl ? `
@@ -58,15 +49,4 @@ export function TextPreview(item) {
             </div>
         </div>
     `;
-    // return `
-    //     <div class="text-preview">
-    //         ${item.imageUrl ? `
-    //             <img class="text-preview-image" src="${item.imageUrl}" alt="${item.name}" loading="lazy" />    
-    //         ` : `
-    //             <div class="text-content">
-    //                 ${item.description.map(text => `<p>{text}</p>`).join("")}}
-    //             </div>
-    //         `}
-    //     </div>
-    // `;
 }

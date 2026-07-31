@@ -86,21 +86,14 @@ function attachClickEvents(container, locationState) {
 
     // change folder content
     container.querySelectorAll(".folder-item").forEach(folderElement => {
-
         folderElement.addEventListener("click", () => {
-
-            // const folder = locationState.activeLocation.children.find(
-            //     child => child.id === Number(folderElement.dataset.id)
-            // );
             const folder = getFinderChildren(locationState.activeLocation).find(
                 child => child.id === Number(folderElement.dataset.id)
             )
 
             if (!folder) return;
             openItem(folder, container, locationState);
-
         });
-
     });
 }
 
@@ -108,7 +101,8 @@ function attachClickEvents(container, locationState) {
 function openItem(item, container, locationState) {
 
     // about me folder doesn't redner inner folder files
-    if (item.name === "About me" && item.children) {
+    if (item.kind === "folder" && item.name === "About me") {
+        windowManager.open("aboutme", item);
         return;
     }
 
@@ -147,13 +141,6 @@ function openItem(item, container, locationState) {
         windowManager.open("txtfile", item);
     }
 }
-
-// don't render about me folder files
-// function getFinderChildren(location) {
-//     return (location.children || []).filter(
-//         item => !item.finderHidden
-//     );
-// }
 
 function getFinderChildren(location) {
     return location.children || [];
