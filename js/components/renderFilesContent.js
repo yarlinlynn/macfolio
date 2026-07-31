@@ -2,6 +2,7 @@
 import { windowManager } from "../state/WindowManager.js";
 
 import { ImagePreview } from "../windows/Images.js";
+import { TextPreview } from "../windows/Text.js";
 
 // render files content/files/docs
 export function renderFilesContent({
@@ -24,6 +25,22 @@ export function renderFilesContent({
             container,
             navigation
         });
+        return;
+    }
+
+    // text preview
+    if (current.type === "text") {
+        container.innerHTML = `
+            ${renderBreadcrumb(navigation)}
+            ${TextPreview(current.data)}
+        `;
+
+        attachEventListeners({
+            header,
+            container,
+            navigation
+        });
+
         return;
     }
 
@@ -178,7 +195,18 @@ function openItem({
 
         // open text file
         case "txt":
-            windowManager.open("txtfile",item);
+            navigation.push({
+                name: item.name,
+                type: "text",
+                data: item
+            });
+
+            renderFilesContent({
+                header,
+                container,
+                navigation
+            })
+            // windowManager.open("txtfile",item);
             break;
 
         // open image file

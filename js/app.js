@@ -7,6 +7,7 @@ import { Files } from "./windows/Files.js";
 import { Finder } from "./windows/Finder.js";
 import { Gmail } from "./windows/Gmail.js";
 import { Images } from "./windows/Images.js";
+import { Text } from "./windows/Text.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     Header();
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Finder();
     Gmail();
     Images();
+    Text();
 });
 
 window.addEventListener('DOMContentLoaded', () => {

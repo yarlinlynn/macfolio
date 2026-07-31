@@ -1119,12 +1119,12 @@ button, input, select, optgroup, textarea {
 \*-----------------------------------*/
 
 #imgfile {
-    top: calc(.25rem * 40);
+    top: calc(.25rem * 27);
     width: 36rem;
     border-radius: calc(.625rem + 4px);
     background-color: var(--color-white);
     
-    left: 16.6667%;
+    left: 55%;
     overflow: hidden;
 }
 
@@ -1157,6 +1157,41 @@ button, input, select, optgroup, textarea {
 #TEXT WINDOW 
 \*-----------------------------------*/
 
+#txtfile {
+    top: calc(.25rem * 85);
+    right: calc(.25rem * 12);
+    width: 23rem;
+    /* background: var(--background); */
+}
+
+.text-window-icons svg { color: rgb(153 161 175); }
+
+.text-preview,
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.text-preview {
+    padding-inline: calc(.25rem * 5);
+    padding-block: calc(.25rem * 4);
+    align-items: center;
+ }
+
+@media screen and (max-width: 599px) {
+    .text-preview {
+        padding-bottom: calc(.25rem * 5);
+        padding-top: calc(.25rem * 10);
+        padding-inline: calc(.25rem * 5);
+        align-items: start;
+    }
+
+    .text-preview-image {
+        border-radius: 50%;
+        width: 8rem;
+    }
+}
 
 /*-----------------------------------*\
 #VIDEO WINDOW 
