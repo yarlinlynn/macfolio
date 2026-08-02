@@ -229,7 +229,7 @@ export const WORK_FOLDER = {
         // PROJECT 1:
         {
             id: 5,
-            name: "Project 1",
+            name: "Kanban Task Board",
             icon: "/assets/docs/folder.png",
             kind: "folder",
             position: "left: calc(.25rem * 5); top: calc(.25rem * 10);",  //->icon position inside Finder
@@ -237,50 +237,45 @@ export const WORK_FOLDER = {
             children: [
                 {
                     id: 1,
-                    name: "Project 1.txt",
+                    name: "Kanban.txt",
                     icon: "/assets/docs/txt.png",
                     kind: "file",
                     fileType: "txt",
                     position: "left: calc(.25rem * 10); top: calc(.25rem * 5);", //->file position in finder window
                     description: [ 
                         // insert project text here ...
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cupiditate expedita deleniti, aut eum tempora omnis! Doloremque molestiae consequuntur inventore rerum odio quis non! Deleniti facere, neque commodi nihil at voluptas ab, sequi dicta, rerum fugiat nobis a adipisci magnam numquam. Quos a error beatae rerum architecto ducimus voluptas. Suscipit!"
+                        "A modern task management web application built with HTML5, Tailwind CSS, JavaScript and LocalStorage API. The app allows users to create, organize, and prioritize tasks with an intuitive interface and dark/light theme support.",
+
+                        "The main features include a task management system where users can create new tasks via a dynamic modal form which includes a task title, description, status (Todo, In Progress, Done), priority (High, Medium, Low) where aasks are automatically sorted by priority for better organization and validation ensures a task cannot be created without a title. User interface was fully styled using Tailwind CSS for a responsive, clean, and modern look with dark and light mode with smooth toggle functionality which syncs theme preference across both desktop and mobile toggles and user’s theme choice is saved to localStorage and persists on reload. Project has a show/hide sidebar functionality for distraction-free task focus, tasks that are saved in localStorage so data persists across page reloads and newly created tasks are automatically stored and re-rendered into the DOM",
+
+                        "This project was developed as part of learning JavaScript, showcasing the concepts and skills I’ve learned along the way. It reflects my growth in building interactive applications, handling data persistence, and creating user-friendly interfaces.",
                     ]
                 },
                 {
                     id: 2,
-                    name: "Project 1.img",
+                    name: "Kanban.img",
                     icon: "/assets/docs/image.png",
                     kind: "file",
                     fileType: "img",
                     position: "top: calc(.25rem * 52); right: calc(.25rem * 80);", //->file position in finder window
-                    imageUrl: "/assets/images/projectImages/old-portfolio.png", //inert image path here
+                    imageUrl: "/assets/images/projectImages/kanban-light.png", //inert image path here
                 },
                 {
                     id: 3,
-                    name: "Project 1.com",
-                    icon: "/assets/apps/safri.png",
-                    kind: "file",
-                    fileType: "url",
-                    href: "", //add project live link
-                    position: "right: calc(.25rem * 20); top: calc(.25rem * 50);", //->file position in finder window
-                },
-                {
-                    id: 4,
-                    name: "Project 1.mov",
+                    name: "kanban.com",
                     icon: "/assets/docs/plain.png",
                     kind: "file",
-                    fileType: "video",
-                    href: "", //add project live link
+                    fileType: "url",
+                    href: "https://kanban-taskboard-made-simple.netlify.app/", //add project live link
                     position: "top: calc(.25rem * 10); right: calc(.25rem * 20);", //->file position in finder window
-                }
+                },
             ]
         },
 
         // PROJECT 2:
         {
             id: 6,
-            name: "Project 2",
+            name: "Space Tourism",
             icon: "/assets/docs/folder.png",
             kind: "folder",
             position: "top: calc(.25rem * 52); right: calc(.25rem * 80);",  //->icon position inside Finder
@@ -288,96 +283,41 @@ export const WORK_FOLDER = {
             children: [
                 {
                     id: 1,
-                    name: "Project 2.txt",
+                    name: "Space Tourism.txt",
                     icon: "/assets/docs/txt.png",
                     kind: "file",
                     fileType: "txt",
                     position: "top: calc(.25rem * 5); right: calc(.25rem * 10);", //->file position in finder window
                     description: [ 
                         // insert project text here ...
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cupiditate expedita deleniti, aut eum tempora omnis! Doloremque molestiae consequuntur inventore rerum odio quis non! Deleniti facere, neque commodi nihil at voluptas ab, sequi dicta, rerum fugiat nobis a adipisci magnam numquam. Quos a error beatae rerum architecto ducimus voluptas. Suscipit!"
+                        "A responsive multi-page space tourism website built as a front-end project to showcase modern web development practices, responsive design, and interactive user experiences. The application allows users to explore space destinations, meet crew members, and discover cutting-edge space technology through an engaging and visually immersive interface.",
+
+                        "Each page features rich imagery, responsive layouts, and interactive content that creates an engaging experience while demonstrating strong front-end development skills.",
                     ]
                 },
                 {
                     id: 2,
-                    name: "Project 2.img",
+                    name: "Space Tourism.img",
                     icon: "/assets/docs/image.png",
                     kind: "file",
                     fileType: "img",
                     position: "left: calc(.25rem * 80); top: calc(.25rem * 52);", //->img position in finder window
-                    imageUrl: "/assets/images/projectImages/old-portfolio.png", //inert image path here
+                    imageUrl: "/assets/images/projectImages/space-tourism.png", //inert image path here
                 },
                 {
                     id: 3,
-                    name: "Project 2.com",
-                    icon: "/assets/apps/safri.png",
-                    kind: "file",
-                    fileType: "url",
-                    href: "", //add project live link
-                    position: "left: calc(.25rem * 20); top: calc(.25rem * 20);", //->file position in finder window
-                },
-                {
-                    id: 4,
-                    name: "Project 2.mov",
+                    name: "Space Tourism.com",
                     icon: "/assets/docs/plain.png",
                     kind: "file",
-                    fileType: "video",
-                    href: "", //add project live link
-                    position: "left: calc(.25rem * 5); top: calc(.25rem * 50);", //->file position in finder window
-                }
+                    fileType: "url",
+                    href: "https://space-tourism-website-multi-page.netlify.app/", //add project live link
+                    position: "left: calc(.25rem * 20); top: calc(.25rem * 20);", //->file position in finder window
+                },
             ]
         },
 
         // PROJECT 3:
-        {
-            id: 7,
-            name: "Project 3",
-            icon: "/assets/docs/folder.png",
-            kind: "folder",
-            position: "left: calc(.25rem * 80); top: calc(.25rem * 10);",  //->icon position inside Finder
-            //windowPosition: "top-[70vh] right-7",  ->optional: Finder desktop window position
-            children: [
-                {
-                    id: 1,
-                    name: "Project 3.txt",
-                    icon: "/assets/docs/txt.png",
-                    kind: "file",
-                    fileType: "txt",
-                    position: "top: calc(.25rem * 5); left: calc(.25rem * 10);", //->file position in finder window
-                    description: [ 
-                        // insert project text here ...
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cupiditate expedita deleniti, aut eum tempora omnis! Doloremque molestiae consequuntur inventore rerum odio quis non! Deleniti facere, neque commodi nihil at voluptas ab, sequi dicta, rerum fugiat nobis a adipisci magnam numquam. Quos a error beatae rerum architecto ducimus voluptas. Suscipit!"
-                    ]
-                },
-                {
-                    id: 2,
-                    name: "Project 3.img",
-                    icon: "/assets/docs/image.png",
-                    kind: "file",
-                    fileType: "img",
-                    position: "top: calc(.25rem * 52); right: calc(.25rem * 80);", //->img position in finder window
-                    imageUrl: "/assets/images/projectImages/old-portfolio.png", //inert image path here
-                },
-                {
-                    id: 3,
-                    name: "Project 2.com",
-                    icon: "/assets/apps/safri.png",
-                    kind: "file",
-                    fileType: "url",
-                    href: "", //add project live link
-                    position: "right: calc(.25rem * 20); top: calc(.25rem * 10);", //->file position in finder window
-                },
-                {
-                    id: 4,
-                    name: "Project 2.mov",
-                    icon: "/assets/docs/plain.png",
-                    kind: "file",
-                    fileType: "video",
-                    href: "", //add project live link
-                    position: "right: calc(.25rem * 20); top: calc(.25rem * 45);", //->file position in finder window
-                }
-            ]
-        },
+        
     ]
 };
 
@@ -409,11 +349,13 @@ export const ABOUT_FOLDER = {
                     position: "top: calc(.25rem * 5); left: calc(.25rem * 10);", //->file position in finder window
                     description: [ 
                         // insert project text here ...
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cupiditate expedita deleniti, aut eum tempora omnis! Doloremque molestiae consequuntur inventore rerum odio quis non! Deleniti facere, neque commodi nihil at voluptas ab, sequi dicta, rerum fugiat nobis a adipisci magnam numquam. Quos a error beatae rerum architecto ducimus voluptas. Suscipit!",
+                        "Hey there I'm Yarlin, a software developer who enjoys building sleek, interactive websites that actually work well",
 
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cupiditate expedita deleniti, aut eum tempora omnis! Doloremque molestiae consequuntur inventore rerum odio quis non! Deleniti facere, neque commodi nihil at voluptas ab, sequi dicta, rerum fugiat nobis a adipisci magnam numquam. Quos a error beatae rerum architecto ducimus voluptas. Suscipit!",
-
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate cupiditate expedita deleniti, aut eum tempora omnis! Doloremque molestiae consequuntur inventore rerum odio quis non! Deleniti facere, neque commodi nihil at voluptas ab, sequi dicta, rerum fugiat nobis a adipisci magnam numquam. Quos a error beatae rerum architecto ducimus voluptas. Suscipit!"
+                        "I specialize in frontend developement using tools like HTML, CSS and JavaScript, and working to add GSAP into my arsenal of tools.", 
+                        
+                        "Currenly in the process of building creatve projects to further my learning by going back to building basic websites with HTML, CSS & JavaScript to solidify my foundation to tackle Node.js. In doing this I will be able to build fullstack projects.",
+                        
+                        "Interested? Keep a look out for more on my Github or feel free to browse further",
                     ],
                     imageUrl: "/assets/images/profileImages/profile.jpg",
                 },
@@ -425,7 +367,7 @@ export const ABOUT_FOLDER = {
                     fileType: "img",
                     // finderHidden: true,
                     position: "top: calc(.25rem * 52); right: calc(.25rem * 80);", //->img position in finder window
-                    imageUrl: "/assets/images/profileImages/profile.jpg", //inert image path here
+                    imageUrl: "/assets/images/profileImages/profile-2.jpg", //inert image path here
                 },
                 {
                     id: 3,
@@ -459,15 +401,6 @@ export const RESUME_FOLDER = {
             position: "left: calc(.25rem * 5); top: calc(.25rem * 10);", //->file position in finder window
             pdfUrl: "/assets/files/Resume-2026.pdf"
         },
-        {
-            id: 2,
-            name: "Cover Letter",
-            icon: "/assets/docs/txt.png",
-            kind: "file",
-            fileType: "pdf",
-            position: "top: calc(.25rem * 28); right: calc(.25rem * 65);", //->file position in finder window
-            pdfUrl: "/assets/files/Resume-2026.pdf"
-        }
     ]
 };
 
@@ -490,11 +423,11 @@ export const TRASH_FOLDER = {
         },
         {
             id: 2,
-            name: "Project 1.mov",
+            name: "portfolio.com",
             icon: "/assets/docs/plain.png",
             kind: "file",
-            fileType: "video",
-            videoUrl: "", //inert image path here
+            fileType: "url",
+            href: "https://portfolio-yarlinlynn.netlify.app/", //inert image path here
             position: "top: calc(.25rem * 40); left: calc(.25rem * 80);", //->file position in finder window
         }
     ]
