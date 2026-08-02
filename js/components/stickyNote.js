@@ -9,7 +9,7 @@ export function draggableNote() {
     let offsetY = 0;
 
     note.addEventListener("mousedown", (e) => {
-        if (e.target.tagName === "TEXTAREA") return;
+        if (e.target.tagName === "sticker-header") return;
 
         isDragging = true;
 
