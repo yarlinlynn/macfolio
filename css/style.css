@@ -235,6 +235,8 @@ button, input, select, optgroup, textarea {
     background-color: rgb(218 178 255);
 }
 
+#desktop-apps { height: 100vh; }
+
 .sticky-note {
     font-family: "Yuyu Short", sans-serif;
     position: absolute;
@@ -264,45 +266,51 @@ button, input, select, optgroup, textarea {
 }
 
 
-.icon-item {
+.desktopIcon-item {
     position: absolute;
     text-align: center;
-    height: calc(.25rem * 20);
-    width: calc(.25rem * 20);
     z-index: 20;
 }
 
-.icon-item:nth-child(1) {
+.desktopIcon-item img {
+    height: calc(.25rem * 20);
+    width: calc(.25rem * 20);
+    margin: auto;
+}
+
+.desktopIcon-item:nth-child(1) {
     top: 100px;
     right: 50px;
 }
 
-.icon-item:nth-child(2) {
+.desktopIcon-item:nth-child(2) {
     top: 220px;
     right: 150px;
 }
 
-.icon-item:nth-child(3) {
-    top: 350px;
-    right: 65px;
-}
-
-.icon-item:nth-child(4) {
+.desktopIcon-item:nth-child(4) {
+    /* top: 350px;
+    right: 65px; */
     top: 400px;
     left: 50px;
 }
 
-.icon-item:nth-child(4) img { width: 100%; }
-
-.icon-item:nth-child(5) {
+.desktopIcon-item:nth-child(3) {
     top: 500px;
     left: 150px;
 }
 
-.icon-item:nth-child(6) {
+.desktopIcon-item:nth-child(3) img { width: 100%; }
+
+.desktopIcon-item:nth-child(5) {
+    top: 500px;
+    left: 150px;
+}
+
+/* .desktopIcon-item:nth-child(6) {
     top: 550px;
     right: 70px;
-}
+} */
 
 /*-----------------------------------*\
 #WORKSPACE: TABLET SCREEN
@@ -938,6 +946,12 @@ button, input, select, optgroup, textarea {
 
 .projects-list li img { width: calc(.25rem * 4); }
 
+.projects-list span {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .finder-content {
     max-width: 42rem;
     background-color: var(--background);
@@ -1162,7 +1176,14 @@ button, input, select, optgroup, textarea {
     padding-inline: calc(.25rem * 5);
     padding-block: calc(.25rem * 4);
     align-items: center;
- }
+}
+
+.text {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    padding: calc(.25rem * 3);
+}
 
 @media screen and (max-width: 599px) {
     .text-preview {
