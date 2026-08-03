@@ -12,7 +12,7 @@ export function Gmail(parent = document.body) {
     header.innerHTML = `
         <p>New Message</p>
 
-        <button class="sendEmail mobile-send" disabled>
+        <button class="sendEmail mobile-send">
             <i class="ri-send-plane-fill"></i>
         </button>
     `;
@@ -43,7 +43,7 @@ export function Gmail(parent = document.body) {
         </div>
 
         <div class="emailWindowFooter">
-            <button class="sendEmail desktop-send" disabled>
+            <button class="sendEmail desktop-send">
                 Send
                 <i class="ri-arrow-down-s-fill"></i>
             </button>
@@ -81,29 +81,11 @@ export function Gmail(parent = document.body) {
 
     const sendButtons = windowElement.querySelectorAll(".sendEmail");
 
-    // enable and disable send buttons
-    function updateSendBtn() {
-        const enabledBtn = fromInput.value.trim() !== "" && messageInput.value.trim() !== "";
-
-        sendButtons.forEach(button => {
-            button.disabled = !enabled;
-        });
-
-        fromInput.addEventListener("input", updateSendButtonState);
-        messageInput.addEventListener("input", updateSendButtonState);
-    }
-    updateSendBtn();
-
-    // enable emailJS to send emails to private gamil
     async function sendEmail() {
-        if ( !fromInput.value.trim() || !messageInput.value.trim() ) {
-            return;
-        }
-
         const inputFields = {
-            from_email: fromInput.value,
-            subject: subjectInput.value,
-            message: messageInput.value,
+            from_email: document.getElementById("from-input").value,
+            subject: document.getElementById("subject-input").value,
+            message: document.getElementById("message").value,
         };
 
         try {
@@ -114,50 +96,19 @@ export function Gmail(parent = document.body) {
             );
             alert("Email sent!");
 
-            // clear input fields for new email
-            fromInput.value = "";
-            subjectInput.value = "";
-            messageInput.value = "";
-
-            updateSendBtn();
-        } catch(error) {
+            document.getElementById("from-input").value = "";
+            document.getElementById("subject-input").value = "";
+            document.getElementById("message").value = "";
+        } catch (error) {
             console.error(error);
             alert("Failed to send email.");
         }
     }
 
-    // click event for send button
-    sendButtons.forEach(button => {
+    //click event for send button
+    content.querySelectorAll(".sendEmail").forEach(button => {
         button.addEventListener("click", sendEmail);
     });
-    // async function sendEmail() {
-    //     const inputFields = {
-    //         from_email: document.getElementById("from-input").value,
-    //         subject: document.getElementById("subject-input").value,
-    //         message: document.getElementById("message").value,
-    //     };
-
-    //     try {
-    //         await emailjs.send(
-    //             "service_cizvuzm",
-    //             "template_dki8x8b",
-    //             inputFields
-    //         );
-    //         alert("Email sent!");
-
-    //         document.getElementById("from-input").value = "";
-    //         document.getElementById("subject-input").value = "";
-    //         document.getElementById("message").value = "";
-    //     } catch (error) {
-    //         console.error(error);
-    //         alert("Failed to send email.");
-    //     }
-    // }
-
-    // click event for send button
-    // content.querySelectorAll(".sendEmail").forEach(button => {
-    //     button.addEventListener("click", sendEmail);
-    // });
 
     return window;
 }

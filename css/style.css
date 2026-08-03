@@ -796,8 +796,8 @@ button, input, select, optgroup, textarea {
 \*-----------------------------------*/
 
 #gmail.window {
-    top: calc(.25rem * 60);
-    right: 2rem;
+    top: calc(.25rem * 15);
+    right: 5%;
     /* height: 450px; */
 }
 
@@ -846,40 +846,25 @@ button, input, select, optgroup, textarea {
 }
 
 .mobile-send {
-    /* background: rgb(153 161 175); */
+    background: #2d53b1;
+    color: white;
     padding: 4px 10px;
     border-radius: 5px;
-    /* color: lightgray; */
     display: none;
 }
 
-.mobile-send:disabled {
-   background: rgb(153 161 175); 
-   color: lightgray;
-}
-
-.mobile-send:not(:disabled) {
-    background: #2d53b1;
-    color: white;
-}
-
-.window-content .desktop-send {
+.desktop-send {
     cursor: not-allowed;
     transition: background-color .2s ease;
-    background: rgb(153 161 175); 
-    color: lightgray;
+    background: #2d53b1;
+    color: white;  
+    cursor: pointer; 
     padding: 5px 15px;
     border-radius: 10px;
     margin-inline-end: 1rem;
 }
 
-.desktop-send:not(:disabled) {
-    background: #2d53b1;
-    color: white;  
-    cursor: pointer; 
-}
-
-.window-content .desktop-send:not(:disabled) i { color: white; }
+.window-content .desktop-send i { color: white; }
 
 .message-container { flex: 1; }
 
@@ -943,6 +928,7 @@ input:focus {
     top: calc(.25rem * 50);
     left: calc(.25rem * 50);
     width: 40rem;
+    height: 45vh;
 }
 
 .finder-content {
