@@ -6,21 +6,6 @@ import { windowManager } from "../state/WindowManager.js";
 import { draggableNote } from "./stickyNote.js";
 import { socialMediaElement } from "./socials.js";
 
-import { WORK_FOLDER, ABOUT_FOLDER, RESUME_FOLDER } from "../constants/index.js";
-
-const desktopFolders = [
-    WORK_FOLDER,
-    ABOUT_FOLDER,
-    RESUME_FOLDER
-];
-
-const desktopIcons = desktopFolders.flatMap(folder =>
-    folder.children.map(child => ({
-        ...child,
-        parent: folder.type
-    }))
-);
-
 export function Workspace() {
     const width = window.innerWidth;
     const workspace = document.getElementById('workspace');
@@ -131,14 +116,7 @@ export function Workspace() {
                     </ul>
                 </div>
 
-                <ul class="desktop-icons">
-                    ${desktopIcons.map(icon => `
-                        <li class="desktopIcon-item" data-parent="${icon.parent}" data-kind="${icon.kind}" data-id="${icon.id}" style="${icon.windowPosition ?? ""}">
-                            <img src="${icon.icon}" alt="${icon.name}" loading="lazy"/>
-                            <span>${icon.name}</span>
-                        </li>    
-                    `).join("")}
-                </ul>
+                <ul class="desktop-icons"></ul>
                 
             </section>
         `;
@@ -162,20 +140,6 @@ export function Workspace() {
     }
 
     // click events for desktop icons to open folders
-    desktopIcons.forEach(item => {
-        const element = document.querySelector(
-            `[data-id="${item.id}"]`
-        );
-
-        element.addEventListener("click",()=>{
-            if(item.kind === "folder"){
-                windowManager.open("files",item);
-            }
-            if(item.fileType === "pdf"){
-                window.open(item.pdfUrl);
-            }
-        });
-    });
 
 
     // enable drag to desktop icons

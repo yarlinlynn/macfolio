@@ -798,7 +798,7 @@ button, input, select, optgroup, textarea {
 #gmail.window {
     top: calc(.25rem * 60);
     right: 2rem;
-    height: 450px;
+    /* height: 450px; */
 }
 
 .window-content {
@@ -811,39 +811,91 @@ button, input, select, optgroup, textarea {
 
 .mobile-header-actions { display: none; }
 
-.window-content i { color: rgb(153 161 175); }
+.window-content i,
+#to-input { color: rgb(153 161 175); }
+
+#to-input { letter-spacing: 1px; }
+
+.grid-row { display: flex; }
+
+.grid-row input { width: 100%; }
 
 .emailWindowFooter {
     display: flex;
     align-items: center;
     margin-inline: 1rem;
-    position: fixed;
-    bottom: 1rem;
+    margin-block-end: 1rem;
+    /* position: fixed;
+    bottom: 1rem; */
+}
+
+.email-icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.email-icons svg {
+    width: 20px;
+    height: 20px;
+}
+
+.email-icons svg:nth-last-child() { 
+    position: absolute;
+    right: 1rem;
+}
+
+.mobile-send {
+    /* background: rgb(153 161 175); */
+    padding: 4px 10px;
+    border-radius: 5px;
+    /* color: lightgray; */
+    display: none;
+}
+
+.mobile-send:disabled {
+   background: rgb(153 161 175); 
+   color: lightgray;
+}
+
+.mobile-send:not(:disabled) {
+    background: #2d53b1;
+    color: white;
 }
 
 .window-content .desktop-send {
-    background: #2d53b1;
-    color: white;
+    cursor: not-allowed;
+    transition: background-color .2s ease;
+    background: rgb(153 161 175); 
+    color: lightgray;
     padding: 5px 15px;
     border-radius: 10px;
     margin-inline-end: 1rem;
 }
 
-.window-content .desktop-send i { color: white; }
+.desktop-send:not(:disabled) {
+    background: #2d53b1;
+    color: white;  
+    cursor: pointer; 
+}
+
+.window-content .desktop-send:not(:disabled) i { color: white; }
 
 .message-container { flex: 1; }
 
 #message {
     border: none;
     width: 100%;
-    height: 68%;
+    height: 40vh;
+    /* height: 68%; */
     resize: none;
     overflow-y: auto;
     padding-inline: 5px;
     margin-block-start: 1rem;
 }
 
-#message:focus {
+#message:focus,
+input:focus {
     outline: none;
     box-shadow: none;
     border-color: transparent; 
@@ -857,20 +909,19 @@ button, input, select, optgroup, textarea {
 @media screen and (max-width: 599px) {
     #gmail.window {
         bottom: 0;
-        top: 10%;
+        top: 0;
         left: 0;
         right: 0;
         width: 100%;
-        height: 90vh;
-        border-top-left-radius: calc(.625rem + 4px);
-        border-top-right-radius: calc(.625rem + 4px);
+        height: 100vh;
     }
 
-    #gmail.window .window-back div,
     .window-header p { display: none; }
 
     #gmail.window .window-back span i,
-    .mobile-header-actions i { font-size: 1.5rem; }
+    .mobile-header-actions i { font-size: 16px; }
+
+    .mobile-send { display: block; }
 
     #gmail.window .window-header { flex-direction: row-reverse; }
 
@@ -1022,13 +1073,14 @@ button, input, select, optgroup, textarea {
 }
 
 .files-header h2 {
-    letter-spacing: 0.1rem;
+letter-spacing: 0.1rem;
     font-size: 18px;
     font-weight: 600;
     position: absolute;
-    left: 50%;
+    left: 78%;
     transform: translate(-50%);
     text-transform: uppercase;
+    width: 100%;
 }
 
 .files-header .email-close { display: none; }
