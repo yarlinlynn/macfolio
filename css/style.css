@@ -706,8 +706,8 @@ button, input, select, optgroup, textarea {
 \*-----------------------------------*/
 
 #notes.window {
-    top: calc(.25rem * 99);
-    right: 2rem;
+    top: calc(.25rem * 10);
+    left: calc(.25rem * 99);
     height: 280px;
     display: flex;
     flex-direction: column;
@@ -925,10 +925,10 @@ input:focus {
 \*-----------------------------------*/
 
 #finder.window {
-    top: calc(.25rem * 50);
-    left: calc(.25rem * 50);
+    top: calc(.25rem * 90);
+    left: calc(.25rem * 10);
     width: 40rem;
-    height: 45vh;
+    /* height: 45vh; */
 }
 
 .finder-content {
@@ -1170,12 +1170,11 @@ letter-spacing: 0.1rem;
 \*-----------------------------------*/
 
 #imgfile {
-    top: calc(.25rem * 27);
+    top: calc(.25rem * 10);
+    right: calc(.25rem * 50);
     width: 36rem;
     border-radius: calc(.625rem + 4px);
     background-color: var(--color-white);
-    
-    left: 55%;
     overflow: hidden;
 }
 
@@ -1208,7 +1207,7 @@ letter-spacing: 0.1rem;
 \*-----------------------------------*/
 
 #txtfile {
-    top: calc(.25rem * 85);
+    top: calc(.25rem * 40);
     right: calc(.25rem * 12);
     width: 23rem;
 }
@@ -1250,5 +1249,27 @@ letter-spacing: 0.1rem;
 }
 
 /*-----------------------------------*\
-#VIDEO WINDOW 
+#ABOUT ME WINDOWS 
 \*-----------------------------------*/
+
+#aboutme { display: contents; }
+
+#aboutText {
+    top: calc(.25rem * 15);
+    left: calc(.25rem * 120);
+    
+}
+
+#aboutText .text-content img { display: none; }
+
+#aboutImage1 {
+    top: calc(.25rem * 85);
+    left: calc(.25rem * 175);
+    width: 20rem;
+}
+
+#aboutImage2 {
+    top: calc(.25rem * 50);
+    left: calc(.25rem * 250);
+    width: 20rem;
+}

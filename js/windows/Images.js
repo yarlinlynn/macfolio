@@ -3,8 +3,9 @@ import WindowWrapper from "../state/WindowWrapper.js";
 import { WindowControls } from "../components/windowControls.js";
 
 // renders image window component
-export function Images(parent=document.body) {
-    const window = new WindowWrapper("imgfile");
+export function Images(parent=document.body, key = "imgfile") {
+    // const window = new WindowWrapper("imgfile");
+    const window = new WindowWrapper(key);
     const windowElement = window.mount(parent);
 
     // HEADER
@@ -20,7 +21,8 @@ export function Images(parent=document.body) {
         </div>
     `;
 
-    header.prepend(WindowControls("imgfile"));
+    // header.prepend(WindowControls("imgfile"));
+    header.prepend(WindowControls(key));
 
     const content = document.createElement("div");
     content.className="image-content";

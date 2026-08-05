@@ -257,7 +257,7 @@ export const WORK_FOLDER = {
                     icon: "/assets/docs/image.png",
                     kind: "file",
                     fileType: "img",
-                    position: "top: calc(.25rem * 52); right: calc(.25rem * 80);", //->file position in finder window
+                    position: "top: calc(.25rem * 49); right: calc(.25rem * 80);", //->file position in finder window
                     imageUrl: "/assets/images/projectImages/kanban-light.png", //inert image path here
                 },
                 {
@@ -278,7 +278,7 @@ export const WORK_FOLDER = {
             name: "Space Tourism",
             icon: "/assets/docs/folder.png",
             kind: "folder",
-            position: "top: calc(.25rem * 52); right: calc(.25rem * 80);",  //->icon position inside Finder
+            position: "top: calc(.25rem * 40); right: calc(.25rem * 80);",  //->icon position inside Finder
             //windowPosition: "top-[10vh] left-10",  ->optional: Finder desktop window position
             children: [
                 {
@@ -301,7 +301,7 @@ export const WORK_FOLDER = {
                     icon: "/assets/docs/image.png",
                     kind: "file",
                     fileType: "img",
-                    position: "left: calc(.25rem * 80); top: calc(.25rem * 52);", //->img position in finder window
+                    position: "left: calc(.25rem * 80); top: calc(.25rem * 45);", //->img position in finder window
                     imageUrl: "/assets/images/projectImages/space-tourism.png", //inert image path here
                 },
                 {
@@ -485,4 +485,19 @@ export const WINDOW_CONFIG = {
         zIndex: INITIAL_Z_INDEX,
         data: null
     },
+    aboutText: {
+        isOpen: false,
+        zIndex: INITIAL_Z_INDEX,
+        data: null
+    },
+    aboutImage1: {
+        isOpen: false,
+        zIndex: INITIAL_Z_INDEX,
+        data: null
+    },
+    aboutImage2: {
+        isOpen: false,
+        zIndex: INITIAL_Z_INDEX,
+        data: null
+    }
 };

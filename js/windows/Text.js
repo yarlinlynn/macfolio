@@ -2,15 +2,17 @@
 import WindowWrapper from "../state/WindowWrapper.js";
 import { WindowControls } from "../components/windowControls.js";
 
-export function Text(parent=document.body) {
-    const window = new WindowWrapper("txtfile");
+export function Text(parent=document.body, key = "txtfile") {
+    // const window = new WindowWrapper("txtfile");
+    const window = new WindowWrapper(key);
     const windowElement = window.mount(parent);
 
     // HEADER
     const header = document.createElement("div");
     header.className = "window-header";
 
-    header.prepend(WindowControls("txtfile"));
+    // header.prepend(WindowControls("txtfile"));
+    header.prepend(WindowControls(key));
 
     // CONTENT
     const content = document.createElement("div");

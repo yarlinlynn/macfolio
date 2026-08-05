@@ -3,16 +3,17 @@ import { windowManager } from "./WindowManager.js";
 import { windowState } from "./WindowState.js";
 
 export default class WindowWrapper {
-    constructor(windowKey) {
+    constructor(windowKey, options = {}) {
         this.windowKey = windowKey;
         this.element = null;
         this.dragInstance = null;
+        this.isContainer = options.isContainer ?? false;
     }
 
     mount(parent=document.body) {
         this.element = document.createElement("section");
         this.element.id = this.windowKey;
-        this.element.className = "window absolute";
+        this.element.className = "window";
         this.element.style.display = "none";
         parent.appendChild(this.element);
 
@@ -57,14 +58,19 @@ export default class WindowWrapper {
     }
 
     update(){
-        const state =   windowState.windows[this.windowKey];
+        const state = windowState.windows[this.windowKey];
+
         if(!state){
             return;
         }
+        if(this.isContainer){
+            this.element.style.display = state.isOpen ? "contents" : "none";
 
-        this.element.style.display = state.isOpen ? "block" : "none";
+        } else {
+            this.element.style.display = state.isOpen ? "block" : "none";
+        }
+
         this.element.style.zIndex = state.zIndex;
-
         if(state.justOpened){
             this.animateOpen();
             state.justOpened=false;
