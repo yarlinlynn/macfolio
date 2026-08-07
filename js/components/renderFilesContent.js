@@ -12,7 +12,7 @@ export function renderFilesContent({
     navigation
 }) {
     const current = getCurrent(navigation);
-    header.querySelector("h2").textContent = current.name;
+    // header.querySelector("h2").textContent = current.name;
 
     // image preview
     if(current.type === "image") {
@@ -102,7 +102,7 @@ function getIcon(item) {
         case "img":
             return "./assets/docs/image.png";
         case "url":
-            return "./assets/app/safri.png";
+            return "./assets/docs/plain.png";
         case "video":
             return "./assets/docs/plain.png";
         default:
