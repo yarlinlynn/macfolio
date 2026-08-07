@@ -2,6 +2,8 @@
 import { dateAndTime } from "../utils/dateAndTime.js";
 import { toggleTheme } from "../utils/ theme.js";
 
+import { techStack, socials } from "../constants/index.js";
+
 export function Header() {
     const width = window.innerWidth;
     const header = document.getElementById('top-bar');
@@ -23,32 +25,41 @@ export function Header() {
         `;
     } else {
         header.innerHTML = `
-            <ul>
+            <ul class="left-side-header">
                 <li class="apple-icon">
                     <img src="/assets/icons/logo.svg" alt="Apple Logo" loading="lazy"/>
                 </li>
                 <li class="desktop">Yarlin's Desktop</li>
                 <li>
-                    <ul class="desktop-socials">
-                        <li>
-                            Skills
-                            <ul class="skills-list">
-                                <!-- add technologies here -->
-                                <li></li>
+                    <ul class="desktop-menu">
+                        <li class="openFinder">Work</li>
+                        <li class="openResume">Resume</li>
+                        <li class="openResume">Profile</li>
+                        <li class="openInfo">Info</li>
+                        <li class="skills-menu">Skills
+                            <i class="ri-arrow-down-s-line"></i>
+                            <ul class="skills-dropdown">
+                                ${techStack.map( ({category, items}) => `
+                                    <li class="skills-list-item">
+                                        ${category}
+                                        <i class="ri-arrow-right-s-line"></i>
+
+                                        <ul class="submenu">
+                                            ${items.map(item => `<li class="submenu-item">${item}</li>`).join("")}
+                                        </ul>
+                                    <li>
+                                `).join("")}
                             </ul>
                         </li>
-                        <li>
-                            Contact
-                            <ul class="contact-list">
-                                <!-- add socials here -->
-                                <li></li>
-                            </ul>
+                        <li class="socials-menu">Socials
+                            <i class="ri-arrow-down-s-line"></i>
+                            <ul class="socials-dropdown"></ul>
                         </li>
-                        <li>Work</li>
+                        <li class="openEmail">Contact</li>
                     </ul>
                 </li>
             </ul>
-            <ul>
+            <ul class="right-side-header">
                 <li>
                     <ul class="desktop-icons">
                         <li>
@@ -81,4 +92,15 @@ export function Header() {
 
     toggleTheme();
     dateAndTime();
+
+    // skills menu dropdown
+    const skillsMenu = document.querySelector(".skills-menu");
+
+    skillsMenu.addEventListener("click", (e) => {
+        e.stopPropagation();
+        skillsMenu.classList.toggle("active");
+    });
+    document.addEventListener("click", () => {
+        skillsMenu.classList.remove("active");
+    });
 }

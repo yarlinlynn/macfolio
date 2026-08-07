@@ -149,11 +149,16 @@ button, input, select, optgroup, textarea {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 5vh;
+    padding-block-start: 1rem;
+    /* height: 5vh; */
     padding-inline: 1rem;
+    padding-block-end: 0.5rem;
 }
 
-#top-bar ul {
+#top-bar .left-side-header,
+.right-side-header,
+.desktop-menu,
+.desktop-icons {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -165,11 +170,57 @@ button, input, select, optgroup, textarea {
     letter-spacing: 0.05rem;
 }
 
+.skills-dropdown {
+    display: none;
+    position: absolute;
+    list-style: none;
+    top: 3rem;
+    /* left: 12%; */
+    padding: 8px;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 5px;
+    width: 8rem;
+    padding-block: 0.5rem;
+    padding-inline: 10px;
+}
+
+.skills-menu.active > .skills-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    width: 8rem;
+    left: 120px;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.20);
+    top: 0;
+    /* left: 100px; */
+    padding: 5px 10px;
+}
+
+.skills-list-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills-list-item:hover > .submenu {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
 .desktop-socials { margin-left: 1rem; }
 
 .desktop-icons { 
     margin-right: -1.5rem;
-    gap: 0.5rem;
+    gap: 15px;
 }
 
 .desktop li img {
@@ -232,7 +283,7 @@ button, input, select, optgroup, textarea {
 
 #workspace {
     margin: 0;
-    background-color: rgb(218 178 255);
+    /* background-color: rgb(218 178 255); */
 }
 
 #desktop-apps { height: 100vh; }
@@ -241,7 +292,7 @@ button, input, select, optgroup, textarea {
     font-family: "Yuyu Short", sans-serif;
     position: absolute;
     top: 6rem;
-    left: 9rem;
+    left: 2rem;
     width: 300px;
     min-height: 230px;
     background: #fffacd;
@@ -257,6 +308,7 @@ button, input, select, optgroup, textarea {
 .sticky-note p { 
     font-size: 30px; 
     margin-bottom: 15px;
+    color: #333;
 }
 
 .sticky-note .sticky-list {
