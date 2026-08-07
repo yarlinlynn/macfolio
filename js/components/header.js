@@ -49,13 +49,23 @@ export function Header() {
                                         <ul class="submenu">
                                             ${items.map(item => `<li class="submenu-item">${item}</li>`).join("")}
                                         </ul>
-                                    <li>
+                                    </li>
                                 `).join("")}
                             </ul>
                         </li>
                         <li class="socials-menu">Socials
                             <i class="ri-arrow-down-s-line"></i>
-                            <ul class="socials-dropdown"></ul>
+                            <ul class="socials-dropdown">
+                                ${socials.map( ({id, name, icon, url}) => `
+                                    <a href="${url}" id="${name}" target="_blank">
+                                        <li class="social-list-item" data-social="${id}">
+                                            <span>${name}</span>
+                                            <i class="${icon}"></i>
+                                        </li>
+                                    </a>
+                                `).join("")}
+                                
+                            </ul>
                         </li>
                         <li data-window="gmail">Contact</li>
                     </ul>
@@ -90,61 +100,71 @@ export function Header() {
             </ul>
                     
         `;
+
+        // skills menu dropdown
+        const skillsMenu = document.querySelector(".skills-menu");
+
+        skillsMenu.addEventListener("click", (e) => {
+            e.stopPropagation();
+            skillsMenu.classList.toggle("active");
+        });
+        document.addEventListener("click", () => {
+            skillsMenu.classList.remove("active");
+        });
+
+        // socials menu dropdown
+        const socialsMenu = document.querySelector(".socials-menu");
+        socialsMenu.addEventListener("click", (e) => {
+            e.stopPropagation();
+            socialsMenu.classList.toggle("active");
+        });
+        document.addEventListener("click", () => {
+            socialsMenu.classList.remove("active");
+        });
+
+        const desktopMenu = document.querySelector(".desktop-menu");
+        desktopMenu.addEventListener("click", (e) => {
+            const menuItem = e.target.closest("[data-window]");
+
+            if (!menuItem) return;
+            e.stopPropagation();
+            const windowKey = menuItem.dataset.window;
+
+            switch(windowKey) {
+                case "finder":
+                windowManager.open("finder", { activeSidebar: menuItem});
+                break;
+
+                case "resume":
+                windowManager.open("resume", getResumeFile());
+                break;
+
+                case "aboutme":
+                const aboutFolder = Object.values(locations).flatMap(location => location.children ?? []).find(item => item.name === "About me");
+                windowManager.open("aboutme", aboutFolder);
+                break;
+
+                case "notes":
+                windowManager.open("notes");
+                break;
+
+                case "gmail":
+                windowManager.open("gmail");
+                break;
+
+                default:
+                console.warn(`Unknown window: ${windowKey}`);
+            }
+        })
+
+        // helper function to get resume to display pdf
+        function getResumeFile() {
+            return Object.values(locations).flatMap(location => location.children ?? []).find(item => item.fileType === "pdf");
+        }
+
     }
 
     toggleTheme();
     dateAndTime();
-
-    // skills menu dropdown
-    const skillsMenu = document.querySelector(".skills-menu");
-
-    skillsMenu.addEventListener("click", (e) => {
-        e.stopPropagation();
-        skillsMenu.classList.toggle("active");
-    });
-    document.addEventListener("click", () => {
-        skillsMenu.classList.remove("active");
-    });
-
-    const desktopMenu = document.querySelector(".desktop-menu");
-    desktopMenu.addEventListener("click", (e) => {
-        const menuItem = e.target.closest("[data-window]");
-
-        if (!menuItem) return;
-        e.stopPropagation();
-        const windowKey = menuItem.dataset.window;
-
-        switch(windowKey) {
-            case "finder":
-            windowManager.open("finder", { activeSidebar: menuItem});
-            break;
-
-            case "resume":
-            windowManager.open("resume", getResumeFile());
-            break;
-
-            case "aboutme":
-            const aboutFolder = Object.values(locations).flatMap(location => location.children ?? []).find(item => item.name === "About me");
-            windowManager.open("aboutme", aboutFolder);
-            break;
-
-            case "notes":
-            windowManager.open("notes");
-            break;
-
-            case "gmail":
-            windowManager.open("gmail");
-            break;
-
-            default:
-            console.warn(`Unknown window: ${windowKey}`);
-        }
-    })
-
-    // helper function to get resume to display pdf
-    function getResumeFile() {
-        return Object.values(locations).flatMap(location => location.children ?? []).find(item => item.fileType === "pdf");
-    }
-
     
 }

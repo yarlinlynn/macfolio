@@ -161,7 +161,8 @@ button, input, select, optgroup, textarea {
 .desktop-icons {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: calc(.25rem * 5);
+    /* gap: 1rem; */
 }
 
 .desktop {
@@ -175,7 +176,7 @@ button, input, select, optgroup, textarea {
     position: absolute;
     list-style: none;
     top: 3rem;
-    /* left: 12%; */
+    color: #333333d4;
     padding: 8px;
     backdrop-filter: blur(12px);
     background: rgba(255, 255, 255, 0.20);
@@ -215,6 +216,36 @@ button, input, select, optgroup, textarea {
     gap: 5px;
     flex-direction: column;
 }
+
+.socials-dropdown {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    list-style: none;
+    top: 3rem;
+    /* left: 12%; */
+    padding: 8px;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 5px;
+    width: 8rem;
+    padding-block: 0.5rem;
+    padding-inline: 10px;
+    color: #333333d4;
+}
+
+.socials-menu.active > .socials-dropdown {
+    display: flex;
+}
+
+.social-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.socials-dropdown #Gmail { display: none; }
 
 .desktop-socials { margin-left: 1rem; }
 
@@ -329,6 +360,7 @@ button, input, select, optgroup, textarea {
     margin-bottom: 5px; 
 }
 
+.sticky-list li svg { width: 15px; }
 
 .desktopIcon-item {
     position: absolute;
