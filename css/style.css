@@ -100,6 +100,17 @@ body {
     color: var(--text);
 }
 
+@media screen and (max-width: 500px) {
+    body {
+        background-image: url(/assets/images/wallpaper/mobile-background.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: var(--background);
+        /* backdrop-filter: blur(1px); */
+        background-position: center;
+    }
+}
+
 a {
     text-decoration: none;
     color: inherit;
