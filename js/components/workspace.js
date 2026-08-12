@@ -3,7 +3,7 @@ import { socials } from "../constants/index.js";
 
 import { windowManager } from "../state/WindowManager.js";
 
-import { draggableNote } from "./stickyNote.js";
+import { draggableNote } from "../utils/stickyNote.js";
 import { socialMediaElement } from "./socials.js";
 
 export function Workspace() {
@@ -89,30 +89,12 @@ export function Workspace() {
                 <div class="sticky-note" id="note">
                     <p class="sticker-header">To do list</p>
                     <ul class="sticky-list">
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q8 0 15 1.5t14 4.5l-74 74H200v560h560v-266l80-80v346q0 33-23.5 56.5T760-120H200Zm261-160L235-506l56-56 170 170 367-367 57 55-424 424Z"/></svg>
-                            <span>Update Resume</span>
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q8 0 15 1.5t14 4.5l-74 74H200v560h560v-266l80-80v346q0 33-23.5 56.5T760-120H200Zm261-160L235-506l56-56 170 170 367-367 57 55-424 424Z"/></svg>
-                            <span>Commit codewars once a day</span>
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q8 0 15 1.5t14 4.5l-74 74H200v560h560v-266l80-80v346q0 33-23.5 56.5T760-120H200Zm261-160L235-506l56-56 170 170 367-367 57 55-424 424Z"/></svg>
-                            <span>Create a mac os/ios inspired portfolio</span>
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Z"/></svg>
-                            <span>Learn GSAP</span>
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Z"/></svg>
-                            <span>Create 2-3 personal projects</span>
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Z"/></svg>
-                            <span>Create a windows xp inspired portfolio</span>
-                        </li>
+                        <li> - Finish up MAC OS portfolio</li>
+                        <li> - Add MAC OS to linkedIn</li>
+                        <li> - Create 1-2 personal projects<li>
+                        <li> - Refactor a website using JS components</li>
+                        <li> - Learn and incorporate GSAP into projects</li>
+                        <li> - Create a windows xp inspired portfolio</li>
                     </ul>
                 </div>
 
