@@ -193,6 +193,12 @@ export const dockIcons = [
         canOpen: false,
     },
     {
+        id: "terminal",
+        name: "Terminal",
+        icon: "/assets/apps/terminal.png",    
+        canOpen: true,
+    },
+    {
         id: "settings",
         name: "Settings",
         icon: "/assets/apps/settings.png",    
@@ -451,6 +457,11 @@ export const WINDOW_CONFIG = {
         data: null
     },
     files: {
+        isOpen: false,
+        zIndex: INITIAL_Z_INDEX,
+        data: null
+    },
+    terminal: {
         isOpen: false,
         zIndex: INITIAL_Z_INDEX,
         data: null

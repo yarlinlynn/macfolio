@@ -8,6 +8,7 @@ import { Notes } from "./windows/Notes.js";
 import { Files } from "./windows/Files.js";
 import { Finder } from "./windows/Finder.js";
 import { Gmail } from "./windows/Gmail.js";
+import { Terminal } from "./windows/Terminal.js";
 import { Images } from "./windows/Images.js";
 import { Text } from "./windows/Text.js";
 import { Resume } from "./windows/Resume.js";
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Files();
     Finder();
     Gmail();
+    Terminal();
     Images();
     Text();
     Resume();
