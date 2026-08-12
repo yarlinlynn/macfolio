@@ -4,7 +4,7 @@ export function renderFAQ(data) {
         <div class="accordion-item">
             <button class="accordion-header">
                 ${item.question}
-                <i class="ri-arrow-down-s-line"></i>
+                <i class="ri-arrow-down-s-fill"></i>
             </button>
             <div class="accordion-content">
                 <p>${item.answer}</p>

@@ -800,9 +800,11 @@ button, input, select, optgroup, textarea {
 
 .window-header { flex-shrink: 0; }
 
-.window-header .header-icons { font-size: 17px; }
-
-.window-header .header-icons:nth-child(1) { margin-left: -3rem; }
+.window-header .header-icons { 
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
 #notes.window .window-content {
     flex: 1;
@@ -833,7 +835,7 @@ button, input, select, optgroup, textarea {
 }
 
 .accordion-item.active .accordion-header { 
-    border-radius: 1rem; 
+    border-radius: 0.9rem; 
     background: rgb(153 161 175);
 }
 
