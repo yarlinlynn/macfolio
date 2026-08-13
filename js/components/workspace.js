@@ -76,6 +76,10 @@ export function Workspace() {
                         <img src="/assets/apps/files.png" alt="Finder" loading="lazy"/>
                         <span>Finder</span>
                     </li>
+                    <li class="app-item" id="skills-mobile">
+                        <img src="/assets/apps/textedit.png" alt="Text Edit" loading="lazy"/>
+                        <span>Text Edit</span>
+                    </li>
                 </ul>
                 <div id="pages">
                     <i class="ri-circle-fill page-icon"></i>
@@ -119,6 +123,13 @@ export function Workspace() {
             filesWindow.addEventListener("click", () => {
             windowManager.open("files");
         });
+    }
+
+    const skillsWindow = document.getElementById("skills-mobile");
+    if(skillsWindow) {
+        skillsWindow.addEventListener("click", () => {
+            windowManager.open("terminal");
+        })
     }
 
     // click events for desktop icons to open folders
