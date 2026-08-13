@@ -3,21 +3,41 @@
 export const faq = [
     {
         question: "Tell me about yourself.",
-        answer: "I'm a software developer specializing in frontend with a passion for building responsive and interactive web applications."
+        answer: "I'm a frontend-focused software developer who enjoys turning ideas and designs into responsive, interactive, and user-friendly web experiences. I particularly enjoy working with JavaScript, building reusable UI components, and creating interfaces that feel polished and intuitive."
     },
     {
-        question: "What technologies do you use?",
-        answer: "HTML, CSS, JavaScript, React, Git/GitHub, Tailwind CSS, Bootstrap"
+        question: "What technologies do you work with?",
+        answer: "My core technologies include HTML, CSS, JavaScript, React, Git and GitHub. I'm also comfortable working with Tailwind CSS and Bootstrap, and I'm continuously expanding my toolkit as I work on new projects."
     },
     {
         question: "What are you currently learning?",
-        answer: "I'm expanding my frontend knowledge by learning GSAP for better and immersive animations and frontend experiences while building full-scale web applications using HTML, CSS & JavaScript"
+        answer: "I'm currently expanding my frontend skills with GSAP to create more immersive animations and interactive experiences. I'm also focusing on building larger, full-scale applications using HTML, CSS, and JavaScript."
+    },
+    {
+        question: "How do you approach responsive design?",
+        answer: "I build with responsiveness in mind from the beginning rather than treating mobile as an afterthought. I use flexible layouts, media queries, relative units, and responsive components to make sure interfaces work well across different screen sizes."
+    },
+    {
+        question: "How do you keep your frontend skills up to date?",
+        answer: "I learn primarily by building. I explore new technologies through documentation, tutorials, and experimentation, then apply what I've learned to personal projects. This helps me understand not just how something works, but when and why I should use it."
+    },
+    {
+        question: "Do you enjoy working independently or as part of a team?",
+        answer: "I'm comfortable with both. I enjoy working independently and am open to working in a team, as that is not something I've had the pleasure of doing."
+    },
+    {
+        question: "Are you comfortable learning new technologies?",
+        answer: "Absolutely. Frontend development evolves quickly, so I see learning new technologies as part of the job. I'm comfortable stepping outside my existing skill set and learning what is needed to solve a problem effectively. I'm currently trying to learn GSAP for better animations"
+    },
+    {
+        question: "What are you looking for in your next role?",
+        answer: "I'm looking for an opportunity where I can contribute to real products, continue developing my frontend skills, and learn from experienced developers. I'm particularly interested in environments where I can take ownership while continuing to grow as a developer."
     },
     {
         question: "Are you available for work?",
         answer: "Yes! I'm currently looking for frontend developer opportunities."
     }
-]
+];
 
 // SKILL STACK
 export const techStack = [
