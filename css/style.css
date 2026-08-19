@@ -791,7 +791,8 @@ button, input, select, optgroup, textarea {
 .window-btn.maximize i { transform: rotate(45deg); }
 
 @media screen and (max-width: 560px) {
-    .window { border-radius: 0; }
+    .window,
+    .window-header { border-radius: 0; }
 
     .window-back { display: block; }
 
@@ -1208,10 +1209,6 @@ letter-spacing: 0.1rem;
     padding:1rem;
     border-bottom:1px solid var(--window-header-border);
     cursor:pointer;
-}
-
-.files-item:hover {
-    background:#f5f5f5;
 }
 
 .files-item img {

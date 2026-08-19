@@ -13,7 +13,7 @@ export function Resume(parent = document.body) {
 
         <a
             class="resume-download"
-            href="/assets/files/Resume-2026.pdf"
+            href="/assets/files/resume_2026.pdf"
             download
             title="Download Resume"
         >
