@@ -343,7 +343,46 @@ export const WORK_FOLDER = {
         },
 
         // PROJECT 3:
-        
+        {
+            id: 7,
+            name: "Glowing",
+            icon: "/assets/docs/folder.png",
+            kind: "folder",
+            position: "top: calc(.25rem * 20); right: calc(.25rem * 40);",  //->icon position inside Finder
+            //windowPosition: "top-[10vh] left-10",  ->optional: Finder desktop window position
+            children: [
+                {
+                    id: 1,
+                    name: "Glowing.txt",
+                    icon: "/assets/docs/txt.png",
+                    kind: "file",
+                    fileType: "txt",
+                    position: "top: calc(.25rem * 5); right: calc(.25rem * 10);", //->file position in finder window
+                    description: [ 
+                        // insert project text here ...
+                        "A frontend recreation of an existing skincare e-commerce website, rebuilt from scratch using HTML5, Tailwind CSS, and vanilla JavaScript. I translated the original design into a responsive, component-based interface while implementing my own reusable components and interactive functionality. The project includes favourites and shopping cart functionality, responsive navigation, dynamic DOM manipulation, and reusable UI elements, demonstrating my ability to recreate an existing design while extending it with functional frontend features."
+                    ]
+                },
+                {
+                    id: 2,
+                    name: "Glowing.img",
+                    icon: "/assets/docs/image.png",
+                    kind: "file",
+                    fileType: "img",
+                    position: "left: calc(.25rem * 80); top: calc(.25rem * 45);", //->img position in finder window
+                    imageUrl: "/assets/images/projectImages/Glowing.png", //inert image path here
+                },
+                {
+                    id: 3,
+                    name: "Glowing.com",
+                    icon: "/assets/docs/plain.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "https://skincare-glowing.netlify.app/", //add project live link
+                    position: "left: calc(.25rem * 20); top: calc(.25rem * 20);", //->file position in finder window
+                },
+            ]
+        },
     ]
 };
 
