@@ -4,11 +4,11 @@ A fully interactive macOS-inspired portfolio website built from scratch using **
 
 Macfolio recreates the desktop experience of macOS inside the browser, featuring draggable windows, Finder-style navigation, desktop applications, responsive layouts, and interactive UI elements.
 
-🌐 Live Demo: https://ios-macfolio.netlify.app/
-
-📂 Repository: https://github.com/yarlinlynn/macfolio
-
-___
+<p float="left" align="center">
+  <img src="assets/images/portfolio-desktop.png" width="70%" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/images/portfolio-mobile.png" width="20%" />
+</p>
 
 ## ✨ Overview
 
