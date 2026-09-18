@@ -334,7 +334,7 @@ button, input, select, optgroup, textarea {
     font-family: "Yuyu Short", sans-serif;
     position: absolute;
     top: 6rem;
-    right: 2rem;
+    left: 2rem;
     width: 300px;
     min-height: 230px;
     background: #fffacd;

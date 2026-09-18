@@ -4,7 +4,7 @@ import { windowManager } from "../state/WindowManager.js";
 import { dateAndTime } from "../utils/dateAndTime.js";
 import { toggleTheme } from "../utils/ theme.js";
 
-import { techStack, socials, locations } from "../constants/index.js";
+import { socials, locations } from "../constants/index.js";
 
 export function Header() {
     const width = window.innerWidth;
@@ -38,21 +38,6 @@ export function Header() {
                         <li  data-window="resume">Resume</li>
                         <li data-window="aboutme">Profile</li>
                         <li data-window="notes">FAQ</li>
-                        <li class="skills-menu">Skills
-                            <i class="ri-arrow-down-s-line"></i>
-                            <ul class="skills-dropdown">
-                                ${techStack.map( ({category, items}) => `
-                                    <li class="skills-list-item">
-                                        ${category}
-                                        <i class="ri-arrow-right-s-line"></i>
-
-                                        <ul class="submenu">
-                                            ${items.map(item => `<li class="submenu-item">${item}</li>`).join("")}
-                                        </ul>
-                                    </li>
-                                `).join("")}
-                            </ul>
-                        </li>
                         <li class="socials-menu">Socials
                             <i class="ri-arrow-down-s-line"></i>
                             <ul class="socials-dropdown">
@@ -100,17 +85,6 @@ export function Header() {
             </ul>
                     
         `;
-
-        // skills menu dropdown
-        const skillsMenu = document.querySelector(".skills-menu");
-
-        skillsMenu.addEventListener("click", (e) => {
-            e.stopPropagation();
-            skillsMenu.classList.toggle("active");
-        });
-        document.addEventListener("click", () => {
-            skillsMenu.classList.remove("active");
-        });
 
         // socials menu dropdown
         const socialsMenu = document.querySelector(".socials-menu");
