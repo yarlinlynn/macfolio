@@ -299,48 +299,48 @@ export const WORK_FOLDER = {
         },
 
         // PROJECT 2:
-        {
-            id: 6,
-            name: "Space Tourism",
-            icon: "/assets/docs/folder.png",
-            kind: "folder",
-            position: "top: calc(.25rem * 40); right: calc(.25rem * 80);",  //->icon position inside Finder
-            //windowPosition: "top-[10vh] left-10",  ->optional: Finder desktop window position
-            children: [
-                {
-                    id: 1,
-                    name: "Space Tourism.txt",
-                    icon: "/assets/docs/txt.png",
-                    kind: "file",
-                    fileType: "txt",
-                    position: "top: calc(.25rem * 5); right: calc(.25rem * 10);", //->file position in finder window
-                    description: [ 
-                        // insert project text here ...
-                        "A responsive multi-page space tourism website built as a front-end project to showcase modern web development practices, responsive design, and interactive user experiences. The application allows users to explore space destinations, meet crew members, and discover cutting-edge space technology through an engaging and visually immersive interface.",
+        // {
+        //     id: 6,
+        //     name: "Space Tourism",
+        //     icon: "/assets/docs/folder.png",
+        //     kind: "folder",
+        //     position: "top: calc(.25rem * 40); right: calc(.25rem * 80);",  //->icon position inside Finder
+        //     //windowPosition: "top-[10vh] left-10",  ->optional: Finder desktop window position
+        //     children: [
+        //         {
+        //             id: 1,
+        //             name: "Space Tourism.txt",
+        //             icon: "/assets/docs/txt.png",
+        //             kind: "file",
+        //             fileType: "txt",
+        //             position: "top: calc(.25rem * 5); right: calc(.25rem * 10);", //->file position in finder window
+        //             description: [ 
+        //                 // insert project text here ...
+        //                 "A responsive multi-page space tourism website built as a front-end project to showcase modern web development practices, responsive design, and interactive user experiences. The application allows users to explore space destinations, meet crew members, and discover cutting-edge space technology through an engaging and visually immersive interface.",
 
-                        "Each page features rich imagery, responsive layouts, and interactive content that creates an engaging experience while demonstrating strong front-end development skills.",
-                    ]
-                },
-                {
-                    id: 2,
-                    name: "Space Tourism.img",
-                    icon: "/assets/docs/image.png",
-                    kind: "file",
-                    fileType: "img",
-                    position: "left: calc(.25rem * 80); top: calc(.25rem * 45);", //->img position in finder window
-                    imageUrl: "/assets/images/projectImages/space-tourism.png", //inert image path here
-                },
-                {
-                    id: 3,
-                    name: "Space Tourism.com",
-                    icon: "/assets/docs/plain.png",
-                    kind: "file",
-                    fileType: "url",
-                    href: "https://space-tourism-website-multi-page.netlify.app/", //add project live link
-                    position: "left: calc(.25rem * 20); top: calc(.25rem * 20);", //->file position in finder window
-                },
-            ]
-        },
+        //                 "Each page features rich imagery, responsive layouts, and interactive content that creates an engaging experience while demonstrating strong front-end development skills.",
+        //             ]
+        //         },
+        //         {
+        //             id: 2,
+        //             name: "Space Tourism.img",
+        //             icon: "/assets/docs/image.png",
+        //             kind: "file",
+        //             fileType: "img",
+        //             position: "left: calc(.25rem * 80); top: calc(.25rem * 45);", //->img position in finder window
+        //             imageUrl: "/assets/images/projectImages/space-tourism.png", //inert image path here
+        //         },
+        //         {
+        //             id: 3,
+        //             name: "Space Tourism.com",
+        //             icon: "/assets/docs/plain.png",
+        //             kind: "file",
+        //             fileType: "url",
+        //             href: "https://space-tourism-website-multi-page.netlify.app/", //add project live link
+        //             position: "left: calc(.25rem * 20); top: calc(.25rem * 20);", //->file position in finder window
+        //         },
+        //     ]
+        // },
 
         // PROJECT 3:
         {
