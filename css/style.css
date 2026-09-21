@@ -583,7 +583,7 @@ button, input, select, optgroup, textarea {
     .social-item:first-child { display: none; }
 
     .social-preview-grid {
-        height: 55vh;
+        /* height: 55vh; */
         gap: 10px;
         padding: 20px;
     }
@@ -804,9 +804,9 @@ button, input, select, optgroup, textarea {
 \*-----------------------------------*/
 
 #notes.window {
-    top: calc(.25rem * 10);
-    left: calc(.25rem * 99);
-    height: 280px;
+    top: calc(.25rem * 20);
+    left: calc(.25rem * 20);
+    height: 300px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -896,8 +896,8 @@ button, input, select, optgroup, textarea {
 \*-----------------------------------*/
 
 #gmail.window {
-    top: calc(.25rem * 15);
-    right: 5%;
+    top: calc(.25rem * 50);
+    left: calc(.25rem * 10);
     /* height: 450px; */
 }
 
@@ -1025,8 +1025,8 @@ input:focus {
 \*-----------------------------------*/
 
 #finder.window {
-    top: calc(.25rem * 90);
-    left: calc(.25rem * 10);
+    top: calc(.25rem * 80);
+    left: calc(.25rem * 100);
     width: 40rem;
     /* height: 45vh; */
 }
@@ -1242,8 +1242,8 @@ letter-spacing: 0.1rem;
 \*-----------------------------------*/
 
 #resume {
-    top: 50%;
-    left: 50%;
+    top: calc(.25rem * 98);
+    right: calc(.25rem * -50);
     transform: translate(-50%, -50%);
     width: 28rem;
 }
@@ -1351,38 +1351,12 @@ letter-spacing: 0.1rem;
 }
 
 /*-----------------------------------*\
-#ABOUT ME WINDOWS 
-\*-----------------------------------*/
-
-#aboutme { display: contents; }
-
-#aboutText {
-    top: calc(.25rem * 15);
-    left: calc(.25rem * 120);
-    
-}
-
-#aboutText .text-content img { display: none; }
-
-#aboutImage1 {
-    top: calc(.25rem * 85);
-    left: calc(.25rem * 175);
-    width: 20rem;
-}
-
-#aboutImage2 {
-    top: calc(.25rem * 50);
-    left: calc(.25rem * 250);
-    width: 20rem;
-}
-
-/*-----------------------------------*\
 #TERMINAL WINDOWS 
 \*-----------------------------------*/
 
 #terminal.window {
-    top: calc(.25rem * 30);
-    left: calc(.25rem * 50);
+    top: calc(.25rem * 20);
+    left: calc(.25rem * 80);
     width: 36rem;
 }
 

@@ -101,7 +101,7 @@ export const socials = [
         name: "X",
         img: "/assets/apps/twitter.png",
         icon: "ri-twitter-x-fill",
-        url: "https://x.com/yourusername",
+        url: "https://x.com/yarlinlynn_",
     },
     {
         id: "discord",
@@ -110,13 +110,13 @@ export const socials = [
         icon: "ri-discord-fill",
         url: "https://discord.com/users/1362060392846856325",
     },
-    {
-        id: "tiktok",
-        name: "TikTok",
-        img: "/assets/apps/tiktok.png",
-        icon: "ri-tiktok-fill",
-        url: "https://www.tiktok.com/@yarlin.lynn_",
-    },
+    // {
+    //     id: "tiktok",
+    //     name: "TikTok",
+    //     img: "/assets/apps/tiktok.png",
+    //     icon: "ri-tiktok-fill",
+    //     url: "https://www.tiktok.com/@yarlin.lynn_",
+    // },
 ];
 
 // DOCK APPS
@@ -518,6 +518,11 @@ export const WINDOW_CONFIG = {
         data: null
     },
     notes: {
+        isOpen: false,
+        zIndex: INITIAL_Z_INDEX,
+        data: null
+    },
+    contact: {
         isOpen: false,
         zIndex: INITIAL_Z_INDEX,
         data: null

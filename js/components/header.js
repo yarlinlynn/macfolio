@@ -40,7 +40,6 @@ export function Header() {
                         <li data-window="aboutme">Profile</li>
                         <li data-window="notes">FAQ</li>
                         <li data-window="gmail">Contact</li>
-                        <li class="socials">Socials</li>
                     </ul>
                 </li>
             </ul>
@@ -105,6 +104,10 @@ export function Header() {
 
                 case "gmail":
                 windowManager.open("gmail");
+                break;
+
+                case "socials":
+                windowManager.open("contact");
                 break;
 
                 default:
