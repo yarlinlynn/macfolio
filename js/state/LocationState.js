@@ -18,3 +18,6 @@ export class LocationState {
         this.activeLocation = locations.work;
     }
 }
+
+// Create one shared LocationState, however work is the default
+export const locationState = new LocationState();

@@ -100,12 +100,6 @@ function attachClickEvents(container, locationState) {
 // open different content from different doc files
 function openItem(item, container, locationState) {
 
-    // about me folder doesn't redner inner folder files
-    if (item.kind === "folder" && item.name === "About me") {
-        windowManager.open("aboutme", item);
-        return;
-    }
-
     // open folder
     if (item.kind === "folder") {
         locationState.set(item);

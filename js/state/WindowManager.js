@@ -36,10 +36,16 @@ class WindowManager {
             if(state.data?.windowClass) {
                 wrapper.element.classList.add(state.data.windowClass);
             }
+            if (wrapper.renderContent) {
+                wrapper.renderContent(state.data);
+            }
         }
 
         // pass available data, into renderContent() // function
-        if(wrapper.renderContent && state.data) {
+        // if(wrapper.renderContent && state.data) {
+        //     wrapper.renderContent(state.data);
+        // }
+        if (wrapper.renderContent) {
             wrapper.renderContent(state.data);
         }
     }

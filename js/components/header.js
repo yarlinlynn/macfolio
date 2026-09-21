@@ -4,7 +4,8 @@ import { windowManager } from "../state/WindowManager.js";
 import { dateAndTime } from "../utils/dateAndTime.js";
 import { toggleTheme } from "../utils/ theme.js";
 
-import { socials, locations } from "../constants/index.js";
+import { locations } from "../constants/index.js";
+import { locationState } from "../state/LocationState.js";
 
 export function Header() {
     const width = window.innerWidth;
@@ -38,21 +39,8 @@ export function Header() {
                         <li  data-window="resume">Resume</li>
                         <li data-window="aboutme">Profile</li>
                         <li data-window="notes">FAQ</li>
-                        <li class="socials-menu">Socials
-                            <i class="ri-arrow-down-s-line"></i>
-                            <ul class="socials-dropdown">
-                                ${socials.map( ({id, name, icon, url}) => `
-                                    <a href="${url}" id="${name}" target="_blank">
-                                        <li class="social-list-item" data-social="${id}">
-                                            <span>${name}</span>
-                                            <i class="${icon}"></i>
-                                        </li>
-                                    </a>
-                                `).join("")}
-                                
-                            </ul>
-                        </li>
                         <li data-window="gmail">Contact</li>
+                        <li class="socials">Socials</li>
                     </ul>
                 </li>
             </ul>
@@ -86,16 +74,6 @@ export function Header() {
                     
         `;
 
-        // socials menu dropdown
-        const socialsMenu = document.querySelector(".socials-menu");
-        socialsMenu.addEventListener("click", (e) => {
-            e.stopPropagation();
-            socialsMenu.classList.toggle("active");
-        });
-        document.addEventListener("click", () => {
-            socialsMenu.classList.remove("active");
-        });
-
         const desktopMenu = document.querySelector(".desktop-menu");
         desktopMenu.addEventListener("click", (e) => {
             const menuItem = e.target.closest("[data-window]");
@@ -106,7 +84,9 @@ export function Header() {
 
             switch(windowKey) {
                 case "finder":
-                windowManager.open("finder", { activeSidebar: menuItem});
+                locationState.set(locations.work);
+                windowManager.open("finder", { activeSidebar: menuItem });
+                console.log("Finder rendering:",locationState.activeLocation.name);
                 break;
 
                 case "resume":
@@ -114,8 +94,9 @@ export function Header() {
                 break;
 
                 case "aboutme":
-                const aboutFolder = Object.values(locations).flatMap(location => location.children ?? []).find(item => item.name === "About me");
-                windowManager.open("aboutme", aboutFolder);
+                locationState.set(locations.about);
+                windowManager.open("finder", { activeSidebar: menuItem });
+                console.log("Profile clicked:",locationState.activeLocation.name);
                 break;
 
                 case "notes":
