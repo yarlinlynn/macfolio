@@ -1266,12 +1266,18 @@ letter-spacing: 0.1rem;
 \*-----------------------------------*/
 
 #imgfile {
-    top: calc(.25rem * 10);
-    right: calc(.25rem * 50);
+    top: calc(.25rem * 20);
+    right: calc(.25rem * 70);
     width: 36rem;
     border-radius: calc(.625rem + 4px);
     background-color: var(--color-white);
     overflow: hidden;
+}
+
+#imgfile.about-image-window { 
+    top: calc(.25rem * 30);
+    right: calc(.25rem * 100);
+    width: 25rem; 
 }
 
 .image-window-icons {

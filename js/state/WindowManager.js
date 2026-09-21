@@ -11,39 +11,28 @@ class WindowManager {
         this.instances[key] = wrapper;
     }
 
-    // render(key) {
-    //     this.instances[key]?.update();
-    // }
     render(key){
-
-        const wrapper =
-            this.instances[key];
-
-
+        const wrapper = this.instances[key];
         if(!wrapper){
             return;
         }
 
-
-        const state =
-            windowState.windows[key];
-
-
+        const state = windowState.windows[key];
         wrapper.update();
 
-
-
-        if(
-            wrapper.renderContent &&
-            state.data
-        ){
-
-            wrapper.renderContent(
-                state.data
-            );
-
+        // add window identifier
+        if(wrapper.element) {
+            // remove already identifier
+            wrapper.element.classList.remove("about-image-window", "about-text-window");
+            // add identifier to specific image window for about me data
+            if(state.data?.windowClass) {
+                wrapper.element.classList.add(state.data.windowClass);
+            }
         }
 
+        if(wrapper.renderContent && state.data) {
+            wrapper.renderContent(state.data);
+        }
     }
 
     open(key, data = null) {

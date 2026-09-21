@@ -400,6 +400,8 @@ export const ABOUT_FOLDER = {
             icon: "/assets/docs/txt.png",
             kind: "file",
             fileType: "txt",  
+            // window identifier
+            windowClass: "about-text-window",
             position: "top: calc(.25rem * 5); left: calc(.25rem * 10);", //->file position in finder window
             description: [ 
                 // insert project text here ...
@@ -419,6 +421,8 @@ export const ABOUT_FOLDER = {
             icon: "/assets/docs/image.png",
             kind: "file",
             fileType: "img",
+            // window identifier
+            windowClass: "about-image-window",
             position: "top: calc(.15rem * 42); right: calc(.25rem * 60);", //->img position in finder window
             imageUrl: "/assets/images/profileImages/profile-2.jpg", //inert image path here
         },
@@ -428,6 +432,8 @@ export const ABOUT_FOLDER = {
             icon: "/assets/docs/image.png",
             kind: "file",
             fileType: "img",
+            // window identifier
+            windowClass: "about-image-window",
             position: "top: calc(.25rem * 42); right: calc(.25rem * 20);", //->img position in finder window
             imageUrl: "/assets/images/profileImages/profile.jpg", //inert image path here
         }
