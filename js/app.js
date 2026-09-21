@@ -12,7 +12,6 @@ import { Terminal } from "./windows/Terminal.js";
 import { Images } from "./windows/Images.js";
 import { Text } from "./windows/Text.js";
 import { Resume } from "./windows/Resume.js";
-import { AboutMe } from "./windows/AboutMe.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     Header();
@@ -26,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     Images();
     Text();
     Resume();
-    AboutMe();
 });
 
 window.addEventListener('DOMContentLoaded', () => {

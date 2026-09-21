@@ -396,56 +396,41 @@ export const ABOUT_FOLDER = {
     children: [
         {
             id: 1,
-            name: "About me",
-            icon: "/assets/docs/folder.png",
-            kind: "folder",
-            fileType: "folder",
-            mobileMode: "profile",
-            position: "left: calc(.25rem * 5); top: calc(.25rem * 10);", //->file position in finder window
+            name: "about-me.txt",
+            icon: "/assets/docs/txt.png",
+            kind: "file",
+            fileType: "txt",  
+            position: "top: calc(.25rem * 5); left: calc(.25rem * 10);", //->file position in finder window
+            description: [ 
+                // insert project text here ...
+                "Hey there I'm Yarlin, a software developer who enjoys building sleek, interactive websites that actually work well",
 
-            children: [
-                {
-                    id: 1,
-                    name: "profile.txt",
-                    icon: "/assets/docs/txt.png",
-                    kind: "file",
-                    fileType: "txt",
-                    // finderHidden: true,
-                    position: "top: calc(.25rem * 5); left: calc(.25rem * 10);", //->file position in finder window
-                    description: [ 
-                        // insert project text here ...
-                        "Hey there I'm Yarlin, a software developer who enjoys building sleek, interactive websites that actually work well",
-
-                        "I specialize in frontend developement using tools like HTML, CSS and JavaScript, and working to add GSAP into my arsenal of tools.", 
+                "I specialize in frontend developement using tools like HTML, CSS and JavaScript, and working to add GSAP into my arsenal of tools.", 
                         
-                        "Currenly in the process of building creatve projects to further my learning by going back to building basic websites with HTML, CSS & JavaScript to solidify my foundation to tackle Node.js. In doing this I will be able to build fullstack projects.",
+                "Currenly in the process of building creatve projects to further my learning by going back to building basic websites with HTML, CSS & JavaScript to solidify my foundation to tackle Node.js. In doing this I will be able to build fullstack projects.",
                         
-                        "Interested? Keep a look out for more on my Github or feel free to browse further",
-                    ],
-                    imageUrl: "/assets/images/profileImages/profile.jpg",
-                },
-                {
-                    id: 2,
-                    name: "profile.img",
-                    icon: "/assets/docs/image.png",
-                    kind: "file",
-                    fileType: "img",
-                    // finderHidden: true,
-                    position: "top: calc(.25rem * 52); right: calc(.25rem * 80);", //->img position in finder window
-                    imageUrl: "/assets/images/profileImages/profile-2.jpg", //inert image path here
-                },
-                {
-                    id: 3,
-                    name: "profile.img",
-                    icon: "/assets/docs/image.png",
-                    kind: "file",
-                    fileType: "img",
-                    // finderHidden: true,
-                    position: "top: calc(.25rem * 52); right: calc(.25rem * 80);", //->img position in finder window
-                    imageUrl: "/assets/images/profileImages/profile.jpg", //inert image path here
-                },
-            ]
+                "Interested? Keep a look out for more on my Github or feel free to browse further",
+            ],
+            // imageUrl: "/assets/images/profileImages/profile.jpg",
         },
+        {
+            id: 2,
+            name: "profile-2.img",
+            icon: "/assets/docs/image.png",
+            kind: "file",
+            fileType: "img",
+            position: "top: calc(.15rem * 42); right: calc(.25rem * 60);", //->img position in finder window
+            imageUrl: "/assets/images/profileImages/profile-2.jpg", //inert image path here
+        },
+        {
+            id: 3,
+            name: "profile-1.img",
+            icon: "/assets/docs/image.png",
+            kind: "file",
+            fileType: "img",
+            position: "top: calc(.25rem * 42); right: calc(.25rem * 20);", //->img position in finder window
+            imageUrl: "/assets/images/profileImages/profile.jpg", //inert image path here
+        }
     ]
 };
 
@@ -550,24 +535,4 @@ export const WINDOW_CONFIG = {
         zIndex: INITIAL_Z_INDEX,
         data: null
     },
-    aboutme: {
-        isOpen: false,
-        zIndex: INITIAL_Z_INDEX,
-        data: null
-    },
-    aboutText: {
-        isOpen: false,
-        zIndex: INITIAL_Z_INDEX,
-        data: null
-    },
-    aboutImage1: {
-        isOpen: false,
-        zIndex: INITIAL_Z_INDEX,
-        data: null
-    },
-    aboutImage2: {
-        isOpen: false,
-        zIndex: INITIAL_Z_INDEX,
-        data: null
-    }
 };
