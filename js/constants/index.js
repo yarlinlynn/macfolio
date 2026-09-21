@@ -386,7 +386,7 @@ export const WORK_FOLDER = {
     ]
 };
 
-// ABOUT ME FOLDER
+// ABOUT ME FOLDER : Contains personal/about information
 export const ABOUT_FOLDER = {
     id: 2,
     type: "work",
@@ -440,7 +440,7 @@ export const ABOUT_FOLDER = {
     ]
 };
 
-// RESUME FOLDER
+// RESUME FOLDER : Contains the downloadable/viewable resume
 export const RESUME_FOLDER = {
     id: 3,
     type: "resume",
@@ -460,7 +460,7 @@ export const RESUME_FOLDER = {
     ]
 };
 
-// TRASH PROJECTS FOLDER
+// TRASH PROJECTS FOLDER : Contains old/archived portfolio project
 export const TRASH_FOLDER = {
     id: 4,
     type: "trash",
@@ -489,6 +489,7 @@ export const TRASH_FOLDER = {
     ]
 };
 
+// FINDER LOCATIONS : Provides a single object for accessing the main Finder folders can access: locations.work
 export const locations = {
   work: WORK_FOLDER,
   about: ABOUT_FOLDER,
@@ -496,10 +497,10 @@ export const locations = {
   trash: TRASH_FOLDER,
 };
 
-// WINDOW INDEX
+// WINDOW INDEX : Base z-index used by the window management system
 export const INITIAL_Z_INDEX = 1000;
 
-// ALL WINDOWS
+// ALL WINDOWS : Defines every reusable window available in the application
 export const WINDOW_CONFIG = {
     finder: {
         isOpen: false,
