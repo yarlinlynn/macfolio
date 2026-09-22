@@ -1,236 +1,243 @@
-# 🖥️ Macfolio — macOS Inspired Portfolio
 
-A fully interactive macOS-inspired portfolio website built from scratch using **HTML, CSS, and JavaScript**.
+# 🖥️ Macfolio — macOS & iOS Inspired Portfolio
 
-Macfolio recreates the desktop experience of macOS inside the browser, featuring draggable windows, Finder-style navigation, desktop applications, responsive layouts, and interactive UI elements.
+> An interactive portfolio experience designed to feel less like a website and more like an operating system.
+
+**Macfolio** is a responsive personal portfolio inspired by the visual language and interaction patterns of macOS and iOS. Instead of presenting projects and information through a traditional scrolling portfolio, the site turns the portfolio itself into an interactive desktop environment.
+
+Built from scratch with **HTML, CSS, JavaScript, and GSAP**, Macfolio features draggable application windows, a dynamic dock, Finder-style navigation, light and dark themes, and a dedicated mobile file-browsing experience.
 
 <p float="left" align="center">
-  <img src="assets/images/portfolio-desktop.png" width="70%" />
+  <img src="assets/images/portfolio-desktop_screen.png" width="70%" />
   &nbsp;&nbsp;&nbsp;&nbsp;
   <img src="assets/images/portfolio-mobile.png" width="20%" />
 </p>
 
-## ✨ Overview
+## ✨ Project Overview
 
-Macfolio is a personal portfolio designed to feel like a native desktop operating system rather than a traditional website.
+Macfolio explores how a portfolio can become an experience rather than simply a collection of pages.
 
-The project focuses on recreating the familiar macOS workflow:
-- Desktop environment
-- Application windows
-- Finder navigation
-- File browsing 
-- Window controls
-- Window drag interactions
-- esponsive mobile file browser 
-- Interactive portfolio content
+The interface is split into two intentionally different experiences:
 
-The goal was to transform a traditional portfolio into an immersive experience where users can explore projects, resume information, and personal details through a familiar operating system interface.
+* 🖥️ **Desktop** — a macOS-inspired interactive desktop with windows, applications, a dock, and Finder.
+* 📱 **Mobile** — an iOS-inspired interface centered around a dedicated Files experience designed specifically for smaller screens.
 
---- 
+The goal is not to simply make the desktop interface responsive, but to rethink how the portfolio should work on each device.
 
-## 🚀 Features
-### 🖥️ Desktop Environment
 
-- macOS-inspired desktop layout
-- Application dock
-- Desktop icons
-- Window management system
-- Dynamic window layering using z-index
-- Draggable application windows
-- Window open, close, and focus states
+## 🖥️ Desktop Experience
 
-<br/>
+The desktop experience recreates the feeling of using a lightweight macOS environment directly in the browser.
 
-## 📂 Finder Application
+### Window System
 
-The desktop version includes a Finder-style file explorer.
-#### Features:
+Macfolio includes a custom window management system that allows applications to behave like desktop windows.
 
-- Sidebar navigation
-- Folder hierarchy
-- File previews
-- Project folders
-- Image previews
-- Text document previews
-- PDF resume viewing
-- External project links
+* Draggable windows
+* Open and close interactions
+* Window focus and layering
+* Dynamic `z-index` management
+* Reusable application window components
+* Custom window controls
+* Multiple applications open simultaneously
+* Dynamic content rendered inside windows
 
-<br/>
+A central `WindowManager` handles window registration, opening, closing, focusing, and passing data between applications.
 
-## Mobile Files Application
+### 🌓 Light & Dark Mode
 
-A separate mobile-focused file browser was created instead of simply shrinking the desktop Finder.
-#### Features:
+The interface supports both **light and dark themes**, allowing the desktop environment and applications to adapt to the selected appearance.
 
-- Mobile-friendly navigation
-- Breadcrumb navigation
-- Folder traversal
-- File previews inside the application
-- Responsive layouts
+The theme system extends across the interface to maintain a consistent visual experience rather than treating dark mode as a simple colour swap.
 
-<br/>
 
-## 🪟 Window Components
+### 🚀 Animated Dock
 
-Each application is built as a reusable window component.
-Implemented windows include:
+The dock provides the primary way to launch applications from the desktop.
 
-- Finder
-- Files
-- Notes
-- Resume viewer
-- Image viewer
-- Text viewer
-- Gmail-inspired application
+It includes an animated interaction inspired by the macOS dock, with smooth hover and transition effects powered by **GSAP**.
 
-Each window contains:
+The dock acts as both navigation and part of the desktop experience, making launching an application feel like interacting with an operating system rather than navigating a traditional website.
 
-- Custom header
-- Window controls
-- Drag functionality
-- Dynamic content rendering
 
---- 
+## 📂 Finder — Desktop File System
 
-## 🏗️ Architecture
+One of the defining features of the desktop experience is the custom **Finder application**.
 
-Macfolio uses a custom JavaScript window management system.
+Rather than displaying portfolio projects as conventional cards, projects and personal information are organised into a virtual file system.
 
-#### Window Manager
 
-A central ``WindowManager`` controls:
+Files are represented as structured JavaScript data, allowing the Finder interface to dynamically render different types of portfolio content.
 
-- Window registration
-- Opening windows
-- Closing windows
-- Focusing windows
-- Passing data into components
+For example, the same system can represent:
 
-Example workflow:
-```
- User clicks file
-            | 
-            ↓
-    Finder detects file type
-            | 
-            ↓
-    WindowManager.open()
-            | 
-            ↓
-    Relevant window component renders
-            | 
-            ↓
-    Content displayed inside window
-```
-
---- 
-
-## 📁 File Data Structure
-Portfolio content is stored using JavaScript objects rather than hardcoded HTML.
-Example:
-```
+```js
 {
-    name: "Project 1.txt",
-    kind: "file",
-    fileType: "txt",
-    description:[
-        "Project description..."
-    ]
+  name: "Project 1.txt",
+  kind: "file",
+  fileType: "txt",
+  description: [
+    "Project description..."
+  ]
 }
 ```
 
-This allows Finder and Files applications to dynamically render:
-- folders
-- images
-- text files
-- PDFs
-- external links
+This allows portfolio content to behave like a collection of files rather than a series of static HTML sections.
 
---- 
 
-## 🛠️ Technologies Used
-Core Technologies
-- HTML5
-- CSS3
-- JavaScript ES6+
-- DOM manipulation
-- Responsive design
+## 📱 Mobile Experience
 
-<br/>
+The mobile version intentionally introduces a dedicated mobile experience inspired by the way users interact with files on iOS.
 
-## 📚 External Libraries
-**PDF.js**
+### 📁 Files App
 
-Used for rendering PDF documents directly inside the portfolio window.
-Features:
-- Embedded resume viewer
-- Canvas-based PDF rendering
-- Custom PDF controls
+The mobile experience replaces the desktop Finder with a dedicated **Files application** designed around touch interaction and smaller displays.
 
-**date-fns**
 
-Used for formatting dates and times dynamically.
-Features:
-- Desktop date and time
-- Date formatting
-- Time display
 
-**Tippy.js**
+This creates a clear distinction between the two experiences:
 
-Used for interactive tooltips.
-Features:
-- Application hover information
-- Desktop icon hints
-- UI enhancements
-
-**GSAP**
-
-Used for advanced animations and interactions.
-Features:
-- Smooth transitions
-- UI animations
-- Draggable interactions
-
-Libraries:
-- GSAP Core
-- GSAP Draggable
-
-***
-
-## 🎨 Design Decisions
-Desktop and Mobile Have Different Experiences
-Instead of forcing one layout to work everywhere:
-
-Desktop:
-```
+```text
 Desktop
- ├── Finder Window
- ├── Apps
- └── Floating Windows
+├── Desktop Environment
+├── Dock
+├── Applications
+├── Finder
+└── Floating Windows
+
+Mobile
+├── Files App
+├── Breadcrumb Navigation
+├── Folder View
+└── File Preview
 ```
 
-Mobile:
+The result is two interfaces built around the strengths of their respective devices rather than one layout being forced to work everywhere.
+
+
+## 🪟 Applications
+
+Macfolio uses reusable window components to power different parts of the portfolio.
+
+Current applications include:
+
+* 📂 Finder
+* 📁 Files
+* 📝 Notes
+* 📄 Resume Viewer
+* 🖼️ Image Viewer
+* 📃 Text Viewer
+* ✉️ Gmail-inspired application
+
+Each application can be opened within the window system and rendered dynamically based on the content being viewed.
+
+## 🏗️ Architecture
+
+At the centre of Macfolio is a custom JavaScript window management system.
+
+```text
+User interaction
+       ↓
+Application / Finder
+       ↓
+WindowManager
+       ↓
+Window state + content
+       ↓
+Application window
+       ↓
+Rendered portfolio content
 ```
-Files App
- ├── Breadcrumb Navigation
- ├── Folder View
- └── File Preview
+
+The `WindowManager` is responsible for:
+
+* Registering windows
+* Opening applications
+* Closing windows
+* Focusing windows
+* Managing window layering
+* Passing content into applications
+
+This architecture makes it possible to add new applications without rebuilding the desktop environment.
+
+## 📁 Content System
+
+Portfolio content is stored as structured JavaScript objects rather than being hardcoded into individual pages.
+
+This allows the same underlying data to power both the desktop **Finder** and mobile **Files** experience.
+
+Content can represent:
+
+* Folders
+* Projects
+* Images
+* Text documents
+* PDFs
+* External links
+* Portfolio information
+
+This separation between **content and presentation** makes it easier to expand the portfolio while keeping the interface consistent.
+
+## 🛠️ Tech Stack
+
+* **HTML5**
+* **CSS3**
+* **JavaScript ES6+**
+* **Responsive Design**
+* **DOM Manipulation**
+
+### Libraries
+
+* **GSAP** — animations, transitions and draggable interactions
+* **GSAP Draggable** — interactive window dragging
+* **PDF.js** — embedded PDF and resume rendering
+* **date-fns** — date and time formatting
+* **Tippy.js** — tooltips and UI enhancements
+
+
+## 🎨 Design Philosophy
+
+Macfolio is built around one central idea:
+
+> **The portfolio itself should be something worth exploring.**
+
+Rather than treating the interface as a container for portfolio content, the interface becomes part of the project.
+
+The desktop environment provides the familiarity of a computer operating system, while the mobile experience adapts the same concept into a more natural touch-based file browser.
+
+The distinction between **Finder on desktop** and **Files on mobile** is intentional: the goal is to create an experience that feels native to the device being used.
+
+## 🚀 Running Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yarlinlynn/macfolio.git
+cd macfolio
 ```
 
-The mobile experience was designed around how users naturally browse files on smaller screens.
+Open the project in your browser using a local development server.
 
-## 📸 Screenshots
-```screenshots or GIF demonstrations here will go here```
+### 🎨 Tailwind CSS Migration
 
-___
+One planned improvement is migrating the current styling system from **plain CSS to Tailwind CSS**.
 
-⭐ If you like this project: 
-- Consider giving the repository a star!
-- Customize it and make it your own!
-- Share it with other developers
+The goal is to install Tailwind through **npm** and gradually replace the existing custom CSS with Tailwind utility classes and reusable components.
 
-### 📄 License
+
+The current version intentionally uses plain CSS, but moving towards Tailwind will provide a more scalable styling architecture as the portfolio continues to grow.
+
+
+This migration is planned rather than currently implemented, so the existing project remains a plain CSS implementation.
+
+
+## 📄 License
 
 This project is open-source and free to use.
+
+### ⭐ If you enjoyed the project
+
+Feel free to explore the repository, experiment with the interface, or use the ideas as inspiration for your own portfolio.
+
 
 
