@@ -1481,3 +1481,58 @@ letter-spacing: 0.1rem;
 
     .footnote p:first-child { font-size: 14px; }
 }
+
+/*-----------------------------------*\
+#SOCIAL MEDIA WINDOW
+\*-----------------------------------*/
+
+#socialmedia.window {
+    top: calc(.25rem * 5);
+    right: calc(.25rem * 105);
+    width: 30rem;
+    /* height: 30vh; */
+}
+
+.social_media-content {
+    align-items: center;
+    justify-content: space-evenly;
+    margin-block: 2rem;
+}
+
+.social_media-content p { 
+    margin: 1.5rem 2rem;
+    text-align: center;
+}
+
+.socials-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    gap: 10px;
+ }
+
+.socials-list li {
+    /* width: calc(.25rem * 60); */
+   width: calc(.25rem * 50);
+    transform-origin: 50%;
+    border-radius: .625rem;
+    padding: calc(.25rem * 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.socials-list li:nth-child(1) { background-color: rgb(75, 203, 99); } 
+.socials-list li:nth-child(2) { background-color: rgb(244, 101, 107); }
+.socials-list li:nth-child(3)  { background-color: rgb(5, 182, 246); }
+.socials-list li:nth-child(4)  { background-color: rgb(255 132 183); }
+.socials-list li:nth-child(5)  { background-color: rgb(255, 134, 107); }
+.socials-list li:nth-child(6)  { background-color: rgb(232 149 255); }
+
+.socials-list li i { color: white; }
+
+.socials-list #phone { display: block; }

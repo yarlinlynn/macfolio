@@ -98,7 +98,7 @@ export const socials = [
     },
     {
         id: "twitter",
-        name: "X",
+        name: "Twitter",
         img: "/assets/apps/twitter.png",
         icon: "ri-twitter-x-fill",
         url: "https://x.com/yarlinlynn_",
@@ -522,11 +522,6 @@ export const WINDOW_CONFIG = {
         zIndex: INITIAL_Z_INDEX,
         data: null
     },
-    contact: {
-        isOpen: false,
-        zIndex: INITIAL_Z_INDEX,
-        data: null
-    },
     resume: {
         isOpen: false,
         zIndex: INITIAL_Z_INDEX,
@@ -543,6 +538,11 @@ export const WINDOW_CONFIG = {
         data: null
     },
     imgfile: {
+        isOpen: false,
+        zIndex: INITIAL_Z_INDEX,
+        data: null
+    },
+    socialmedia: {
         isOpen: false,
         zIndex: INITIAL_Z_INDEX,
         data: null
