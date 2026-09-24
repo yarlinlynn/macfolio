@@ -2,6 +2,14 @@
 import { locations } from "../constants/index.js";
 import { windowManager } from "../state/WindowManager.js";
 
+/** 
+    Renders the desktop Finder interface
+    The Finder is data-driven: 
+        - the locations object provides the folders/files to display
+        - locationState keeps track of which location is currently active
+
+    Whenever the location changes, the Finder is re-rendered so  the UI always reflects the current state
+*/
 export function renderFinderContent(container, locationState) {
     container.innerHTML = `
         <aside class="sidebar">
@@ -54,50 +62,65 @@ export function renderFinderContent(container, locationState) {
     attachClickEvents(container, locationState)
 };
 
-// add click events
+/** 
+    Adds interaction handlers to Finder items. 
+    Finder navigation is state-driven: 
+        1. Find the selected item in the data 
+        2. Update locationState 
+        3. Re-render the Finder 
+*/
 function attachClickEvents(container, locationState) {
 
-    // open sidebar
+    // Handle clicks on the main Finder sidebar location
     container.querySelectorAll("[data-type='location']").forEach(sidebarItem => {
         sidebarItem.addEventListener("click" , () => {
+            // Find the location represented by the clicked DOM element
             const location = Object.values(locations).find(
                 location => location.id === Number(sidebarItem.dataset.id)
             );
 
-            locationState.set(location);
-            renderFinderContent(container, locationState);
+            locationState.set(location); // Update the active Finder location
+            renderFinderContent(container, locationState); // Re-render the interface using the new state
         })
     })
 
-    // open projects
+    // Handle direct clicks on projects in the sidebar
     container.querySelectorAll("[data-type='project']").forEach(project => {
         project.addEventListener("click", () => {
-
+            // Find the project represented by the clicked element
             const projectItem = locations.work.children.find(
-                p => p.id === Number(project.dataset.id)
+                p => p.id === Number(project.dataset.id) 
             );
 
-            if (!projectItem) return;
-            locationState.set(projectItem);
-            renderFinderContent(container, locationState);
+            if (!projectItem) return; // Stop if the project could not be found
+            locationState.set(projectItem); // Set the selected project as the active location
+            renderFinderContent(container, locationState); // Re-render the Finder with the selected project
         });
 
     });
 
-    // change folder content
+    // Handle files and folders inside the current Finder location
     container.querySelectorAll(".folder-item").forEach(folderElement => {
         folderElement.addEventListener("click", () => {
+            // Find the data object represented by the clicked item
             const folder = getFinderChildren(locationState.activeLocation).find(
                 child => child.id === Number(folderElement.dataset.id)
             )
 
             if (!folder) return;
+            /* 
+                Route the selected item to the appropriate action: 
+                 - folder navigation, PDF viewer, image viewer, text viewer, or external link. 
+            */
             openItem(folder, container, locationState);
         });
     });
 }
 
-// open different content from different doc files
+/** 
+    Determines what should happen when a Finder item is opened. 
+    Folders update the Finder state, while files are routed to their appropriate application through WindowManager or opened externally when necessary.
+*/
 function openItem(item, container, locationState) {
 
     // open folder
@@ -119,14 +142,12 @@ function openItem(item, container, locationState) {
         if (item.href) {
             window.open(item.href, "_blank");
         }
-
         return;
     }
 
     // open image
     if (item.fileType === "img") {
         windowManager.open("imgfile", item);
-
         return;
     }
 
@@ -136,6 +157,7 @@ function openItem(item, container, locationState) {
     }
 }
 
+// Returns the children of a Finder location eg work = WORK_FOLDER = children: [ ... ]
 function getFinderChildren(location) {
     return location.children || [];
 }
