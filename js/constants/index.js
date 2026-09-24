@@ -1,3 +1,23 @@
+// STICKNOTE DYNAMIC DATA
+export const stickyNote = [
+    { 
+        title: "Features to add", 
+        items: [ 
+            "[ ] Add Google Calendar window", 
+            "[ ] Replace EmailJS with Node.js",
+            "[ ] Add files to workspace screen", 
+            "[ ] Replace CSS with Tailwind CSS"
+        ], 
+    },
+    { 
+        title: "Things to do", 
+        items: [ 
+            "[ ] Add MAC OS to LinkedIn", 
+            "[ ] Learn GSAP", 
+            "[ ] Create 1-2 personal projects",
+        ], 
+    }
+] //[✓] use control + command + spacebar to open icons
 
 // QUESTIONS AND ANSWES: FAQ
 export const faq = [
