@@ -6,6 +6,7 @@ import { windowManager } from "../state/WindowManager.js";
 import { draggableNote } from "../utils/stickyNote.js";
 import { socialMediaElement } from "./socials.js";
 import { StickyNote } from "./StickyNote.js";
+import { renderDesktopIcons } from "./renderDesktopIcons.js";
 
 export function Workspace() {
     const width = window.innerWidth;
@@ -93,7 +94,7 @@ export function Workspace() {
             <section id="desktop-apps">
                 ${StickyNote()}
 
-                <ul class="desktop-icons"></ul>
+                <ul class="desktopIcons"></ul>
                 
             </section>
         `;
@@ -101,6 +102,7 @@ export function Workspace() {
 
     draggableNote();
     socialMediaElement();
+    renderDesktopIcons();
 
     const notesMobileWindow = document.getElementById("notes-mobile");
     if(notesMobileWindow) {
@@ -134,14 +136,3 @@ export function Workspace() {
 
 }
 
-{/* <div class="sticky-note" id="note">
-                    <p class="sticker-header">To do list</p>
-                    <ul class="sticky-list">
-                        <li> - Finish up MAC OS portfolio</li>
-                        <li> - Add MAC OS to linkedIn</li>
-                        <li> - Create 1-2 personal projects<li>
-                        <li> - Refactor a website using JS components</li>
-                        <li> - Learn and incorporate GSAP into projects</li>
-                        <li> - Create a windows xp inspired portfolio</li>
-                    </ul>
-                </div> */}
