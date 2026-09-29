@@ -260,7 +260,7 @@ export const dockIcons = [
         id: "trash",
         name: "Trash",
         icon: "/assets/apps/trash-full.png",    
-        canOpen: false,
+        canOpen: true,
     },
 ];
 
