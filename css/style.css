@@ -389,40 +389,6 @@ button, input, select, optgroup, textarea {
     margin: auto;
 }
 
-.desktopIcon-item:nth-child(1) {
-    top: 100px;
-    right: 50px;
-}
-
-.desktopIcon-item:nth-child(2) {
-    top: 220px;
-    right: 150px;
-}
-
-.desktopIcon-item:nth-child(4) {
-    /* top: 350px;
-    right: 65px; */
-    top: 400px;
-    left: 50px;
-}
-
-.desktopIcon-item:nth-child(3) {
-    top: 500px;
-    left: 150px;
-}
-
-.desktopIcon-item:nth-child(3) img { width: 100%; }
-
-.desktopIcon-item:nth-child(5) {
-    top: 500px;
-    left: 150px;
-}
-
-/* .desktopIcon-item:nth-child(6) {
-    top: 550px;
-    right: 70px;
-} */
-
 /*-----------------------------------*\
 #WORKSPACE: TABLET SCREEN
 \*-----------------------------------*/

@@ -279,7 +279,7 @@ export const WORK_FOLDER = {
             icon: "/assets/docs/folder.png",
             kind: "folder",
             position: "left: calc(.25rem * 5); top: calc(.25rem * 10);",  //->icon position inside Finder
-            desktopIconPosition: "top-[45vh] left-[50rem]",  //->optional: Finder desktop window position
+            desktopIconPosition: "top: calc(.25rem * 50); right: calc(.25rem * 50);",  //->optional: Finder desktop window position
             children: [
                 {
                     id: 1,
@@ -369,7 +369,7 @@ export const WORK_FOLDER = {
             icon: "/assets/docs/folder.png",
             kind: "folder",
             position: "top: calc(.25rem * 20); right: calc(.25rem * 40);",  //->icon position inside Finder
-            desktopIconPosition: "top-[10vh] left-10",  //->optional: Finder desktop window position
+            desktopIconPosition: "top: calc(.25rem * 25); right: calc(.25rem * 25);",  //->optional: Finder desktop window position
             children: [
                 {
                     id: 1,
@@ -412,6 +412,8 @@ export const ABOUT_FOLDER = {
     type: "work",
     name: "About me",
     icon: "/assets/icons/info.svg",
+    desktopIcon: "/assets/docs/folder.png",
+    desktopIconPosition: "top: calc(.25rem * 30); left: calc(.25rem * 100);",  //->optional: Finder desktop window position
     kind: "folder",
     children: [
         {
@@ -467,7 +469,6 @@ export const RESUME_FOLDER = {
     name: "Resume",
     icon: "/assets/icons/file.svg",
     kind: "folder",
-    desktopIconPosition: "top: calc(.25rem * 80); left: calc(.25rem * 100);",  //->optional: Finder desktop window position
     children: [
         {
             id: 1,
@@ -476,6 +477,7 @@ export const RESUME_FOLDER = {
             kind: "file",
             fileType: "pdf",
             position: "left: calc(.25rem * 5); top: calc(.25rem * 10);", //->file position in finder window
+            desktopIconPosition: "top: calc(.25rem * 140); left: calc(.25rem * 120);",  //->optional: Finder desktop window position
             pdfUrl: "/assets/files/resume_2026.pdf"
         },
     ]
