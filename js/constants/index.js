@@ -409,11 +409,11 @@ export const WORK_FOLDER = {
 // ABOUT ME FOLDER : Contains personal/about information
 export const ABOUT_FOLDER = {
     id: 2,
-    type: "work",
+    type: "about",
     name: "About me",
     icon: "/assets/icons/info.svg",
     desktopIcon: "/assets/docs/folder.png",
-    desktopIconPosition: "top: calc(.25rem * 30); left: calc(.25rem * 100);",  //->optional: Finder desktop window position
+    desktopIconPosition: "top: calc(.25rem * 110); left: calc(.25rem * 50);",  //->optional: Finder desktop window position
     kind: "folder",
     children: [
         {
@@ -477,7 +477,7 @@ export const RESUME_FOLDER = {
             kind: "file",
             fileType: "pdf",
             position: "left: calc(.25rem * 5); top: calc(.25rem * 10);", //->file position in finder window
-            desktopIconPosition: "top: calc(.25rem * 140); left: calc(.25rem * 120);",  //->optional: Finder desktop window position
+            desktopIconPosition: "    top: calc(.25rem * 130); left: calc(.25rem * 80);",  //->optional: Finder desktop window position
             pdfUrl: "/assets/files/resume_2026.pdf"
         },
     ]
