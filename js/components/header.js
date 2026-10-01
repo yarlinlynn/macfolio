@@ -35,12 +35,11 @@ export function Header() {
                 <li class="desktop">Yarlin's Desktop</li>
                 <li>
                     <ul class="desktop-menu">
-                        <li data-window="finder">Work</li>
-                        <li  data-window="resume">Resume</li>
-                        <li data-window="aboutme">Profile</li>
+                        <li data-window="finder">Finder</li>
                         <li data-window="notes">FAQ</li>
-                        <li data-window="gmail">Contact</li>
-                        <li data-window="socials">Socials</li>
+                        <li data-window="gmail">Contact me</li>
+                        <li data-window="skils">Socials</li>
+                        <li data-window="socials">Skills</li>
                     </ul>
                 </li>
             </ul>
@@ -89,16 +88,6 @@ export function Header() {
                 console.log("Finder rendering:",locationState.activeLocation.name);
                 break;
 
-                case "resume":
-                windowManager.open("resume", getResumeFile());
-                break;
-
-                case "aboutme":
-                locationState.set(locations.about);
-                windowManager.open("finder", { activeSidebar: menuItem });
-                console.log("Profile clicked:",locationState.activeLocation.name);
-                break;
-
                 case "notes":
                 windowManager.open("notes");
                 break;
@@ -111,15 +100,14 @@ export function Header() {
                 windowManager.open("socialmedia");
                 break;
 
+                case "skils":
+                windowManager.open("terminal");
+                break;
+
                 default:
                 console.warn(`Unknown window: ${windowKey}`);
             }
         })
-
-        // helper function to get resume to display pdf
-        function getResumeFile() {
-            return Object.values(locations).flatMap(location => location.children ?? []).find(item => item.fileType === "pdf");
-        }
 
     }
 
