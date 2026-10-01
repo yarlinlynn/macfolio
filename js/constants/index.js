@@ -5,14 +5,14 @@ export const stickyNote = [
         items: [ 
             "[ ] Add Google Calendar window", 
             "[ ] Replace EmailJS with Node.js",
-            "[ ] Add files to workspace screen", 
+            "✔️ Add files to workspace screen", 
             "[ ] Replace CSS with Tailwind CSS"
         ], 
     },
     { 
         title: "Things to do", 
         items: [ 
-            "[ ] Add MAC OS to LinkedIn", 
+            "✔️ Add MAC OS to LinkedIn", 
             "[ ] Learn GSAP", 
             "[ ] Create 1-2 personal projects",
         ], 
