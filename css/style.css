@@ -105,10 +105,15 @@ body {
         background-image: url(/assets/images/wallpaper/mobile-background.jpg);
         background-repeat: no-repeat;
         background-size: contain;
-        background-color: var(--background);
-        /* backdrop-filter: blur(1px); */
+        background-color: black;
         background-position: center;
     }
+
+    header, .apps { color: white; }
+
+    .status-bar img, .battery-life img { filter: brightness(0) invert(1); }
+
+
 }
 
 a {
@@ -1270,6 +1275,8 @@ letter-spacing: 0.1rem;
         padding-block: calc(.25rem * 2);
         height: 50%;
     }
+
+    #img-1, #img-2 { margin-top: 3rem; }
 }
 
 /*-----------------------------------*\
