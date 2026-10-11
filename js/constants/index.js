@@ -116,13 +116,13 @@ export const socials = [
         icon: "ri-instagram-fill",
         url: "https://www.instagram.com/yarlin.lynn_",
     },
-    {
-        id: "twitter",
-        name: "Twitter",
-        img: "/assets/apps/twitter.png",
-        icon: "ri-twitter-x-fill",
-        url: "https://x.com/yarlinlynn_",
-    },
+    // {
+    //     id: "twitter",
+    //     name: "Twitter",
+    //     img: "/assets/apps/twitter.png",
+    //     icon: "ri-twitter-x-fill",
+    //     url: "https://x.com/yarlinlynn_",
+    // },
     {
         id: "discord",
         name: "Discord",

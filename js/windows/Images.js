@@ -28,7 +28,7 @@ export function Images(parent=document.body, key = "imgfile") {
     content.className="image-content";
     window.renderContent = function(item){
         content.innerHTML = `
-            <img src="${item.imageUrl}" alt="${item.name}" loading="lazy" />
+            <img src="${item.imageUrl}" id="${item.name}" alt="${item.name}" loading="lazy" />
         `;
     };
 
@@ -45,7 +45,7 @@ export function Images(parent=document.body, key = "imgfile") {
 export function ImagePreview(item) {
     return `
         <div class="image-preview">
-            <img src="${item.imageUrl}" alt="${item.name}" loading="lazy" />
+            <img src="${item.imageUrl}" id="${item.name}" alt="${item.name}" loading="lazy" />
         </div>
     `
 }
