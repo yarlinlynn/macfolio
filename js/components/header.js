@@ -38,8 +38,8 @@ export function Header() {
                         <li data-window="finder">Finder</li>
                         <li data-window="notes">FAQ</li>
                         <li data-window="gmail">Contact me</li>
-                        <li data-window="skils">Socials</li>
-                        <li data-window="socials">Skills</li>
+                        <li data-window="socials">Socials</li>
+                        <li data-window="skills">Skills</li>
                     </ul>
                 </li>
             </ul>
@@ -100,7 +100,7 @@ export function Header() {
                 windowManager.open("socialmedia");
                 break;
 
-                case "skils":
+                case "skills":
                 windowManager.open("terminal");
                 break;
 
