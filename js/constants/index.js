@@ -567,6 +567,11 @@ export const WINDOW_CONFIG = {
         zIndex: INITIAL_Z_INDEX,
         data: null
     },
+    videofile: {
+        isOpen: false,
+        zIndex: INITIAL_Z_INDEX,
+        data: null
+    },
     socialmedia: {
         isOpen: false,
         zIndex: INITIAL_Z_INDEX,
