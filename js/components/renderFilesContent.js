@@ -1,6 +1,7 @@
 
 import { windowManager } from "../state/WindowManager.js";
 
+import { VideoPreview } from "../windows/Video.js";
 import { ImagePreview } from "../windows/Images.js";
 import { TextPreview } from "../windows/Text.js";
 import { ResumePreview, renderPdf } from "../windows/Resume.js";
@@ -14,6 +15,16 @@ export function renderFilesContent({ header, container, navigation }) {
         container.innerHTML = `
             ${renderBreadcrumb(navigation)}
             ${ImagePreview(current.data)}
+        `;
+        attachEventListeners({ header, container, navigation });
+        return;
+    }
+
+    // Render a video preview
+    if (current.type === "video") {
+        container.innerHTML = `
+            ${renderBreadcrumb(navigation)}
+            ${VideoPreview(current.data)}
         `;
         attachEventListeners({ header, container, navigation });
         return;
@@ -171,13 +182,6 @@ function openItem({ item, header, container, navigation }) {
     switch(item.fileType) {
         // open pdf
         case "pdf":
-            // Desktop
-            if (window.innerWidth >= 768) {
-                windowManager.open("resume", item);
-                break;
-            }
-
-            // keep the PDF inside the Files navigation instead of opening a desktop-style floating window
             navigation.push({ name: item.name, type: "pdf", data: item });
             renderFilesContent({ header,container, navigation });
             break;
@@ -192,6 +196,12 @@ function openItem({ item, header, container, navigation }) {
         case "img":
             navigation.push({ name: item.name, type: "image", data: item });
             renderFilesContent({ header, container, navigation })
+            break;
+
+        // open video file
+        case "video":
+            navigation.push({ name: item.name, type: "video", data: item });
+            renderFilesContent({ header, container, navigation });
             break;
 
         // open external link

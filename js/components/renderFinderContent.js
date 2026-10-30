@@ -155,6 +155,12 @@ function openItem(item, container, locationState) {
     if (item.fileType === "txt") {
         windowManager.open("txtfile", item);
     }
+
+    /// open video file
+    if (item.fileType === "video") {
+        windowManager.open("videofile", item);
+        return;
+    }
 }
 
 // Returns the children of a Finder location eg work = WORK_FOLDER = children: [ ... ]
