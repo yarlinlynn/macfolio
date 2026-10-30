@@ -319,48 +319,50 @@ export const WORK_FOLDER = {
         },
 
         // PROJECT 2:
-        // {
-        //     id: 6,
-        //     name: "Space Tourism",
-        //     icon: "/assets/docs/folder.png",
-        //     kind: "folder",
-        //     position: "top: calc(.25rem * 40); right: calc(.25rem * 80);",  //->icon position inside Finder
-        //     //desktopIconPosition: "top-[10vh] left-10",  ->optional: Finder desktop window position
-        //     children: [
-        //         {
-        //             id: 1,
-        //             name: "Space Tourism.txt",
-        //             icon: "/assets/docs/txt.png",
-        //             kind: "file",
-        //             fileType: "txt",
-        //             position: "top: calc(.25rem * 5); right: calc(.25rem * 10);", //->file position in finder window
-        //             description: [ 
-        //                 // insert project text here ...
-        //                 "A responsive multi-page space tourism website built as a front-end project to showcase modern web development practices, responsive design, and interactive user experiences. The application allows users to explore space destinations, meet crew members, and discover cutting-edge space technology through an engaging and visually immersive interface.",
+        {
+            id: 6,
+            name: "Feelings Journal",
+            icon: "/assets/docs/folder.png",
+            kind: "folder",
+            position: "top: calc(.25rem * 40); right: calc(.25rem * 80);",  //->icon position inside Finder
+            desktopIconPosition: "top: calc(.25rem * 85); right: calc(.25rem * 30);",  //->optional: Finder desktop window position
+            children: [
+                {
+                    id: 1,
+                    name: "Journal.txt",
+                    icon: "/assets/docs/txt.png",
+                    kind: "file",
+                    fileType: "txt",
+                    position: "top: calc(.25rem * 5); right: calc(.25rem * 10);", //->file position in finder window
+                    description: [ 
+                        // insert project text here ...
+                        "A simple personal feelings journal web application that allows users to record their thoughts, feelings, or experiences and return to previous entries whenever they revisit the website, built with HTML, Tailwind CSS, and vanilla JavaScript. Users can select an emotion, write a reflection, and save entries that persist in the browser using localStorage.",
 
-        //                 "Each page features rich imagery, responsive layouts, and interactive content that creates an engaging experience while demonstrating strong front-end development skills.",
-        //             ]
-        //         },
-        //         {
-        //             id: 2,
-        //             name: "Space Tourism.img",
-        //             icon: "/assets/docs/image.png",
-        //             kind: "file",
-        //             fileType: "img",
-        //             position: "left: calc(.25rem * 80); top: calc(.25rem * 45);", //->img position in finder window
-        //             imageUrl: "/assets/images/projectImages/space-tourism.png", //inert image path here
-        //         },
-        //         {
-        //             id: 3,
-        //             name: "Space Tourism.com",
-        //             icon: "/assets/docs/plain.png",
-        //             kind: "file",
-        //             fileType: "url",
-        //             href: "https://space-tourism-website-multi-page.netlify.app/", //add project live link
-        //             position: "left: calc(.25rem * 20); top: calc(.25rem * 20);", //->file position in finder window
-        //         },
-        //     ]
-        // },
+                        "The app is structured around reusable JavaScript components and features three main screens: a welcome screen with typing animation, an entry form with emotion selection and validation, and a journal view that displays saved entries. On desktop, entries appear two per page in a realistic open-journal layout, while mobile shows one entry at a time. Long entries are fully readable with smooth scrolling, and navigating between pages plays a custom page-turn sound.",
+
+                        "Key features include form validation (emotion, title, and thoughts are required before saving), dynamic background colors based on the selected emotion, a thoughtful empty state design when no entries exist, and full responsiveness across desktop, tablet, and mobile. All entries are stored locally in the browser so they remain available after page reloads."
+                    ]
+                },
+                {
+                    id: 2,
+                    name: "Journal.img",
+                    icon: "/assets/docs/image.png",
+                    kind: "file",
+                    fileType: "img",
+                    position: "left: calc(.25rem * 80); top: calc(.25rem * 45);", //->img position in finder window
+                    imageUrl: "/assets/images/projectImages/desktop-no_entries.png", //inert image path here
+                },
+                {
+                    id: 3,
+                    name: "Journal.com",
+                    icon: "/assets/docs/plain.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "https://yarlinlynn.github.io/feelings-journal/", //add project live link
+                    position: "left: calc(.25rem * 20); top: calc(.25rem * 20);", //->file position in finder window
+                },
+            ]
+        },
 
         // PROJECT 3:
         {
