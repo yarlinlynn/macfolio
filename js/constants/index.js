@@ -307,6 +307,7 @@ export const WORK_FOLDER = {
                     icon: "/assets/docs/image.png",
                     kind: "file",
                     fileType: "video", 
+                    variant: "desktop",
                     position: "left: calc(.25rem * 80); top: calc(.25rem * 45);", //->img position in finder window
                     videoUrl: "/assets/images/projectVideos/projectOne_desktop-demo.mp4", //inert image path here 
                 },
@@ -316,6 +317,7 @@ export const WORK_FOLDER = {
                     icon: "/assets/docs/image.png",
                     kind: "file",
                     fileType: "video",
+                    variant: "mobile",
                     position: "left: calc(.25rem * 20); top: calc(.25rem * 20);", //->file position in finder window
                     videoUrl: "/assets/images/projectVideos/projectOne_mobile-demo.mp4", //add project live link
                 },
@@ -371,6 +373,7 @@ export const WORK_FOLDER = {
                     icon: "/assets/docs/image.png",
                     kind: "file",
                     fileType: "video",
+                    variant: "desktop",
                     position: "left: calc(.25rem * 80); top: calc(.25rem * 45);", //->img position in finder window
                     videoUrl: "/assets/images/projectVideos/projectTwo_desktop-demo.mp4", //inert image path here
                 },
@@ -380,6 +383,7 @@ export const WORK_FOLDER = {
                     icon: "/assets/docs/image.png",
                     kind: "file",
                     fileType: "video",
+                    variant: "mobile",
                     position: "left: calc(.25rem * 80); top: calc(.25rem * 45);", //->img position in finder window
                     videoUrl: "/assets/images/projectVideos/projectTwo_mobile-demo.mp4", //inert image path here
                 },
@@ -439,6 +443,7 @@ export const WORK_FOLDER = {
                     icon: "/assets/docs/image.png",
                     kind: "file",
                     fileType: "video",
+                    variant: "desktop",
                     position: "top: calc(.25rem * 10); right: calc(.25rem * 20);", //->file position in finder window
                     videoUrl: "/assets/images/projectVideos/projectThree_desktop-demo.mp4", //inert image path here
                 },
@@ -448,6 +453,7 @@ export const WORK_FOLDER = {
                     icon: "/assets/docs/image.png",
                     kind: "file",
                     fileType: "video",
+                    variant: "mobile",
                     position: "top: calc(.25rem * 10); right: calc(.25rem * 30);", //->file position in finder window
                     videoUrl: "/assets/images/projectVideos/projectThree_mobile-demo.mp4", //inert image path here
                 },
