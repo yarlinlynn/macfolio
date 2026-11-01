@@ -1311,10 +1311,8 @@ letter-spacing: 0.1rem;
 }
 
 .window-header-links {
-    display: grid;
-    grid-template-columns: 1.5rem 1.5rem;
+    display: flex;
     align-items: center;
-    gap: 5px;
 }
 
 
