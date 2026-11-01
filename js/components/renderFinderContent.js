@@ -48,7 +48,7 @@ export function renderFinderContent(container, locationState) {
                 locationState.activeLocation.children ? `
                     <ul class="folder-content">
                         ${getFinderChildren(locationState.activeLocation).map( item => `
-                            <li class="folder-item" data-id="${item.id}" style="${item.position ?? ""}">
+                            <li class="folder-item" id="${item.name}" data-id="${item.id}" style="${item.position ?? ""}">
                                 <img src="${item.icon}" alt="${item.name}" loading="lazy" />
                                 <p>${item.name}</p>
                             </li>
@@ -167,3 +167,4 @@ function openItem(item, container, locationState) {
 function getFinderChildren(location) {
     return location.children || [];
 }
+

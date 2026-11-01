@@ -1098,11 +1098,12 @@ input:focus {
     display: flex; 
 }
 
-
-.folder-item #github.com,
-.folder-item #Journal.com,
-.folder-item #Glowing.com,
-.folder-item #kanban.com { display: none; }
+.folder-item[id="Journal.com"],
+.folder-item[id="Glowing.com"],
+.folder-item[id="kanban.com"],
+.folder-item[id="github.com"] {
+    display: none !important;
+}
 
 .finder-content .folder-content li img {
     width: calc(.25rem * 16);
@@ -1112,10 +1113,10 @@ input:focus {
     position: relative;
 }
 
-/* .folder-item {
+.folder-item {
     position: absolute;
     list-style: none;
-} */
+}
 
 /*-----------------------------------*\
 #FILES WINDOW 

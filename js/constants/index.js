@@ -291,7 +291,7 @@ export const WORK_FOLDER = {
                     fileType: "txt",
                     liveWebsite: "https://yarlinlynn.github.io/feelings-journal/",
                     githubLink: "https://github.com/yarlinlynn/feelings-journal",
-                    position: "top: calc(.25rem * 5); right: calc(.25rem * 10);", //->file position in finder window
+                    position: "top: calc(.25rem * 5); left: calc(.25rem * 10);", //->file position in finder window
                     description: [ 
                         // insert project text here ...
                         "A simple personal feelings journal web application that allows users to record their thoughts, feelings, or experiences and return to previous entries whenever they revisit the website, built with HTML, Tailwind CSS, and vanilla JavaScript. Users can select an emotion, write a reflection, and save entries that persist in the browser using localStorage.",
@@ -308,7 +308,7 @@ export const WORK_FOLDER = {
                     kind: "file",
                     fileType: "video", 
                     variant: "desktop",
-                    position: "left: calc(.25rem * 80); top: calc(.25rem * 45);", //->img position in finder window
+                    position: "top: calc(.25rem * 50); right: calc(.25rem * 50);", //->img position in finder window
                     videoUrl: "/assets/images/projectVideos/projectOne_desktop-demo.mp4", //inert image path here 
                 },
                 {
@@ -318,7 +318,7 @@ export const WORK_FOLDER = {
                     kind: "file",
                     fileType: "video",
                     variant: "mobile",
-                    position: "left: calc(.25rem * 20); top: calc(.25rem * 20);", //->file position in finder window
+                    position: "top: calc(.25rem * 15); right: calc(.25rem * 10);", //->file position in finder window
                     videoUrl: "/assets/images/projectVideos/projectOne_mobile-demo.mp4", //add project live link
                 },
                 {
@@ -374,7 +374,7 @@ export const WORK_FOLDER = {
                     kind: "file",
                     fileType: "video",
                     variant: "desktop",
-                    position: "left: calc(.25rem * 80); top: calc(.25rem * 45);", //->img position in finder window
+                    position: "left: calc(.25rem * 50); top: calc(.25rem * 45);", //->img position in finder window
                     videoUrl: "/assets/images/projectVideos/projectTwo_desktop-demo.mp4", //inert image path here
                 },
                 {
@@ -384,7 +384,7 @@ export const WORK_FOLDER = {
                     kind: "file",
                     fileType: "video",
                     variant: "mobile",
-                    position: "left: calc(.25rem * 80); top: calc(.25rem * 45);", //->img position in finder window
+                    position: "left: calc(.25rem * 10); top: calc(.25rem * 10);", //->img position in finder window
                     videoUrl: "/assets/images/projectVideos/projectTwo_mobile-demo.mp4", //inert image path here
                 },
                 {
@@ -444,7 +444,7 @@ export const WORK_FOLDER = {
                     kind: "file",
                     fileType: "video",
                     variant: "desktop",
-                    position: "top: calc(.25rem * 10); right: calc(.25rem * 20);", //->file position in finder window
+                    position: "top: calc(.25rem * 50); right: calc(.25rem * 50);", //->file position in finder window
                     videoUrl: "/assets/images/projectVideos/projectThree_desktop-demo.mp4", //inert image path here
                 },
                 {
