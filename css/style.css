@@ -1082,13 +1082,30 @@ input:focus {
     height: 100%;
 }
 
+.finder-content .folder-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding-block-start: 2rem;
+    padding-inline: 2rem;
+    gap: calc(.25rem * 10);
+    align-items: center;
+}
+
 .finder-content .folder-content li {
+    /* align-items: center;
+    gap: calc(.25rem * 3);
+    flex-direction: column;
+    display: flex; */
+    /* position: absolute; */
     align-items: center;
     gap: calc(.25rem * 3);
     flex-direction: column;
     display: flex;
     /* position: absolute; */
+    flex-wrap: wrap;
 }
+
+/* .finder-content .folder-content li p { display: none; } */
 
 /* .finder-content .folder-content li:nth-child(1) {
     left: calc(.25rem * 5);
@@ -1113,10 +1130,10 @@ input:focus {
     position: relative;
 }
 
-.folder-item {
+/* .folder-item {
     position: absolute;
     list-style: none;
-}
+} */
 
 /*-----------------------------------*\
 #FILES WINDOW 
@@ -1157,6 +1174,7 @@ letter-spacing: 0.1rem;
     padding-block: calc(.25rem * 6);
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .breadcrumb button {
@@ -1277,6 +1295,20 @@ letter-spacing: 0.1rem;
     .image-preview #profile-2\.img,
     .image-preview #profile-1\.img { margin-top: 5rem; }
 }
+
+/*-----------------------------------*\
+#VIDEO WINDOW 
+\*-----------------------------------*/
+
+#videofile {
+    top: calc(.25rem * 20);
+    right: calc(.25rem * 70);
+    width: 36rem;
+    border-radius: calc(.625rem + 4px);
+    background-color: var(--color-white);
+    overflow: hidden;
+}
+
 
 /*-----------------------------------*\
 #TEXT WINDOW 

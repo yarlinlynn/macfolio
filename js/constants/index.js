@@ -275,55 +275,11 @@ export const WORK_FOLDER = {
         // PROJECT 1:
         {
             id: 5,
-            name: "Kanban Task Board",
-            icon: "/assets/docs/folder.png",
-            kind: "folder",
-            position: "left: calc(.25rem * 5); top: calc(.25rem * 10);",  //->icon position inside Finder
-            desktopIconPosition: "top: calc(.25rem * 50); right: calc(.25rem * 50);",  //->optional: Finder desktop window position
-            children: [
-                {
-                    id: 1,
-                    name: "Kanban.txt",
-                    icon: "/assets/docs/txt.png",
-                    kind: "file",
-                    fileType: "txt",
-                    position: "left: calc(.25rem * 10); top: calc(.25rem * 5);", //->file position in finder window
-                    description: [ 
-                        // insert project text here ...
-                        "A modern task management web application built with HTML5, Tailwind CSS, JavaScript and LocalStorage API. The app allows users to create, organize, and prioritize tasks with an intuitive interface and dark/light theme support.",
-
-                        "The main features include a task management system where users can create new tasks via a dynamic modal form which includes a task title, description, status (Todo, In Progress, Done), priority (High, Medium, Low) where aasks are automatically sorted by priority for better organization and validation ensures a task cannot be created without a title. User interface was fully styled using Tailwind CSS for a responsive, clean, and modern look with dark and light mode with smooth toggle functionality which syncs theme preference across both desktop and mobile toggles and user’s theme choice is saved to localStorage and persists on reload. Project has a show/hide sidebar functionality for distraction-free task focus, tasks that are saved in localStorage so data persists across page reloads and newly created tasks are automatically stored and re-rendered into the DOM",
-
-                        "This project was developed as part of learning JavaScript, showcasing the concepts and skills I’ve learned along the way. It reflects my growth in building interactive applications, handling data persistence, and creating user-friendly interfaces.",
-                    ]
-                },
-                {
-                    id: 2,
-                    name: "Kanban.img",
-                    icon: "/assets/docs/image.png",
-                    kind: "file",
-                    fileType: "img",
-                    position: "top: calc(.25rem * 49); right: calc(.25rem * 80);", //->file position in finder window
-                    imageUrl: "/assets/images/projectImages/kanban-light.png", //inert image path here
-                },
-                {
-                    id: 3,
-                    name: "kanban.com",
-                    icon: "/assets/docs/plain.png",
-                    kind: "file",
-                    fileType: "url",
-                    href: "https://kanban-taskboard-made-simple.netlify.app/", //add project live link
-                    position: "top: calc(.25rem * 10); right: calc(.25rem * 20);", //->file position in finder window
-                },
-            ]
-        },
-
-        // PROJECT 2:
-        {
-            id: 6,
             name: "Feelings Journal",
             icon: "/assets/docs/folder.png",
             kind: "folder",
+            liveWebsite: "https://yarlinlynn.github.io/feelings-journal/",
+            githubLink: "https://github.com/yarlinlynn/feelings-journal",
             position: "top: calc(.25rem * 40); right: calc(.25rem * 80);",  //->icon position inside Finder
             desktopIconPosition: "top: calc(.25rem * 85); right: calc(.25rem * 30);",  //->optional: Finder desktop window position
             children: [
@@ -333,6 +289,8 @@ export const WORK_FOLDER = {
                     icon: "/assets/docs/txt.png",
                     kind: "file",
                     fileType: "txt",
+                    liveWebsite: "https://yarlinlynn.github.io/feelings-journal/",
+                    githubLink: "https://github.com/yarlinlynn/feelings-journal",
                     position: "top: calc(.25rem * 5); right: calc(.25rem * 10);", //->file position in finder window
                     description: [ 
                         // insert project text here ...
@@ -345,15 +303,24 @@ export const WORK_FOLDER = {
                 },
                 {
                     id: 2,
-                    name: "Journal.img",
+                    name: "desktop demo.mp4",
                     icon: "/assets/docs/image.png",
                     kind: "file",
-                    fileType: "img",
+                    fileType: "video", 
                     position: "left: calc(.25rem * 80); top: calc(.25rem * 45);", //->img position in finder window
-                    imageUrl: "/assets/images/projectImages/desktop-no_entries.png", //inert image path here
+                    videoUrl: "/assets/images/projectVideos/projectOne_desktop-demo.mp4", //inert image path here 
                 },
                 {
                     id: 3,
+                    name: "mobile demo.mp4",
+                    icon: "/assets/docs/image.png",
+                    kind: "file",
+                    fileType: "video",
+                    position: "left: calc(.25rem * 20); top: calc(.25rem * 20);", //->file position in finder window
+                    videoUrl: "/assets/images/projectVideos/projectOne_mobile-demo.mp4", //add project live link
+                },
+                {
+                    id: 4,
                     name: "Journal.com",
                     icon: "/assets/docs/plain.png",
                     kind: "file",
@@ -361,15 +328,26 @@ export const WORK_FOLDER = {
                     href: "https://yarlinlynn.github.io/feelings-journal/", //add project live link
                     position: "left: calc(.25rem * 20); top: calc(.25rem * 20);", //->file position in finder window
                 },
+                {
+                    id: 5,
+                    name: "github.com",
+                    icon: "/assets/docs/plain.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "https://github.com/yarlinlynn/feelings-journal", //add project live link
+                    position: "top: calc(.25rem * 45); left: calc(.25rem * 5);", //->file position in finder window
+                },
             ]
         },
 
-        // PROJECT 3:
+        // PROJECT 2:
         {
-            id: 7,
+            id: 6,
             name: "Glowing",
             icon: "/assets/docs/folder.png",
             kind: "folder",
+            liveWebsite: "https://yarlinlynn.github.io/Glowing-Skincare/",
+            githubLink: "https://github.com/yarlinlynn/Glowing-Skincare",
             position: "top: calc(.25rem * 20); right: calc(.25rem * 40);",  //->icon position inside Finder
             desktopIconPosition: "top: calc(.25rem * 25); right: calc(.25rem * 25);",  //->optional: Finder desktop window position
             children: [
@@ -379,6 +357,8 @@ export const WORK_FOLDER = {
                     icon: "/assets/docs/txt.png",
                     kind: "file",
                     fileType: "txt",
+                    liveWebsite: "https://yarlinlynn.github.io/Glowing-Skincare/",
+                    githubLink: "https://github.com/yarlinlynn/Glowing-Skincare",
                     position: "top: calc(.25rem * 5); right: calc(.25rem * 10);", //->file position in finder window
                     description: [ 
                         // insert project text here ...
@@ -387,21 +367,107 @@ export const WORK_FOLDER = {
                 },
                 {
                     id: 2,
-                    name: "Glowing.img",
+                    name: "desktop demo.mp4",
                     icon: "/assets/docs/image.png",
                     kind: "file",
-                    fileType: "img",
+                    fileType: "video",
                     position: "left: calc(.25rem * 80); top: calc(.25rem * 45);", //->img position in finder window
-                    imageUrl: "/assets/images/projectImages/Glowing.png", //inert image path here
+                    videoUrl: "/assets/images/projectVideos/projectTwo_desktop-demo.mp4", //inert image path here
                 },
                 {
                     id: 3,
+                    name: "mobile demo.mp4",
+                    icon: "/assets/docs/image.png",
+                    kind: "file",
+                    fileType: "video",
+                    position: "left: calc(.25rem * 80); top: calc(.25rem * 45);", //->img position in finder window
+                    videoUrl: "/assets/images/projectVideos/projectTwo_mobile-demo.mp4", //inert image path here
+                },
+                {
+                    id: 4,
                     name: "Glowing.com",
                     icon: "/assets/docs/plain.png",
                     kind: "file",
                     fileType: "url",
-                    href: "https://skincare-glowing.netlify.app/", //add project live link
+                    href: "https://yarlinlynn.github.io/Glowing-Skincare/", //add project live link
                     position: "left: calc(.25rem * 20); top: calc(.25rem * 20);", //->file position in finder window
+                },
+                {
+                    id: 5,
+                    name: "github.com",
+                    icon: "/assets/docs/plain.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "https://github.com/yarlinlynn/Glowing-Skincare", //add project live link
+                    position: "left: calc(.25rem * 20); top: calc(.25rem * 20);", //->file position in finder window
+                },
+            ]
+        },
+
+        // PROJECT 3:
+        {
+            id: 7,
+            name: "Kanban Task Board",
+            icon: "/assets/docs/folder.png",
+            kind: "folder",
+            liveWebsite: "https://kanban-taskboard-made-simple.netlify.app/",
+            githubLink: "https://github.com/yarlinlynn/Kanban",
+            position: "left: calc(.25rem * 5); top: calc(.25rem * 10);",  //->icon position inside Finder
+            desktopIconPosition: "top: calc(.25rem * 50); right: calc(.25rem * 50);",  //->optional: Finder desktop window position
+            children: [
+                {
+                    id: 1,
+                    name: "Kanban.txt",
+                    icon: "/assets/docs/txt.png",
+                    kind: "file",
+                    fileType: "txt",
+                    liveWebsite: "https://kanban-taskboard-made-simple.netlify.app/",
+                    githubLink: "https://github.com/yarlinlynn/Kanban",
+                    position: "left: calc(.25rem * 10); top: calc(.25rem * 5);", //->file position in finder window
+                    description: [ 
+                        // insert project text here ...
+                        "A modern task management web application built with HTML5, Tailwind CSS, JavaScript and LocalStorage API. The app allows users to create, organize, and prioritize tasks with an intuitive interface and dark/light theme support.",
+
+                        "The main features include a task management system where users can create new tasks via a dynamic modal form which includes a task title, description, status (Todo, In Progress, Done), priority (High, Medium, Low) where aasks are automatically sorted by priority for better organization and validation ensures a task cannot be created without a title. User interface was fully styled using Tailwind CSS for a responsive, clean, and modern look with dark and light mode with smooth toggle functionality which syncs theme preference across both desktop and mobile toggles and user’s theme choice is saved to localStorage and persists on reload. Project has a show/hide sidebar functionality for distraction-free task focus, tasks that are saved in localStorage so data persists across page reloads and newly created tasks are automatically stored and re-rendered into the DOM",
+
+                        "This project was developed as part of learning JavaScript, showcasing the concepts and skills I’ve learned along the way. It reflects my growth in building interactive applications, handling data persistence, and creating user-friendly interfaces.",
+                    ]
+                },
+                {
+                    id: 2,
+                    name: "desktop demo.mp4",
+                    icon: "/assets/docs/image.png",
+                    kind: "file",
+                    fileType: "video",
+                    position: "top: calc(.25rem * 10); right: calc(.25rem * 20);", //->file position in finder window
+                    videoUrl: "/assets/images/projectVideos/projectThree_desktop-demo.mp4", //inert image path here
+                },
+                {
+                    id: 3,
+                    name: "mobile demo.mp4",
+                    icon: "/assets/docs/image.png",
+                    kind: "file",
+                    fileType: "video",
+                    position: "top: calc(.25rem * 10); right: calc(.25rem * 30);", //->file position in finder window
+                    videoUrl: "/assets/images/projectVideos/projectThree_mobile-demo.mp4", //inert image path here
+                },
+                {
+                    id: 4,
+                    name: "kanban.com",
+                    icon: "/assets/docs/plain.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "https://kanban-taskboard-made-simple.netlify.app/", //add project live link
+                    position: "top: calc(.25rem * 10); right: calc(.25rem * 20);", //->file position in finder window
+                },
+                {
+                    id: 5,
+                    name: "github.com",
+                    icon: "/assets/docs/plain.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "https://github.com/yarlinlynn/Kanban", //add project live link
+                    position: "top: calc(.25rem * 49); right: calc(.25rem * 80);", //->file position in finder window
                 },
             ]
         },
