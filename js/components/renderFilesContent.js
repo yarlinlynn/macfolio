@@ -94,7 +94,7 @@ function getIcon(item) {
         case "url":
             return "./assets/docs/plain.png";
         case "video":
-            return "./assets/docs/plain.png";
+            return "./assets/docs/image.png";
         default:
             return "./assets/docs/folder.png";
     }
