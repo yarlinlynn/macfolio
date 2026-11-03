@@ -501,15 +501,14 @@ export const ABOUT_FOLDER = {
             position: "top: calc(.25rem * 5); left: calc(.25rem * 10);", //->file position in finder window
             description: [ 
                 // insert project text here ...
-                "Hey there I'm Yarlin, a software developer who enjoys building sleek, interactive websites that actually work well",
-
-                "I specialize in frontend developement using tools like HTML, CSS and JavaScript, and working to add GSAP into my arsenal of tools.", 
-                        
-                "Currenly in the process of building creatve projects to further my learning by going back to building basic websites with HTML, CSS & JavaScript to solidify my foundation to tackle Node.js. In doing this I will be able to build fullstack projects.",
-                        
-                "Interested? Keep a look out for more on my Github or feel free to browse further",
+                "Hey there, I'm Yarlin — a software developer who loves turning ideas into fun, interactive, and functional web applications. I'm currently focused on HTML, Tailwind CSS, and JavaScript, and I've challenged myself to build projects exclusively with JavaScript components so I can strengthen my fundamentals before diving back into React.",
+    
+                "So far I've only created frontend applications (like an e-commerce skincare site and a journal entries application), but I'm actively learning GSAP to level up my animations and prepare for more complex work. I also have a future project planned that will introduce me to the backend and show how frontend and backend applications communicate with each other.",
+                
+                "In the meantime, I'm building creative projects to solidify my foundation and get ready for full-stack development.",
+                
+                "Interested? Feel free to explore the rest of my portfolio or keep an eye on my GitHub for what’s coming next."
             ],
-            // imageUrl: "/assets/images/profileImages/profile.jpg",
         },
         {
             id: 2,
@@ -519,7 +518,7 @@ export const ABOUT_FOLDER = {
             fileType: "img",
             // window identifier
             windowClass: "about-image-window",
-            position: "top: calc(.15rem * 42); right: calc(.25rem * 60);", //->img position in finder window
+            position: "top: calc(.15rem * 55); right: calc(.25rem * 55);", //->img position in finder window
             imageUrl: "/assets/images/profileImages/profile-2.jpg", //inert image path here
         },
         {
@@ -530,7 +529,7 @@ export const ABOUT_FOLDER = {
             fileType: "img",
             // window identifier
             windowClass: "about-image-window",
-            position: "top: calc(.25rem * 42); right: calc(.25rem * 20);", //->img position in finder window
+            position: "top: calc(.25rem * 55); right: calc(.25rem * 20);", //->img position in finder window
             imageUrl: "/assets/images/profileImages/profile.jpg", //inert image path here
         }
     ]
@@ -551,7 +550,7 @@ export const RESUME_FOLDER = {
             kind: "file",
             fileType: "pdf",
             position: "left: calc(.25rem * 5); top: calc(.25rem * 10);", //->file position in finder window
-            desktopIconPosition: "    top: calc(.25rem * 130); left: calc(.25rem * 80);",  //->optional: Finder desktop window position
+            desktopIconPosition: "top: calc(.25rem * 130); left: calc(.25rem * 80);",  //->optional: Finder desktop window position
             pdfUrl: "/assets/files/resume_2026.pdf"
         },
     ]
