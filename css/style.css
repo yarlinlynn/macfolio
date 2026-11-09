@@ -777,10 +777,11 @@ button, input, select, optgroup, textarea {
 #notes.window {
     top: calc(.25rem * 20);
     left: calc(.25rem * 20);
-    height: 300px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    width: 35rem;
 }
 
 .window-header { flex-shrink: 0; }
@@ -800,28 +801,31 @@ button, input, select, optgroup, textarea {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
 }
 
 .window-content .welcome-text {
     text-align: center;
     color: rgb(153 161 175);
     margin-block-start: 1rem;
+    font-size: 14px;
 }
 
 .accordion-item {
     border: 1px solid rgb(153 161 175);
     border-radius: 1rem;
+    font-size: 14px;
 }
 
 .accordion-item.active .accordion-header i {
     transform: rotate(180deg);
-    color: var(--text);
+    color: var(--background);
 }
 
 .accordion-item.active .accordion-header { 
     border-radius: 0.9rem; 
     background: rgb(153 161 175);
+    color: var(--background);
 }
 
 .accordion-header {
@@ -833,6 +837,8 @@ button, input, select, optgroup, textarea {
     background: none;
     border: none;
     cursor: pointer;
+    text-align: justify;
+    gap: 1rem;
 }
 
 .accordion-header:focus {

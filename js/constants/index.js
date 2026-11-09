@@ -20,34 +20,46 @@ export const stickyNote = [
 ] //[✓] use control + command + spacebar to open icons
 
 // QUESTIONS AND ANSWES: FAQ
-export const faq = [
+export const FAQ = [
     {
-        question: "Tell me about yourself.",
-        answer: "I'm a frontend-focused software developer who enjoys turning ideas and designs into responsive, interactive, and user-friendly web experiences. I particularly enjoy working with JavaScript, building reusable UI components, and creating interfaces that feel polished and intuitive."
+        question: "If your coding style had a personality, what would it be?",
+        answer: "I’d say it’s equal parts curious and quiet perfectionist. I'm always thinking 'is this something I can create with code ?' and I definitely try to perfect every application I work on",
     },
     {
-        question: "What technologies do you work with?",
-        answer: "My core technologies include HTML, CSS, JavaScript, React, Git and GitHub. I'm also comfortable working with Tailwind CSS and Bootstrap, and I'm continuously expanding my toolkit as I work on new projects."
+        question: "What’s the weirdest constraint you’ve given yourself while building a project?",
+        answer: "I’ve been challenging myself to build entire projects using only JavaScript components — no frameworks, just pure JS.",
     },
     {
-        question: "What are you currently learning?",
-        answer: "I'm currently expanding my frontend skills with GSAP to create more immersive animations and interactive experiences. I'm also focusing on building larger, full-scale applications using HTML, CSS, and JavaScript."
+        question: "What’s something you’re currently learning that has nothing to do with getting a job?",
+        answer: "I’m learning GSAP purely because I love the idea of making interfaces feel alive. Animations have always fascinated me, and being able to control timing, easing, and sequencing feels like a new creative superpower. It’s not strictly required for most jobs, but it makes building so much more fun.",
+    },
+    {
+        question: "What’s a project idea you’re secretly excited about but haven’t started yet?",
+        answer: "I have two semi-full-stack projects planned that will finally introduce me to the backend side of things. I’m really curious about how frontend and backend actually talk to each other in a real application. It’s the next big step for me, and I’m both nervous and excited to start it",
+    },
+    {
+        question: "If you could only use three tools for the next year, what would they be and why?",
+        answer: "HTML, Tailwind CSS, and JavaScript (with a heavy side of GSAP). Those three already let me build almost anything I can imagine on the frontend, and GSAP is opening up a whole new level of interaction. I want to go deep with them before adding more tools to the mix.",
     },
     {
         question: "How do you approach responsive design?",
-        answer: "I build with responsiveness in mind from the beginning rather than treating mobile as an afterthought. I use flexible layouts, media queries, relative units, and responsive components to make sure interfaces work well across different screen sizes."
+        answer: "Depending on the design I tend to approach projects with responsiveness in mind from the beginning rather than treating mobile as an afterthought. I use flexible layouts, media queries, relative units, and responsive components to make sure interfaces work well across different screen sizes."
     },
     {
-        question: "How do you keep your frontend skills up to date?",
-        answer: "I learn primarily by building. I explore new technologies through documentation, tutorials, and experimentation, then apply what I've learned to personal projects. This helps me understand not just how something works, but when and why I should use it."
+        question: "How has your approach to learning changed since you started building more serious projects?",
+        answer: "I used to jump between tutorials a lot. Now I prefer to pick one idea for a proect and focus on completing it",
+    },
+    {
+        question: "If a recruiter only had 30 seconds to understand what kind of developer you are, what should they know?",
+        answer: "I currently work with HTML, Tailwind, and pure JavaScript components, I’m diving into GSAP, and I’m preparing to explore the backend soon. I like building things that feel good to use, and I’m always looking for the next skill that will make my work better.",
+    },
+    {
+        question: "What would you say is your weakness as a developer?",
+        answer: "I'm terrible at design. One of the hardest aspects when learning to code was figuring out how my project idea should look on both mobile and desktop. There has been many times where I've seen a design tried to implement it, tried to figure out how to implement both mobile or desktop responsiveness and even changed my mind a lot to start from scratch."
     },
     {
         question: "Do you enjoy working independently or as part of a team?",
         answer: "I'm comfortable with both. I enjoy working independently and am open to working in a team, as that is not something I've had the pleasure of doing."
-    },
-    {
-        question: "Are you comfortable learning new technologies?",
-        answer: "Absolutely. Frontend development evolves quickly, so I see learning new technologies as part of the job. I'm comfortable stepping outside my existing skill set and learning what is needed to solve a problem effectively. I'm currently trying to learn GSAP for better animations"
     },
     {
         question: "What are you looking for in your next role?",
@@ -55,9 +67,9 @@ export const faq = [
     },
     {
         question: "Are you available for work?",
-        answer: "Yes! I'm currently looking for frontend developer opportunities."
+        answer: "Yes! I'm currently looking for developer opportunities."
     }
-];
+]
 
 // SKILL STACK
 export const techStack = [

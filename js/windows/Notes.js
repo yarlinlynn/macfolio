@@ -1,7 +1,7 @@
 
 import WindowWrapper from "../state/WindowWrapper.js";
 import { WindowControls } from "../components/windowControls.js";
-import { faq } from "../constants/index.js";
+import { FAQ } from "../constants/index.js";
 
 import { renderFAQ } from "../components/renderFAQ.js";
 import { initAccordion } from "../utils/accordion.js";
@@ -28,10 +28,10 @@ export function Notes(parent = document.body) {
     content.className = "window-content";
     content.innerHTML = `
         <p class="welcome-text">
-            Welcome to questions and answers where you can find out more about me. Enjoy!
+            Hey there — whether you're a fellow developer, a recruiter, or just someone who stumbled across this little corner of the internet, welcome. This space is meant to help you get to know me a bit better. Feel free to explore the rest of the portfolio while you're here.
         <p>
 
-        ${renderFAQ(faq)}
+        ${renderFAQ(FAQ)}
     `;
 
     windowElement.append(
