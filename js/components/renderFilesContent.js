@@ -61,7 +61,7 @@ export function renderFilesContent({ header, container, navigation }) {
 
         <ul class="files-list">
             ${getFilesChildren(current).map(item => `
-                <li class="files-item" data-id="${item.id}">
+                <li class="files-item" data-id="${item.id}" id="${item.name}">
                     <img src="${getIcon(item)}" alt="${item.name}" loading="lazy" />
                     <span>${item.name}</span>
 
@@ -79,10 +79,6 @@ export function renderFilesContent({ header, container, navigation }) {
     Folders use the folder icon while files are mapped to icons based on their fileType. 
 */
 function getIcon(item) {
-    // if (item.kind === "folder") {
-    //     return "./assets/docs/folder.png";
-    // }
-
     // Choose an icon to display based on the file type
     switch (item.fileType) {
         case "pdf":

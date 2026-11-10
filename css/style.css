@@ -167,6 +167,7 @@ button, input, select, optgroup, textarea {
     /* height: 5vh; */
     padding-inline: 1rem;
     padding-block-end: 0.5rem;
+    font-size: 14px;
 }
 
 #top-bar .left-side-header,
@@ -298,7 +299,7 @@ button, input, select, optgroup, textarea {
     #top-bar div {
         display: flex;
         align-items: center;
-        gap: 2px;
+        gap: 5px;
     }
 
     #top-bar ul {
@@ -308,7 +309,7 @@ button, input, select, optgroup, textarea {
     }
 
     #top-bar ul img {
-        width: 20px;
+        width: 18px;
     }
 }
 
@@ -479,6 +480,7 @@ button, input, select, optgroup, textarea {
         border-radius:25px;
         overflow:hidden;
         transform-origin:center;
+        color: var(--background);
     }
 
     .social-preview h4 {
@@ -525,30 +527,30 @@ button, input, select, optgroup, textarea {
 
     .apps {
         display: grid;
-        grid-template-rows: repeat(4, calc(.25rem * 20));
-        grid-template-columns: repeat(4, calc(.25rem * 20));
+        grid-template-rows: repeat(4, calc(.25rem * 18));
+        grid-template-columns: repeat(4, calc(.25rem * 18));
         justify-content: center;
-        margin-top: 2rem;
-        column-gap: 5px;
+        margin-top: 2.5rem;
+        column-gap: 15px;
     }
 
     .app-item {
         font-size: 10px;
-        height: calc(.25rem * 20);
-        width: calc(.25rem * 20);
+        height: calc(.25rem * 18);
+        width: calc(.25rem * 18);
     }
 
     #files-mobile { display: block; }
 
     .social-links {
         margin-top: 4px;
-        height: calc(.22rem * 20);
-        width: calc(.24rem * 20);
+        height: calc(.22rem * 18);
+        width: calc(.24rem * 18);
     }
 
     .social-item {
-        height: calc(.08rem * 14);
-        width: calc(.08rem * 14);
+        height: calc(.08rem * 12);
+        width: calc(.08rem * 12);
     }
 
     .social-item:first-child { display: none; }
@@ -655,8 +657,8 @@ button, input, select, optgroup, textarea {
     }
 
     .dock-item {
-        width: calc(.25rem * 20);
-        height: calc(.25rem * 20);
+        width: calc(.25rem * 18);
+        height: calc(.25rem * 18);
     }
 
     #phone, #safri, #messages { display: flex; }
@@ -866,6 +868,8 @@ button, input, select, optgroup, textarea {
 @media screen and (max-width: 599px) {
     .window-header .header-icons:nth-child(2),
     .window-header .header-icons:nth-child(3) { display: none; }
+
+    #notes.window .window-content { padding-bottom: 8rem; }
 }
 
 /*-----------------------------------*\
@@ -1189,6 +1193,8 @@ letter-spacing: 0.1rem;
     cursor:pointer;
 }
 
+.files-item[id="desktop demo.mp4"] { display: none; }
+
 .files-item img {
     width:42px;
     height:42px;
@@ -1308,13 +1314,13 @@ letter-spacing: 0.1rem;
 }
 
 .video-wrapper.desktop_demo {
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 }
 
 .video-wrapper.mobile_demo {
-    width: 92%;
+    width: 75%;
     text-align: center;
-    margin: 2rem auto 0;
+    margin: 0 auto 0;
 }
 
 .window-header-links {
@@ -1356,9 +1362,8 @@ letter-spacing: 0.1rem;
 }
 
 @media screen and (max-width: 599px) {
-    .text-preview {
-        padding-bottom: calc(.25rem * 5);
-        padding-top: calc(.25rem * 10);
+    .text-preview, .resume-preview, .terminal-content {
+        padding-bottom: calc(.25rem * 25);
         padding-inline: calc(.25rem * 5);
         align-items: start;
     }
@@ -1379,7 +1384,11 @@ letter-spacing: 0.1rem;
     width: 36rem;
 }
 
-.terminal-content { padding: calc(.25rem * 5); }
+.terminal-content { 
+    height: 100vh;
+    overflow-y: auto;
+    padding-bottom: calc(.25rem * 30);
+}
 
 .teach-prompt span {
     font-weight: 700;
@@ -1473,6 +1482,7 @@ letter-spacing: 0.1rem;
 
     .skills-list {
         border: none;
+        gap: 0;
     }
 
     .inner-list {
